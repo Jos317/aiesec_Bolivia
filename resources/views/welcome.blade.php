@@ -6,13 +6,13 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-     <link rel="shortcut icon" href="public/img/cropped-AIESEC-Human-Blue-32x32.png" />
+     <link rel="shortcut icon" href="{{ asset('img/cropped-AIESEC-Human-Blue-32x32.png') }} />
 
      <!--=============== BOXICONS ===============-->
      <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
      <!--=============== SWIPER CSS ===============-->
-     <link rel="stylesheet" href="public/css/swiper-bundle.min.css">
+     <link rel=" stylesheet" href="public/css/swiper-bundle.min.css">
 
      <!--=============== CSS ===============-->
      <link rel="stylesheet" href="/css/styles.css">
@@ -35,8 +35,6 @@
                      <li class="nav__item"><a href="#" class="nav__link">Hospeda un Voluntario</a></li>
 
                      <li class="nav__item"><a href="#" class="nav__link">Iniciar sessión</a></li>
-
-
                      <div
                          class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
                          @if (Route::has('login'))
