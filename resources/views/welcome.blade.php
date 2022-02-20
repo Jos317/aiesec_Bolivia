@@ -5,330 +5,324 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+     <link rel="shortcut icon" href="assets/img/IconAIESEC.png" type="image/x-icon">
 
-     <link rel="shortcut icon" href="{{ asset('img/cropped-AIESEC-Human-Blue-32x32.png') }} />
-
-     <!--=============== BOXICONS ===============-->
      <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
-     <!--=============== SWIPER CSS ===============-->
-     <link rel=" stylesheet" href="public/css/swiper-bundle.min.css">
+     <link rel="stylesheet" href="assets/css/styles.css">
 
-     <!--=============== CSS ===============-->
-     <link rel="stylesheet" href="/css/styles.css">
-     <link rel="stylesheet" href="/css/css.css">
-
-     <title> AIESEC Bolivia </title>
+     <title>AIESEC Bolivia</title>
  </head>
 
  <body>
-     <!--=============== HEADER ===============-->
-     <header class="l-header" id="header">
+     <div class="load" id="load">
+         <img src="assets/img/blueman-blue.gif" alt="" class="load__gif">
+     </div>
+
+     <header class="header" id="header">
          <nav class="nav container">
-             <a href="#" class="nav__logo"> <img src="public/img/cropped-Blue-logo.png" /></a>
+             <a href="#" class="nav__logo">
+                 <img src="assets/img/Blue-Logo.png" alt="" class="nav__logo-img">
+             </a>
 
              <div class="nav__menu" id="nav-menu">
                  <ul class="nav__list">
-                     <li class="nav__item"><a href="#" class="nav__link active-link">Nosotros</a></li>
-                     <li class="nav__item"><a href="#" class="nav__link">Jovenes</a></li>
-                     <li class="nav__item"><a href="#" class="nav__link">Organizaciones</a></li>
-                     <li class="nav__item"><a href="#" class="nav__link">Hospeda un Voluntario</a></li>
+                     <li class="nav__item">
+                         <a href="#" class="nav__link active-link">Nosotros</a>
+                     </li>
 
-                     <li class="nav__item"><a href="#" class="nav__link">Iniciar sessión</a></li>
-                     <div
-                         class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-                         @if (Route::has('login'))
-                             <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                                 @auth
-                                     <a href="{{ url('/home') }}"
-                                         class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
-                                 @else
-                                     <a href="{{ route('login') }}"
-                                         class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-                                     @if (Route::has('register'))
-                                         <a href="{{ route('register') }}"
-                                             class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                                     @endif
-                                 @endauth
-                             </div>
-                         @endif
+                     <li class="nav__item">
+                         <a href="#" class="nav__link">Jóvenes</a>
+                     </li>
 
-                     </div>
+                     <li class="nav__item">
+                         <a href="#" class="nav__link">Organizaciones</a>
+                     </li>
 
+                     <li class="nav__item">
+                         <a href="#" class="nav__link">Hospeda</a>
+                     </li>
+
+                     <li class="nav__item">
+                         <a href="#blog" class="nav__link">Blog</a>
+                     </li>
                  </ul>
+
+                 <div class="nav__close" id="nav-close">
+                     <i class="bx bx-x"></i>
+                 </div>
              </div>
 
-             <div class="nav__btns">
-                 <i class='bx bx-moon change-theme' id="theme-button"></i>
-                 <div class="nav__toggle" id="nav-toggle">
-                     <i class='bx bx-menu'></i>
-                 </div>
+             <div class="nav__toggle" id="nav-toggle">
+                 <i class="bx bx-grid-alt"></i>
              </div>
          </nav>
      </header>
-     <!--=============== MAIN ===============-->
-     <main class="main">
-         <!--=============== HOME ===============-->
-         <section class="home section" id="home">
 
-             <div class="video">
-                 <div class="overlay">
+     <main>
+         <section class="home grid" id="home">
+             <div class="home__container">
+                 <div class="home__content container">
+                     <div id="typewriter"></div>
+                     <h1 class="home__title">
+                         con AIESEC<span>.</span>
+                     </h1>
+                     <p class="home__description">
+                         Viaja al extranjero e impulsa tu carrera profesional trabajando en una empresa multinacional o
+                         sé un voluntario y participa en proyectos de impacto social. Internacionaliza tu empresa
+                         conectando con jóvenes extranjeros cubriendo las necesidades de tu negocio.
+                     </p>
 
-                     <div class="content2">
-                         <h1>con aiesec.</h1>
-                         <p> Viaja al extranjero e impulsa tu carrera profesional trabajando en una empresa
-                             multinacional o sé un voluntario y participa en proyectos de impacto social.
-                             Internacionaliza tu empresa conectando con jóvenes extranjeros cubriendo
-                             las necesidades de tu negocio.
-                         </p>
+                     <div class="home__data">
+                         <div class="home__data-group">
+                             <h2 class="home__data-number">+1200</h2>
+                             <h3 class="home__data-title">Miembros</h3>
+                             <p class="home__data-description">De jóvenes, para jóvenes.</p>
+                         </div>
+
+                         <div class="home__data-group">
+                             <h2 class="home__data-number">200</h2>
+                             <h3 class="home__data-title">Aliados</h3>
+                             <p class="home__data-description">Ambiente multicultural en tu organización.</p>
+                         </div>
                      </div>
-                 </div>
 
-                 <video autoplay muted loop id="myVideo">
-                     <source src="public/img/video.mp4" type="video/mp4">
-                     <source src="video/concierto.ogg" type="video/ogg">
-                     <source src="video/concierto.webm" type="video/webm">
-                 </video>
+                 </div>
              </div>
 
-
-
+             <img src="assets/img/Homeaiesec.jpg" alt="" class="home__img">
          </section>
 
-         <!--=============== CARTAS ===============-->
-         <!--
-                        <section class="carts section" id="carts">
-                <h1>
-                    Descúbrete a ti mismo y conoce el mundo
-                </h1>
-                <p>
-                    AIESEC es la organización juvenil más grande del mundo que contribuye con la sociedad a través del desarrollo de los jóvenes y las oportunidades en el entorno internacional. Te conectamos con proyectos en el extranjero, donde puedes aprender más sobre
-                    otras culturas y trabajar en tu propio crecimiento. Una de nuestras 34 oficinas locales, ubicadas en 18 estados de la república esperan por ti.
-                </p>
-
-                <div class="carts_table">
-                    <div class="carts_column1">
-                        <img src="public/img/GV_horizontal_white.png">
-                        <p>Sé un ciudadano del mundo. Nuestras oportunidades alrededor del mundo han inspirado a miles de jóvenes a participar en causas sociales que solucionan problemáticas globales.</p>
-                        <button>Saber mas ...</button>
-                    </div>
-                    <div class="carts_column2">
-                        <img src="public/img/GTa_horizontal_white.png">
-
-
-                        <p>Experimenta el trabajo multicultural, gestiona proyectos, aprende, desarrolla tus habilidades en Empresas Multinacionales y conviértete en un Intern por el mundo. ..</p>
-                        <button>Saber mas ...</button>
-                    </div>
-                    <div class="carts_column3">
-
-                        <img src="public/img/GTe_Horizontal_white.png">
-                        <p>Una oportunidad para jóvenes que buscan desarrollar sus habilidades de liderazgo, competencias profesionales y cualidades mediante una experiencia de enseñanza en Institutos alrededor del mundo.</p>
-                        <button>Saber mas ...</button>
-                    </div>
-                </div>
-
-
-            </section>
-            -->
-         <section class="carts section" id="carts">
-             <h2 class="section_title">Descúbrete a ti mismo y conoce el mundo</h2>
-             <span class="section_subtitle">AIESEC es la organización juvenil más grande del mundo que contribuye con la
-                 sociedad a través del desarrollo de los jóvenes y las oportunidades en el entorno internacional.<br>
-                 Te conectamos con proyectos en el extranjero, donde puedes aprender más sobre otras culturas y trabajar
-                 en tu propio crecimiento.<br>
-                 Una de nuestras 34 oficinas locales, ubicadas en 18 estados de la república esperan por ti.</span>
+         <section class="carts section container" id="carts">
+             <h2 class="section__title">Descúbrete a ti mismo y conoce el mundo</h2>
 
              <div class="carts_container container grid">
-                 <!--==================== carts 1 ====================-->
                  <div class="carts_content cart_1">
                      <div>
-                         <img src="public/img/GV_horizontal_white.png" class="carts_icon" />
-                         <!--                         <h3 class="carts_title">Branding <br> Designer</h3>-->
-                         <span class="carts_subtitle">
+                         <img src="assets/img/GV_horizontal_white.png" class="carts_icon" />
+                         <p class="carts_subtitle">
                              Sé un ciudadano del mundo. Nuestras oportunidades alrededor del mundo han inspirado a miles
                              de jóvenes a participar en causas sociales que solucionan problemáticas globales.
-                         </span>
+                         </p>
                      </div>
                      <div>
-                         <a href="#" class="button button--flex button--white ">
-                             Saber más
+                         <a href="#" class="button2 button--flex button--white ">
+                             Ver más
                              <i class="uil uil-arrow-from-right button_icon"></i>
                          </a>
                      </div>
                  </div>
-                 <!--==================== carts 2 ====================-->
                  <div class="carts_content cart_2">
                      <div>
-                         <img src="public/img/GTa_horizontal_white.png" class="carts_icon" />
-                         <!--                         <h3 class="carts_title">Branding <br> Designer</h3>-->
-                         <span class="carts_subtitle">
+                         <img src="assets/img/GTa_horizontal_white.png" class="carts_icon" />
+                         <p class="carts_subtitle">
                              Una oportunidad para jóvenes que buscan desarrollar sus habilidades de liderazgo,
                              competencias profesionales y cualidades mediante una experiencia de enseñanza en Institutos
                              alrededor del mundo.
-                         </span>
+                         </p>
                      </div>
                      <div>
-                         <a href="#" class="button button--flex button--white ">
-                             Saber más
+                         <a href="#" class="button2 button--flex button--white ">
+                             Ver más
                              <i class="uil uil-arrow-from-right button_icon"></i>
                          </a>
                      </div>
                  </div>
-                 <!--==================== carts 3 ====================-->
-                 <div class="carts_content cart_3">
-                     <div>
-                         <img src="public/img/GTe_Horizontal_white.png" class="carts_icon" />
-                         <!--                         <h3 class="carts_title">Branding <br> Designer</h3>-->
-                         <span class="carts_subtitle">
-                             Sé un ciudadano del mundo. Nuestras oportunidades alrededor del mundo han inspirado a miles
-                             de jóvenes a participar en causas sociales que solucionan problemáticas globales.
-                         </span>
-                     </div>
-                     <div>
-                         <a href="#" class="button button--flex button--white ">
-                             Saber más
-                             <i class="uil uil-arrow-from-right button_icon"></i>
-                         </a>
+             </div>
+         </section>
+
+         <section class="quality section" id="premium">
+             <div class="quality__container container">
+                 <h2 class="section__title">
+                     Tenemos la mejor oferta de pasantias internacionales para ti!
+                 </h2>
+
+                 <div class="quality__content grid">
+                     <div class="quality__images">
+                         <img src="assets/img/aiesecccc.jpg" alt="" class="quality__img-big">
+                         <img src="assets/img/ai22.jpg" alt="" class="quality__img-small">
                      </div>
 
+                     <div class="quality__data">
+                         <h1 class="quality__title">Talento Global</h1>
+                         <h2 class="quality__price">Bs 2999.99</h2>
+                         <span class="quality__special">Oferta Especial</span>
+                         <p class="quality__description">
+                             No se que poner aqui por ahi no quieren esto y envano lo programee
+                             aaaaa :) jskdskja Hola Mundo dos tres cuatro cinco seis aaaa
+                             en otra mejor me duermo asies no te olvides de subirlo a heroku.
+                         </p>
+
+                         <div class="quality__buttons">
+                             <button class="button">
+                                 Postularte
+                             </button>
+
+                             <a href="#" class="quality__button">
+                                 Ver más
+                                 <i class="bx bx-right-arrow-alt"></i>
+                             </a>
+                         </div>
+                     </div>
                  </div>
              </div>
          </section>
 
-         <!--=============== FUNCIONES ===============-->
-         <!--
-            <section class="functions section" id="functions">
-                <h1>¿Cómo funciona?</h1>
-                <div class="section_table">
-                    <center>
-                        <div class="section_column">
-                            <div class="spam_icon"><i class='bx bxs-file'></i>
-                                <h1> REGÍSTRATE
-                                </h1>
-                            </div>
+         <section class="blog section" id="blog">
+             <div class="blog__container container">
+                 <h2 class="section__title">
+                     Conoce las historias de liderazgo de jóvenes como tu.
+                 </h2>
 
-                            <p>Completa el formulario de solicitud y crea tu perfil.</p>
-                        </div>
+                 <div class="blog__content grid">
+                     <article class="blog__card">
+                         <div class="blog__image">
+                             <img src="assets/img/bl2.jpg" alt="" class="blog__img">
+                             <a href="#" class="blog__button">
+                                 <i class="bx bx-right-arrow-alt"></i>
+                             </a>
+                         </div>
 
-                        <div class="section_column">
-                            <div class="spam_icon"><i class='bx bx-conversation'></i>
-                                <h1>CONTACTO CON AIESEC</h1>
-                            </div>
-                            <p>Un miembro o encargado de AIESEC se pondrá en contacto contigo por teléfono o correo electrónico para brindarte más información acerca de los programas y proyectos disponibles.</p>
-                        </div>
+                         <div class="blog__data">
+                             <h2 class="blog__title">
+                                 Valentina | Voluntaria Global
+                             </h2>
+                             <p class="blog__description">
+                                 “Creyeron tanto en mí, que logré crear un estudio de fotografía y
+                                 video en la empresa, nunca se había hecho ese proyecto, y con mi esfuerzo
+                                 y dedicación lo logré”.
+                             </p>
 
-                        <div class="section_column">
-                            <div class="spam_icon"><i class='bx bx-message-rounded-dots'></i>
-                                <h1>PROCESO DE SELECCIÓN</h1>
-                            </div>
-                            <p>Después de elegir el proyecto que más te interese comienza el proceso de selección con la orientación de tu manager.</p>
+                             <div class="blog__footer">
+                                 <div class="blog__reaction">
+                                     <i class="bx bx-comment"></i>
+                                     <span>13</span>
+                                 </div>
+                                 <div class="blog__reaction">
+                                     <i class="bx bx-show"></i>
+                                     <span>76</span>
+                                 </div>
+                             </div>
+                         </div>
+                     </article>
 
-                        </div>
-                        <div class="section_column">
-                            <div class="spam_icon"><i class='bx bx-message-rounded-dots'></i>
-                                <h1>ADMISIÓN</h1>
-                            </div>
-                            <p>Una vez que hayas sido aceptado te ayudaremos en la preparación de tu viaje.</p>
-                        </div>
+                     <article class="blog__card">
+                         <div class="blog__image">
+                             <img src="assets/img/bl1.jpg" alt="" class="blog__img">
+                             <a href="#" class="blog__button">
+                                 <i class="bx bx-right-arrow-alt"></i>
+                             </a>
+                         </div>
 
+                         <div class="blog__data">
+                             <h2 class="blog__title">
+                                 Cristhian | Talento Global
+                             </h2>
+                             <p class="blog__description">
+                                 “Ser parte del programa de talento global no es solo ir a otro
+                                 país y adquirir nueva experiencia laboral o nuevas habilidades,
+                                 también trae consigo la oportunidad de conocer personas nuevas, entornos
+                                 y culturas totalmente diferentes”.
+                             </p>
 
-                        <div class="section_column">
-                            <div class="spam_icon"><i class='bx bx-message-rounded-dots'></i>
-                                <h1>VIVE LA EXPERIENCIA</h1>
-                            </div>
-                            <p>AIESEC te acompaña antes, durante y después de tu proyecto.</p>
-
-                        </div>
-                    </center>
-
-                </div>
-            </section>
-        -->
-
-
-
-
-
-         <!--=============== FUNCIONES ===============-->
-         <section class="functions section" id="functions">
-             <h2 class="section_title">¿Cómo funciona?</h2>
-             <div class="functions_container container grid">
-                 <!--==================== functions 1 ====================-->
-                 <div class="functions_content functions_carts">
-
-                     <i class='functions_icon bx bxs-file'></i>
-                     <h3 class="function_title"> REGÍSTRATE</h3>
-                     <span class="function_subtitle">
-                         Completa el formulario de solicitud<br> y crea tu perfil.
-                     </span>
-
-
-                 </div>
-                 <!--==================== functions 2 ====================-->
-                 <div class="functions_content functions_carts">
-
-                     <i class='functions_icon bx bx-conversation' class="carts_icon"></i>
-                     <h3 class="function_title">CONTACTO CON AIESEC</h3>
-                     <span class="function_subtitle">
-                         Un miembro o encargado de AIESEC se pondrá en contacto contigo <br>
-                         por teléfono o correo electrónico para brindarte más información acerca de los programas y
-                         proyectos disponibles.
-                     </span>
-                 </div>
-                 <!--==================== functions 3 ====================-->
-                 <div class="functions_content functions_carts">
-                     <i class='functions_icon bx bx-conversation' class="carts_icon"></i>
-                     <h3 class="function_title">PROCESO DE SELECCIÓN </h3>
-                     <span class="function_subtitle">
-                         Después de elegir el proyecto que más te interese comienza el proceso de selección con la
-                         orientación de tu manager.
-                     </span>
-                 </div>
-                 <!--==================== functions 4 ====================-->
-                 <div class="functions_content functions_carts">
-                     <i class='functions_icon bx bxs-file' class="carts_icon"></i>
-                     <h3 class="function_title"> ADMISIÓN</h3>
-                     <span class="function_subtitle">
-                         Una vez que hayas sido aceptado te ayudaremos en la preparación de tu viaje.
-                     </span>
-                 </div>
-                 <!--==================== functions 5 ====================-->
-                 <div class="functions_content functions_carts">
-                     <i class='functions_icon bx bxs-file' class="carts_icon"></i>
-                     <h3 class="function_title"> VIVE LA EXPERIENCIA</h3>
-                     <span class="function_subtitle">
-                         AIESEC te acompaña antes, durante y después de tu proyecto.
-                     </span>
+                             <div class="blog__footer">
+                                 <div class="blog__reaction">
+                                     <i class="bx bx-comment"></i>
+                                     <span>3</span>
+                                 </div>
+                                 <div class="blog__reaction">
+                                     <i class="bx bx-show"></i>
+                                     <span>37</span>
+                                 </div>
+                             </div>
+                         </div>
+                     </article>
                  </div>
              </div>
-
          </section>
 
-
-
-
-         <!--=============== ALIANZAS ===============-->
-         <section class="alliences section" id="alliences">
-
-         </section>
+         <div class="logo section">
+             <div class="logo__container container grid">
+                 <img src="assets/img/Turisteo (1) (1).png" alt="" class="logo__img">
+                 <img src="assets/img/Blue-Logo.png" alt="" class="logo__img">
+                 <img src="assets/img/Turisteo (1) (1).png" alt="" class="logo__img">
+                 <img src="assets/img/Blue-Logo.png" alt="" class="logo__img">
+                 <img src="assets/img/Turisteo (1) (1).png" alt="" class="logo__img">
+             </div>
+             </section>
      </main>
 
-     <!--=============== FOOTER ===============-->
      <footer class="footer">
+         <div class="footer__container container">
+             <h1 class="footer__title">AIESEC</h1>
 
+             <div class="footer__content grid">
+                 <div class="footer__data">
+                     <p class="footer__description">
+                         Subscribete para obtener mayor información
+                     </p>
+
+                     <div class="footer__newsletter">
+                         <input type="email" placeholder="Dirección de email" class="footer__input">
+                         <button class="footer__button">
+                             <i class="bx bx-right-arrow-alt"></i>
+                         </button>
+                     </div>
+                 </div>
+
+                 <div class="footer__data">
+                     <h2 class="footer__subtitle">Dirección</h2>
+                     <p class="footer__information">
+                         1234 Av. Eduardo Avaroa. <br>
+                         La Paz, Bolivia
+                     </p>
+                 </div>
+
+                 <div class="footer__data">
+                     <h2 class="footer__subtitle">Contactanos</h2>
+                     <p class="footer__information">
+                         +591 73665124 <br>
+                         aiesec@gmail.com
+                     </p>
+                 </div>
+
+                 <div class="footer__data">
+                     <h2 class="footer__subtitle">Horario</h2>
+                     <p class="footer__information">
+                         Lunes - Sabado <br>
+                         9AM - 16PM
+                     </p>
+                 </div>
+             </div>
+
+             <div class="footer__group">
+                 <ul class="footer__social">
+                     <a href="#" target="_blank" class="footer__social-link">
+                         <i class="bx bxl-facebook"></i>
+                     </a>
+                     <a href="#" target="_blank" class="footer__social-link">
+                         <i class="bx bxl-instagram"></i>
+                     </a>
+                     <a href="#" target="_blank" class="footer__social-link">
+                         <i class="bx bxl-twitter"></i>
+                     </a>
+                 </ul>
+
+                 <span class="footer__copy">
+                     &#169; AIESEC. 2022 Todos los derechos reservados
+                 </span>
+             </div>
+         </div>
      </footer>
 
-     <!--=============== SCROLLREVEAL ===============-->
-     <script src=""></script>
 
-     <!--=============== SWIPER JS ===============-->
-     <script src="public/js/swiper-bundle.min.js"></script>
+     <a href="#" class="scrollup" id="scroll-up">
+         <i class="bx bx-up-arrow-alt"></i>
+     </a>
 
-     <script src="public/js/mixitup.min.js"></script>
-
-     <!--=============== MAIN JS ===============-->
-     <script src="public/js/main.js"></script>
-     <script src="public/js/video.js"></script>
+     <script src="assets/js/mixitup.min.js"></script>
+     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+     <script src="assets/js/main.js"></script>
  </body>
 
  </html>
