@@ -246,24 +246,20 @@ return [
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
+        
+        ['header' => 'OPCIONES'],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
-        ['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'text'       => 'Usuarios',
+            'icon' =>        'fas fa-users fa-fw',
+            'route'        => 'users.index'
+            
         ],
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
+            'text'       => 'Roles',
+            'icon' =>        'fas fa-user-tie fa-fw',
+            'route'        => 'roles.index',
+            'can'  => 'Gestionar Roles'
+        ] ,
         [
             'text' => 'change_password',
             'url'  => 'admin/settings',
