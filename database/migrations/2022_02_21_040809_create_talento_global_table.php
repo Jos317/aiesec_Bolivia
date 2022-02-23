@@ -16,10 +16,11 @@ class CreateTalentoGlobalTable extends Migration
         Schema::create('talento_global', function (Blueprint $table) {
             
             $table->id();
-            $table->string('nombre',50);
-            $table->string('apellido',50);
+            $table->string('nombres',50);
+            $table->string('apellidos',50);
             $table->string('edad',20);
             $table->string('correo',50);
+            $table->string('celular',10);
             $table->string('ciudad_reside',15);
             $table->string('universidad');
             $table->string('grado_estudio',40);
@@ -33,13 +34,6 @@ class CreateTalentoGlobalTable extends Migration
             $table->string('descubrimiento_programa',35);
             $table->string('medio_contacto',40);
             $table->string('describir_documento');
-
-            $table->unsignedBigInteger('idcelular');
-            $table->foreign('idcelular')->on ('celular_talento')->references('id'); //foranea celular
-            
-	        $table->unsignedBigInteger('iddocumento');
-            $table->foreign('iddocumento')->on ('documento_talento')->references('id'); //foranea documento
-            
         });
     }
 

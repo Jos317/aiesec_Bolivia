@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCelularTalentoTable extends Migration
+class CreateOfrecimientoHospedaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateCelularTalentoTable extends Migration
      */
     public function up()
     {
-        Schema::create('celular_talento', function (Blueprint $table) {
+        Schema::create('ofrecimiento_hospeda', function (Blueprint $table) {
             $table->id();
-            $table->string('tipo',15);
-            $table->string('telefono',10);
+            $table->string('ofrecer');
+            $table->tinyInteger('condicion')->default(0);
         });
     }
 
@@ -27,6 +27,6 @@ class CreateCelularTalentoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('celular_talento');
+        Schema::dropIfExists('ofrecimiento_hospeda');
     }
 }
