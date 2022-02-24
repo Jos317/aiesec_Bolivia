@@ -6,6 +6,7 @@
   --header-height: 3.5rem;
   
   /*========== Colors ==========*/
+  --second-hue: 219;
   --first-color: hsl(209, 98%, 48%);
   --first-color-alt: hsl(209, 98%, 44%);
   --black-color: hsl(209, 98%, 48%);
@@ -141,7 +142,7 @@ button {
 /*=============== HEADER & NAV ===============*/
 .header{
   width: 100%;
-  background: transparent;
+  background: var(--body-color);
   position: fixed;
   top: 0;
   left: 0;
@@ -157,7 +158,7 @@ button {
 
 .nav__logo,
 .nav__toggle{
-  color: #fff;
+  color: var(--title-color);
 }
 
 .nav__logo{
@@ -206,7 +207,7 @@ button {
 }
 
 .nav__link:hover{
-  color: #fff;
+  color: var(--first-color);
 }
 
 .nav__close{
@@ -239,7 +240,7 @@ button {
 
 /* Active link */
 .active-link{
-  color: #fff;
+  color: var(--first-color);
 }
 
 /*=============== HOME ===============*/
@@ -249,13 +250,14 @@ button {
 
 .home__container{
   padding: 7rem 0 2.5rem;
-  background: linear-gradient(
+  /* background: linear-gradient(
     160deg,
-    /* hsla(206, 5%, 24%, 1) -4%,
-    hsla(206, 12%, 12%, 1) 46% */
+     hsla(206, 5%, 24%, 1) -4%,
+    hsla(206, 12%, 12%, 1) 46% 
     hsla(209, 40%, 84%, 1) -4%,
     hsla(209, 80%, 40%, 1) 46%
-  );
+  ); */
+  background-color: var(--first-color);
 }
 
 .home__content{
@@ -847,6 +849,111 @@ button {
   bottom: 3rem;
 }
 
+
+
+/*=============== CONTACT ===============*/
+.contact__container{
+  row-gap: 3rem;
+  padding-bottom:3rem;
+}
+
+.contact__title{
+  text-align: center;
+  font-size:var(--h3-font-size);
+  margin-bottom: 1.5rem;
+}
+
+.contact__info{
+  display: grid;
+  gap:1rem;
+}
+
+.contact__card{
+  background-color: var(--container-color);
+  padding: 1rem;
+  border-radius: .75rem;
+  text-align: center;
+  box-shadow: 0 2px 16px hsla(var(--second-hue), 48%, 8%, .1);
+}
+
+
+.contact__card-icon{
+  font-size: 2rem;
+  color: var(--title-color);
+  margin-bottom: .25rem;
+}
+
+.contact__card-title,
+.contact__card-data{
+  font-size: var(--small-font-size);
+}
+
+.contact__card-title{
+  font-weight: var(--font-medium);
+}
+
+.contact__card-data{
+  display: block;
+  margin-bottom: .75rem;
+}
+
+.contact__button{
+  color: var(--first-color);
+  font-size: var(--small-font-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: .25rem;
+}
+
+.contact__button:hover .contact__button-icon{
+  transform: translateX(.25rem);
+}
+
+.contact__button-icon{
+  font-size: 1rem;
+  transition: .4s;
+}
+
+.contact__form-div{
+  position: relative;
+  margin-bottom: 2rem;
+  height: 4rem;
+}
+
+.contact__form-input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--text-color-light);
+  background: none;
+  color: var(--text-color);
+  outline: none;
+  padding: 1.5rem;
+  border-radius: .75rem;
+  z-index: 1;
+}
+
+.contact__form-tag{
+  position: absolute;
+  top: -.75rem;
+  left: 1.25rem;
+  font-size: var(--smaller-font-size);
+  padding: .25rem;
+  background-color: var(--body-color);
+  z-index: 10;
+}
+
+.contact__form-area{
+  height: 11rem;
+}
+
+.contact__form-area textarea{
+  resize: none;
+}
+
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media  screen and (max-width: 320px) {
@@ -879,6 +986,16 @@ button {
 
   .footer__newsletter{
     width: 350px;
+  }
+
+  .contact__info{
+    grid-template-columns: 300px;
+    justify-content: center;
+  }
+
+  .contact__form{
+    width: 360px;
+    margin: 0 auto;
   }
 }
 
@@ -971,6 +1088,11 @@ button {
 }
 .carts_modal-content {
     width: 450px;
+}
+.contact__container{
+  grid-template-columns: repeat(2, max-content);
+  justify-content: center;
+  column-gap: 3rem;
 }
 }
 
@@ -1105,6 +1227,10 @@ button {
   }
   .carts_container {
     grid-template-columns: repeat(2, 400px)
+}
+
+.contact__container{
+  column-gap: 6rem;
 }
 }
 
