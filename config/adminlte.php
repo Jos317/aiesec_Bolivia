@@ -255,6 +255,12 @@ return [
             
         ],
         [
+            'text'       => 'Empresas / ONGs',
+            'icon' =>        'fas fa-users fa-fw',
+            'route'        => 'empresa.index'
+            
+        ],
+        [
             'text'       => 'Roles',
             'icon' =>        'fas fa-user-tie fa-fw',
             'route'        => 'roles.index',

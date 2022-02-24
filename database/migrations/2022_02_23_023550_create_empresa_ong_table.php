@@ -18,7 +18,7 @@ class CreateEmpresaOngTable extends Migration
             $table->string('nombre_empresa',50);
             $table->string('nombre_representante',50);
             $table->string('cargo_representante',50);
-            $table->string('pagina_web',100);
+            $table->string('pagina_web',100)->nullable();
             $table->string('celular',10);
             $table->string('telefono',10);
             $table->string('correo_representante',50);
