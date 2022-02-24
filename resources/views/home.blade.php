@@ -9,7 +9,9 @@
 @stop
 
 @section('content')
+
     <p>Bienvenido al panel de administrador.</p>
+    @extends('plantilla.flechaarriba')
 @stop
 
 @section('css')

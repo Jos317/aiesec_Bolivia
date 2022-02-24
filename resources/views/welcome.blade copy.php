@@ -12,7 +12,7 @@
      <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
      <!--=============== SWIPER CSS ===============-->
-     <link rel=" stylesheet" href="public/css/swiper-bundle.min.css">
+     <link rel=" stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
 
      <!--=============== CSS ===============-->
      <link rel="stylesheet" href="/css/styles.css">
