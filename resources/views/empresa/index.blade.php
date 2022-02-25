@@ -14,38 +14,24 @@
                 <table class="table table-striped" id="empresas" style="width:100%">
                     <thead>
                         <tr>
+                            <th scope="col">Id</th>
                             <th scope="col">Nombre de la empresa / ONG</th>
                             <th scope="col">Nombre del representante</th>
-                            <th scope="col">Cargo del representante</th>
-                            <th scope="col">Página Web / Facebook</th>
-                            <th scope="col">Celular de la empresa</th>
-                            <th scope="col">Teléfono de la empresa</th>
-                            <th scope="col">Correo del representante</th>
                             <th scope="col">Correo del empresa</th>
-                            <th scope="col">Ubicación departamental de la empresa</th>
-                            <th scope="col">Dirección de la empresa</th>
-                            <th scope="col">Dedicación de la empresa</th>
-                            <th scope="col">Medio por el que supo de AIESEC</th>
-                            <th scope="col">Nombre de la persona si se marcó Otro</th>
+                            <th scope="col">Opciones</th>
                         </tr>
                     </thead>
 
                     <tbody>
                         @foreach ($empresas as $empresa)
                             <tr>
+                                <td>{{ $empresa->id}}</td>
                                 <td>{{ $empresa->nombre_empresa }}</td>
                                 <td>{{ $empresa->nombre_representante }}</td>
-                                <td>{{ $empresa->cargo_representante }}</td>
-                                <td>{{ $empresa->pagina_web }}</td>
-                                <td>{{ $empresa->celular }}</td>
-                                <td>{{ $empresa->telefono }}</td>
                                 <td>{{ $empresa->correo_representante }}</td>
-                                <td>{{ $empresa->correo_empresa }}</td>
-                                <td>{{ $empresa->departamento }}</td>
-                                <td>{{ $empresa->direccion }}</td>
-                                <td>{{ $empresa->dedicacion }}</td>
-                                <td>{{ $empresa->saber_de_AIESEC }}</td>
-                                <td>{{ $empresa->nombre_amigo }}</td>
+                                <td>
+                                    <a href="{{url('empresa/ver/'.$empresa->id)}}" class="btn btn-primary btn-sm">Ver información completa<a>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>

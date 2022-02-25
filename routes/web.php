@@ -31,6 +31,6 @@ Route::resource('users',user_controller::class)->names('users');
 Route::get('form_empresas', [EmpresaController::class, 'form']);
 Route::post('empresa/store', [EmpresaController::class, 'store']);
 Route::resource('empresa',Empresacontroller::class)->names('empresa');
+Route::get('empresa/ver/{id}', [EmpresaController::class, 'ver']);
 
-Route::resource('users', user_controller::class)->names('users');
 

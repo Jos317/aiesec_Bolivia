@@ -18,6 +18,12 @@ class EmpresaController extends Controller
         return view('empresa.index', compact('empresas'));
     }
 
+    public function ver($id){
+        $empresa = empresa_ong::find($id);
+
+        return view('empresa.ver', ['empresa' => $empresa]);
+    }
+
     public function store(Request $request){
         try {
             
