@@ -5,7 +5,6 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <link rel="stylesheet" href="{{ asset('assets/css/login.css') }}">
         <link rel="icon" href="{{ asset('assets/img/IconAIESEC.png') }}">
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
@@ -15,10 +14,6 @@
     </head>
     @extends('plantilla.logo')
 
-
-
-
-
     <div class="login">
         @error('email')
             <div class="alert alert-danger" role="alert">
@@ -26,7 +21,6 @@
             </div>
         @enderror
         <div class="login__content">
-
             <div class="login__forms">
                 <form method="POST" action="{{ route('login') }}" class="login__registre" id="login-in">
                     @csrf
@@ -37,9 +31,6 @@
                         <input id="email" type="email" placeholder="Usuario"
                             class="login__input @error('email') is-invalid @enderror" name="email"
                             value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-
-
                     </div>
 
                     <div class="login__box">
@@ -47,26 +38,13 @@
                         <input id="password" type="password" placeholder="Contraseña"
                             class="login__input @error('password') is-invalid @enderror" name="password" required
                             autocomplete="current-password">
-
-                        {{-- @error('password')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror --}}
-
                     </div>
 
                     <button type="submit" class="login__button">
                         {{ __('Login') }}
                     </button>
 
-                    {{-- @if (Route::has('password.request'))
-                        <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a> 
-                    @endif --}}
                 </form>
-
             </div>
         </div>
     </div>
