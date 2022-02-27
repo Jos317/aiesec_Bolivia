@@ -15,7 +15,7 @@
                         @error('correo')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
-                        <input class="footer__input" type="text" id="correo" name="correo" placeholder="Correo *"
+                        <input class="footer__input" type="email" id="correo" name="correo" placeholder="Correo *"
                             required>
                         <button class="footer__button">
                             <i class="bx bx-right-arrow-alt"></i>

@@ -32,8 +32,11 @@
                                 <form action="{{ url('/roles/' . $rol->id) }}" method="post">
                                     @csrf
                                     @method('delete')
-                                    <a href="{{ route('roles.edit', $rol) }}" class="btn btn-primary btn-sm">Editar</a>
-                                    <button class="btn btn-danger btn-sm" onclick="return confirm('¿ESTA SEGURO DE  BORRAR?')" value="Borrar">Eliminar</button>
+                                    <a href="{{ route('roles.edit', $rol) }}" class="btn btn-primary btn-sm"><i
+                                            class="fas fa-edit"></i>Editar</a>
+                                    <button class="btn btn-danger btn-sm"
+                                        onclick="return confirm('¿ESTA SEGURO DE  BORRAR?')" value="Borrar"><i
+                                            class="fas fa-edit"></i>Eliminar</button>
                                 </form>
                             </td>
                         </tr>

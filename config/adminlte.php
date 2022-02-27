@@ -264,7 +264,13 @@ return [
             'text'       => 'Empresas / ONGs',
             'icon' =>        'fas fa-users fa-fw',
             'route'        => 'empresa.index'
-            
+
+        ],
+        [
+            'text'       => 'Mensajes',
+            'icon' =>        'fas fa-users fa-fw',
+            'route'        => 'mensajes.index'
+
         ],
         [
             'text'       => 'Roles',
