@@ -11,7 +11,7 @@
                 </li>
 
                 <li class="nav__item">
-                    <a href="#" class="nav__link">Jóvenes</a>
+                    <a href="{{ asset('form_talentos') }}" class="nav__link">Jóvenes</a>
                 </li>
 
                 <li class="nav__item">

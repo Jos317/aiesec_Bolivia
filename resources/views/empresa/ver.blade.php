@@ -105,24 +105,6 @@
                 <input type="text" name="name" class="form-control" value="{{$empresa->nombre_amigo}}" disabled>
             </div>
         </div>
-                {{-- <br>
-                <label for="email">Ingrese el correo electronico</label>
-                <input type="email" name="email" class="form-control" value="{{ old('email') }}" required>
-                @error('email')
-                    <small>*{{ $message }}</small>
-                    <br><br>
-                @enderror
-                <br>
-                <label for="password">Ingrese la contraseña</label>
-                <input type="password" minlength="8" name="password" class="form-control" value="{{ old('password') }}" required>
-                @error('password')
-                    <small>*{{ $message }}</small>
-                    <br><br>
-                @enderror
-                <br> --}}
-
-
-
     </div>
 </div>
 
