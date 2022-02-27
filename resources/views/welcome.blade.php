@@ -211,7 +211,7 @@
 
     </main>
 
-    @extends('plantilla.footer')
+    @extends('contactos.index')
     @extends('plantilla.flechaarriba')
 
 
