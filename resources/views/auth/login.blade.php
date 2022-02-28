@@ -1,4 +1,4 @@
-@extends('layouts.app')}}
+@extends('layouts.app')
 
 @section('content')
 
@@ -12,7 +12,7 @@
 
         <title>AIESEC Bolivia</title>
     </head>
-    @extends('plantilla.logo')
+    {{-- @extends('plantilla.logo') --}}
 
     <div class="login">
         @error('email')
