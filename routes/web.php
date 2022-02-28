@@ -36,6 +36,12 @@ Route::post('empresa/store', [EmpresaController::class, 'store']);
 Route::resource('empresa', Empresacontroller::class)->names('empresa');
 Route::get('empresa/ver/{id}', [EmpresaController::class, 'ver']);
 
+//Talento
+Route::get('form_talentos', [TalentoController::class, 'form']);
+Route::post('talento/store', [TalentoController::class, 'store']);
+Route::resource('talento',TalentoController::class)->names('talento');
+Route::get('talento/ver/{id}', [TalentoController::class, 'ver']);
+
 
 
 //welcome enviar correo
