@@ -1,3 +1,4 @@
+
 <div class="content">
     <div class="row">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
@@ -76,9 +77,11 @@
                             </div>
                             <div class="col-md-4 col-sm-4">
                                 <label class="text-info">¿En que universidad / Instituto estudias o estudiaste? *: </label>
-                                <select class="form-control" name="universidad">
+                                <select class="form-control" id="buscador" name="universidad">
                                     <option value="vacio" disabled selected>Seleccione una opción...</option>
-                                    <option class="text-dark" value="Santa Cruz - UAGRM">Santa Cruz - UAGRM</option>
+                                    @foreach ($universidades as $item)
+                                        <option value="{{$item->code}}">{{$item->name}}</option>
+                                    @endforeach
                                 </select>
                             </div>
                             <div class="col-md-4 col-sm-4">
