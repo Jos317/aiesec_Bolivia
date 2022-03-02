@@ -5,11 +5,14 @@ namespace App\Http\Controllers;
 use App\Models\talento_global;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 
 class TalentoController extends Controller
 {
     public function form(){
-        return view('talento.form_talentos');
+        $universidades = File::get(base_path().'/public/lista_universidades.json');
+        $universidades = json_decode($universidades)->universidad;
+        return view('talento.form_talentos', compact('universidades'));
     }
 
     public function index()
@@ -20,8 +23,9 @@ class TalentoController extends Controller
 
     public function ver($id){
         $talento = talento_global::find($id);
-
-        return view('talento.ver', ['talento' => $talento]);
+        $universidades = File::get(base_path().'/public/lista_universidades.json');
+        $universidades = json_decode($universidades)->universidad;
+        return view('talento.ver', compact('universidades'), ['talento' => $talento]);
     }
 
     public function store(Request $request){

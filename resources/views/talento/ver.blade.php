@@ -60,7 +60,7 @@
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
             <div class="form-group">
                 <label for="name">¿En que universidad / Instituto estudias o estudiaste?: </label>
-                <input type="text" name="name" class="form-control" value="{{$talento->universidad}}" disabled>
+                <input type="text" name="name" class="form-control" value="{{$universidades[$talento->universidad - 1]->name}}" disabled>
             </div>
         </div>
         <br>
@@ -144,7 +144,6 @@
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
             <div class="form-group">
                 <label for="name">Archivo adjuntado: </label>
-                <input type="text" name="name" class="form-control" value="{{$talento->describir_documento}}" disabled>
                 <a href="{{asset('storage/'.$talento->documentos)}}" download>Descargar el archivo zip</a>
             </div>
         </div>

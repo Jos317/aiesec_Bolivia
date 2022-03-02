@@ -82,10 +82,11 @@
                             <div class="col-md-4 col-sm-4">
                                 <label class="text-info">¿En que universidad / Instituto estudias o estudiaste? *:
                                 </label>
-                                <select class="form-control" name="universidad">
+                                <select class="form-control" id="buscador" name="universidad">
                                     <option value="vacio" disabled selected>Seleccione una opción...</option>
-                                    <option class="text-dark" value="Santa Cruz - UAGRM">Santa Cruz - UAGRM
-                                    </option>
+                                    @foreach ($universidades as $item)
+                                        <option value="{{ $item->code }}">{{ $item->name }}</option>
+                                    @endforeach
                                 </select>
                             </div>
                             <div class="col-md-4 col-sm-4">
@@ -97,8 +98,8 @@
                                         1er. a 3er. semestre</option>
                                     <option class="text-dark" value="Universidad 4to. a 6to. semestre">Universidad
                                         4to. a 6to. semestre</option>
-                                    <option class="text-dark" value="Universidad 7mo. a 10mo. semestre">
-                                        Universidad 7mo. a 10mo. semestre</option>
+                                    <option class="text-dark" value="Universidad 7mo. a 10mo. semestre">Universidad
+                                        7mo. a 10mo. semestre</option>
                                     <option class="text-dark" value="Egresado">Egresado</option>
                                     <option class="text-dark" value="Titulado">Titulado</option>
                                     <option class="text-dark" value="Posgrado Maestría/Doctorado">Posgrado
@@ -113,8 +114,8 @@
                                         Empresas</option>
                                     <option class="text-dark" value="Ciencias de la Educación">Ciencias de la
                                         Educación</option>
-                                    <option class="text-dark" value="Comercio Internacional">Comercio
-                                        Internacional</option>
+                                    <option class="text-dark" value="Comercio Internacional">Comercio Internacional
+                                    </option>
                                     <option class="text-dark" value="Comunicación Social">Comunicación Social
                                     </option>
                                     <option class="text-dark" value="Diseño Gráfico">Diseño Gráfico</option>
@@ -129,8 +130,8 @@
                                     </option>
                                     <option class="text-dark" value="Ingeniería de Sistemas y Computación">
                                         Ingeniería de Sistemas y Computación</option>
-                                    <option class="text-dark" value="Ingeniería Informática">Ingeniería
-                                        Informática</option>
+                                    <option class="text-dark" value="Ingeniería Informática">Ingeniería Informática
+                                    </option>
                                     <option class="text-dark" value="Marketing">Marketing</option>
                                     <option class="text-dark" value="Negocios Internacionales">Negocios
                                         Internacionales</option>
@@ -151,8 +152,8 @@
                                     <option class="text-dark" value="Intermedio (B1-B2)">Intermedio (B1-B2)
                                     </option>
                                     <option class="text-dark" value="Avanzado (C1-C2)">Avanzado (C1-C2)</option>
-                                    <option class="text-dark" value="No tengo estudios en Inglés">No tengo
-                                        estudios en Inglés</option>
+                                    <option class="text-dark" value="No tengo estudios en Inglés">No tengo estudios
+                                        en Inglés</option>
                                 </select>
                             </div>
                             <div class="col-md-4 col-sm-4">
