@@ -7,7 +7,7 @@
         <div class="nav__menu" id="nav-menu">
             <ul class="nav__list">
                 <li class="nav__item">
-                    <a href="#" class="nav__link active-link">Nosotros</a>
+                    <a href="{{ url('/') }}" class="nav__link active-link">Nosotros</a>
                 </li>
 
                 <li class="nav__item">

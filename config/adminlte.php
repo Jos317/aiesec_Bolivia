@@ -258,7 +258,7 @@ return [
             'text'       => 'Talento Global',
             'icon' =>        'fas fa-users fa-fw',
             'route'        => 'talento.index'
-            
+
         ],
         [
             'text'       => 'Empresas / ONGs',
@@ -278,7 +278,7 @@ return [
             'route'        => 'roles.index',
             'can'  => 'Gestionar Roles'
         ],
-        [
+        /*[
             'text' => 'change_password',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
@@ -332,11 +332,11 @@ return [
             'icon_color' => 'yellow',
             'url'        => '#',
         ],
-        [
+       [
             'text'       => 'information',
             'icon_color' => 'cyan',
             'url'        => '#',
-        ],
+        ],*/
     ],
 
     /*
