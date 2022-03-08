@@ -134,7 +134,7 @@
                                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                             <a href="#" class="blog__button">
                                 <i class="bx bx-right-arrow-alt"></i>
-                            </a>
+                             </a>
                         </div>
 
                         <div class="blog__data">
