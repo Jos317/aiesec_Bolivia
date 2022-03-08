@@ -267,6 +267,12 @@ return [
 
         ],
         [
+            'text'       => 'Hospedaje Internacional',
+            'icon' =>        'fas fa-users fa-fw',
+            'route'        => 'hospedajes.index'
+
+        ],
+        [
             'text'       => 'Mensajes',
             'icon' =>        'fas fa-users fa-fw',
             'route'        => 'mensajes.index'

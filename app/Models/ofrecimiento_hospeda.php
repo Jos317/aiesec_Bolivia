@@ -9,7 +9,7 @@ class ofrecimiento_hospeda extends Model
 {
     use HasFactory;
     protected $table='ofrecimiento_hospeda'; 
-    protected $fillable = ['ofrecer', 'condicion'];
+    protected $fillable = ['habitacion_unica', 'habitacion_compa','servicios','desayuno','almuerzo','cena','otros'];
     public $timestamps = false;
     
     public function ofrecimiento_hospeda()
