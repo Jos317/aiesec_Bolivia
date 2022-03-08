@@ -8,15 +8,19 @@
 
 @section('content')
     <div class="card">
+
+
         <div class="card-body">
-            <form action="{{ route('roles.store') }}" method="post" novalidate>
+            <form action="{{ route('roles.store') }}" method="post" >
                 @csrf
-                <label for="name">Ingrese el nombre del Rol</label>
-                <input type="text" name="name" class="form-control"> <br>
-                @error('name')
-                    <small class="text-danger">*{{ $message }}</small>
-                    <br><br>
-                @enderror
+                {{-- @error('name')
+                    <div class="alert alert-danger" role="alert">
+                        ¡Debes rellenar el campo nombre del rol!
+                    </div>
+                @enderror --}}
+                <label for="name">Ingrese el nombre del rol</label>
+                <input type="text" name="name" class="form-control" required> <br>
+
 
 
                 <label for="permisos">Asignación de permisos</label><br>
@@ -32,8 +36,9 @@
                         @endforeach
                     </div>
                 </div> <br>
-
+                
                 <button class="btn btn-danger btn-sm" type="submit">Crear Rol</button>
+                <a class="btn btn-primary btn-sm" href="{{ route('roles.index') }}">Volver</a>
             </form>
 
         </div>

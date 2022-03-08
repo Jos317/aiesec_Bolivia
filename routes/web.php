@@ -6,6 +6,7 @@ use App\Http\Controllers\TalentoController;
 use App\Http\Controllers\user_controller;
 use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\Bandeja_CorreoController;
+use App\Http\Controllers\HospedaIController;
 use App\Http\Controllers\MensajeController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -47,3 +48,7 @@ Route::get('talento/ver/{id}', [TalentoController::class, 'ver']);
 //welcome enviar correo
 Route::resource('contactos', ContactoController::class)->names('contactos');
 Route::resource('mensajes', MensajeController::class)->names('mensajes');
+
+
+//hospedaje
+Route::resource('hospedajes', HospedaIController::class)->names('hospedajes');
