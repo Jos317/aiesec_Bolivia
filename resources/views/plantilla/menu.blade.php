@@ -19,7 +19,7 @@
                 </li>
 
                 <li class="nav__item">
-                    <a href="#" class="nav__link">Hospeda</a>
+                    <a href="{{ route('hospedajes.create') }}" class="nav__link">Hospeda</a>
                 </li>
 
                 <li class="nav__item">

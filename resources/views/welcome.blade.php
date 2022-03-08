@@ -96,7 +96,7 @@
                 <div class="blog__content grid">
                     <article class="blog__card">
                         <div class="blog__image">
-                            <img src="{{ asset('assets/img/bl1.jpg') }}" alt="" class="blog__img">
+                            <img src="{{ asset('assets/img/bl2.jpg') }}" alt="" class="blog__img">
                             <a href="#" class="blog__button">
                                 <i class="bx bx-right-arrow-alt"></i>
                             </a>
@@ -125,7 +125,7 @@
                         </div>
                     </article>
 
-                    <article class="blog__card">
+                    {{-- <article class="blog__card">
                         <div class="blog__image">
                             <iframe
                                 src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FAIESECenBolivia%2Fposts%2F4995195870493663&show_text=true&width=500"
@@ -134,7 +134,7 @@
                                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                             <a href="#" class="blog__button">
                                 <i class="bx bx-right-arrow-alt"></i>
-                             </a>
+                            </a>
                         </div>
 
                         <div class="blog__data">
@@ -148,7 +148,7 @@
                             </p>
 
                         </div>
-                    </article>
+                    </article> --}}
 
                     <article class="blog__card">
                         <div class="blog__image">

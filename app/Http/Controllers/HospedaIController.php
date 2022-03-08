@@ -15,9 +15,9 @@ class HospedaIController extends Controller
      */
     public function index()
     {
-        $ofrecimientos= ofrecimiento_hospeda::all();
+        $ofrecimientos = ofrecimiento_hospeda::all();
         $hospedajes = hospeda_internacional::all();
-        return view('hospedajes.index',compact('ofrecimientos','hospedajes'));
+        return view('hospedajes.index', compact('ofrecimientos', 'hospedajes'));
     }
 
     /**
@@ -40,57 +40,57 @@ class HospedaIController extends Controller
     {
         $ofrecer = new ofrecimiento_hospeda();
         // habitacion unica
-        if(!$request->habitacion_unica ) {
-            $ofrecer->habitacion_unica= 0;
-        }else {
-            $ofrecer->habitacion_unica= $request->habitacion_unica;
+        if (!$request->habitacion_unica) {
+            $ofrecer->habitacion_unica = 0;
+        } else {
+            $ofrecer->habitacion_unica = $request->habitacion_unica;
         }
         // habitacion compartida
 
-        if(!$request->habitacion_compa) {
-            $ofrecer->habitacion_compa= 0;
-        }else {
-            $ofrecer->habitacion_compa= $request->habitacion_compa;
+        if (!$request->habitacion_compa) {
+            $ofrecer->habitacion_compa = 0;
+        } else {
+            $ofrecer->habitacion_compa = $request->habitacion_compa;
         }
         //servicios
-      
-        if(!$request->servicios ) {
-            $ofrecer->servicios= 0;
-        }else {
-            $ofrecer->servicios= $request->servicios;
+
+        if (!$request->servicios) {
+            $ofrecer->servicios = 0;
+        } else {
+            $ofrecer->servicios = $request->servicios;
         }
         // desayuno
-       
-        if(!$request->desayuno) {
-            $ofrecer->desayuno= 0;
-        }else {
-            $ofrecer->desayuno= $request->desayuno;
+
+        if (!$request->desayuno) {
+            $ofrecer->desayuno = 0;
+        } else {
+            $ofrecer->desayuno = $request->desayuno;
         }
 
         //almuerzo
 
-        if(!$request->almuerzo) {
-            $ofrecer->almuerzo= 0;
-        }else {
-            $ofrecer->almuerzo= $request->almuerzo;
+        if (!$request->almuerzo) {
+            $ofrecer->almuerzo = 0;
+        } else {
+            $ofrecer->almuerzo = $request->almuerzo;
         }
 
         //cena
 
-        if(!$request->cena) {
-            $ofrecer->cena= 0;
-        }else {
-            $ofrecer->cena= $request->cena;
+        if (!$request->cena) {
+            $ofrecer->cena = 0;
+        } else {
+            $ofrecer->cena = $request->cena;
         }
-        
+
         // otros
 
-        if(!$request->otros) {
-            $ofrecer->otros= 0;
-        }else {
-            $ofrecer->otros= $request->otros;
+        if (!$request->otros) {
+            $ofrecer->otros = 0;
+        } else {
+            $ofrecer->otros = $request->otros;
         }
-        
+
         $ofrecer->save();
 
         $talento = new hospeda_internacional();
@@ -117,8 +117,8 @@ class HospedaIController extends Controller
      */
     public function show(hospeda_internacional $hospedaje)
     {
-        $ofrecer=ofrecimiento_hospeda::findOrFail($hospedaje->idofrecimiento);
-        return view('hospedajes.show',compact('hospedaje','ofrecer'));
+        $ofrecer = ofrecimiento_hospeda::findOrFail($hospedaje->idofrecimiento);
+        return view('hospedajes.show', compact('hospedaje', 'ofrecer'));
     }
 
     /**
