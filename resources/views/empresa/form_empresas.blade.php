@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="{{url('empresa/store')}}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('empresas.store' )}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group row">
                             <div class="col-md-4 col-sm-4">
@@ -81,7 +81,7 @@
                                 <select class="form-control" name="saber_de_AIESEC">
                                     <option value="vacio" disabled selected>Seleccione una opción...</option>
                                     <option class="text-dark" value="Facebook">Facebook</option>
-                                    <option class="text-dark" value="Instragam">Instragam</option>
+                                    <option class="text-dark" value="Instragam">Instagram</option>
                                     <option class="text-dark" value="Linkedln">Linkedln</option>
                                     <option class="text-dark" value="Correo Electrónico">Correo Electrónico</option>
                                     <option class="text-dark" value="Sitio Web">Sitio Web</option>

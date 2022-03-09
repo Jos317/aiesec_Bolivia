@@ -8,8 +8,12 @@
 
 @section('content')
     <div class="card">
+        <div class="card-header">
+            <a href="{{url('talento/excel')}}" class="btn btn-sm btn-success">Exportar a Excel</a>
+        </div>
+    </div>
+    <div class="card">
         <div class="card-body">
-            
             <div class="table-responsive" style="overflow: auto">    
                 <table class="table table-striped" id="talentos" style="width:100%">
                     <thead>
@@ -53,9 +57,11 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap5.min.js"></script>
+    
     <script>
         $(document).ready(function() {
             $('#talentos').DataTable();
         });
     </script>
+    
 @stop

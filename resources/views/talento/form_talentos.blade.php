@@ -17,7 +17,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="{{url('talento/store')}}" method="POST" enctype="multipart/form-data">
+                    <form action="{{route('talentos.store')}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group row">
                             <div class="col-md-4 col-sm-4">

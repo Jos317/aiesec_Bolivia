@@ -33,16 +33,16 @@ Route::resource('users', user_controller::class)->names('users');
 //Empresa
 Route::get('form_empresas', [EmpresaController::class, 'form']);
 Route::post('empresa/store', [EmpresaController::class, 'store']);
-Route::resource('empresa', Empresacontroller::class)->names('empresa');
+Route::resource('empresas', Empresacontroller::class)->names('empresas');
 Route::get('empresa/ver/{id}', [EmpresaController::class, 'ver']);
+Route::get('empresa/excel', [EmpresaController::class, 'exportExcel']);
 
 //Talento
 Route::get('form_talentos', [TalentoController::class, 'form']);
 Route::post('talento/store', [TalentoController::class, 'store']);
-Route::resource('talento',TalentoController::class)->names('talento');
+Route::resource('talentos',TalentoController::class)->names('talentos');
 Route::get('talento/ver/{id}', [TalentoController::class, 'ver']);
-
-
+Route::get('talento/excel', [TalentoController::class, 'exportExcel']);
 
 //welcome enviar correo
 Route::resource('contactos', ContactoController::class)->names('contactos');

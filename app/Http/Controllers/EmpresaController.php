@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\empresa_ong;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\EmpresaExport;
 
 class EmpresaController extends Controller
 {
@@ -35,5 +37,9 @@ class EmpresaController extends Controller
             DB::rollBack();
             return redirect('/')->with('error', $e->getMessage());
         }
+    }
+
+    public function exportExcel() {
+        return Excel::download(new EmpresaExport, 'empresa.xlsx');
     }
 }
