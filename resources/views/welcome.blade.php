@@ -7,12 +7,18 @@
     <link rel="shortcut icon" href="{{ asset('assets/img/IconAIESEC.png') }}" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
+
+
+
     <title>AIESEC Bolivia</title>
 </head>
 
 <body>
     @extends('plantilla.logo')
     @extends('plantilla.menu')
+
+
+
 
     <main>
         <section class="home grid" id="home">
@@ -186,7 +192,17 @@
 
         </section>
 
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('.js-example-basic-multiple').select2();
+            });
+        </script>
 
+        <select class="js-example-basic-multiple" name="states[]" multiple="multiple">
+            <option value="AL">Alabama</option>
+            ...
+            <option value="WY">Wyoming</option>
+        </select>
 
     </main>
 
