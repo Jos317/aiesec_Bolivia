@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class hospeda_internacional extends Model
 {
     use HasFactory;
-    protected $table='talento_global'; 
+    protected $table='hospeda_internacional'; 
     protected $fillable = ['nombre', 'celular','correo','ciudad_reside','direccion',
     'cantidad_voluntarios','hospedar_fecha','hospedar_hora','formar_parte','saber_programa','decir_algo',
     'idofrecimiento'
@@ -22,8 +22,13 @@ class hospeda_internacional extends Model
 
     public static function store(Request $request){
         $ofrecer = new ofrecimiento_hospeda();
-        $ofrecer->ofrecer = $request->ofrecer;
-        $ofrecer->condicion = $request->condicion;
+        $ofrecer->habitacion_unica= $request->habitacion_unica;
+        $ofrecer->habitacion_compa = $request->habitacion_compa;
+        $ofrecer->servicios = $request->servicios;
+        $ofrecer->desayuno = $request->desayuno;
+        $ofrecer->almuerzo = $request->almuerzo;
+        $ofrecer->cena = $request->cena;
+        $ofrecer->otros = $request->otros;
         $ofrecer->save();
 
         $talento = new hospeda_internacional();

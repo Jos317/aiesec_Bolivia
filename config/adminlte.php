@@ -258,12 +258,17 @@ return [
             'text'       => 'Talento Global',
             'icon' =>        'fas fa-users fa-fw',
             'route'        => 'talentos.index'
-            
         ],
         [
             'text'       => 'Empresas / ONGs',
             'icon' =>        'fas fa-users fa-fw',
             'route'        => 'empresas.index'
+
+        ],
+        [
+            'text'       => 'Hospedaje Internacional',
+            'icon' =>        'fas fa-users fa-fw',
+            'route'        => 'hospedajes.index'
 
         ],
         [
@@ -278,7 +283,7 @@ return [
             'route'        => 'roles.index',
             'can'  => 'Gestionar Roles'
         ],
-        [
+        /*[
             'text' => 'change_password',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
@@ -332,11 +337,11 @@ return [
             'icon_color' => 'yellow',
             'url'        => '#',
         ],
-        [
+       [
             'text'       => 'information',
             'icon_color' => 'cyan',
             'url'        => '#',
-        ],
+        ],*/
     ],
 
     /*

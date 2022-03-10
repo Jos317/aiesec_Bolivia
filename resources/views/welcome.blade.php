@@ -4,13 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="shortcut icon" href="{{ asset('assets/img/IconAIESEC.png') }}" type="image/x-icon">
-
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
-
     <title>AIESEC Bolivia</title>
 </head>
 
@@ -49,7 +45,7 @@
                 </div>
             </div>
 
-            <img src="assets/img/Homeaiesec.jpg" alt="" class="home__img">
+            <img src="{{ asset('assets/img/Homeaiesec.jpg') }}" alt="" class="home__img">
         </section>
 
         <section class="carts section container" id="carts">
@@ -65,7 +61,7 @@
                         </p>
                     </div>
                     <div>
-                        <a href="subpages/vol.html" class="button2 button--flex button--white ">
+                        <a href="#" class="button2 button--flex button--white ">
                             Ver más
                             <i class="uil uil-arrow-from-right button_icon"></i>
                         </a>
@@ -81,7 +77,7 @@
                         </p>
                     </div>
                     <div>
-                        <a href="#" class="button2 button--flex button--white ">
+                        <a href="{{ asset('form_talentos') }}" class="button2 button--flex button--white ">
                             Ver más
                             <i class="uil uil-arrow-from-right button_icon"></i>
                         </a>
@@ -90,42 +86,6 @@
             </div>
         </section>
 
-        <section class="quality section" id="premium">
-            <div class="quality__container container">
-                <h2 class="section__title">
-                    Tenemos la mejor oferta de pasantias internacionales para ti!
-                </h2>
-
-                <div class="quality__content grid">
-                    <div class="quality__images">
-                        <img src="{{ asset('assets/img/aiesecccc.jpg') }}" alt="" class="quality__img-big">
-                        <img src="{{ asset('assets/img/ai22.jpg') }}" alt="" class="quality__img-small">
-                    </div>
-
-                    <div class="quality__data">
-                        <h1 class="quality__title">Talento Global</h1>
-                        <h2 class="quality__price">Bs 2999.99</h2>
-                        <span class="quality__special">Oferta Especial</span>
-                        <p class="quality__description">
-                            No se que poner aqui por ahi no quieren esto y envano lo programee
-                            aaaaa :) jskdskja Hola Mundo dos tres cuatro cinco seis aaaa
-                            en otra mejor me duermo asies no te olvides de subirlo a heroku.
-                        </p>
-
-                        <div class="quality__buttons">
-                            <button class="button">
-                                Postularte
-                            </button>
-
-                            <a href="#" class="quality__button">
-                                Ver más
-                                <i class="bx bx-right-arrow-alt"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <section class="blog section" id="blog">
             <div class="blog__container container">
@@ -165,6 +125,31 @@
                         </div>
                     </article>
 
+                    {{-- <article class="blog__card">
+                        <div class="blog__image">
+                            <iframe
+                                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FAIESECenBolivia%2Fposts%2F4995195870493663&show_text=true&width=500"
+                                width="450" height="300" style="border:none;overflow:hidden" scrolling="no"
+                                frameborder="0" allowfullscreen="true"
+                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            <a href="#" class="blog__button">
+                                <i class="bx bx-right-arrow-alt"></i>
+                            </a>
+                        </div>
+
+                        <div class="blog__data">
+                            <h2 class="blog__title">
+                                Valentina | Voluntaria Global
+                            </h2>
+                            <p class="blog__description">
+                                “Creyeron tanto en mí, que logré crear un estudio de fotografía y
+                                video en la empresa, nunca se había hecho ese proyecto, y con mi esfuerzo
+                                y dedicación lo logré”.
+                            </p>
+
+                        </div>
+                    </article> --}}
+
                     <article class="blog__card">
                         <div class="blog__image">
                             <img src="{{ asset('assets/img/bl1.jpg') }}" alt="" class="blog__img">
@@ -198,21 +183,17 @@
                     </article>
                 </div>
             </div>
+
         </section>
 
-        <div class="logo section">
-            <div class="logo__container container grid">
-                <img src="{{ asset('assets/img/Turisteo (1) (1).png') }}" alt="" class="logo__img">
-                <img src="{{ asset('assets/img/Blue-Logo.png') }}" alt="" class="logo__img">
-                <img src="{{ asset('assets/img/Turisteo (1) (1).png') }}" alt="" class="logo__img">
-                <img src="{{ asset('assets/img/Blue-Logo.png') }}" alt="" class="logo__img">
-                <img src="{{ asset('assets/img/Turisteo (1) (1).png') }}" alt="" class="logo__img">
-            </div>
+
 
     </main>
 
     @extends('contactos.index')
     @extends('plantilla.flechaarriba')
+    @extends('plantilla.parners')
+
 
 
 
