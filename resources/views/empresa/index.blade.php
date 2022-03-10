@@ -8,8 +8,12 @@
 
 @section('content')
     <div class="card">
+        <div class="card-header">
+            <a href="{{url('empresa/excel')}}" class="btn btn-sm btn-success">Exportar a Excel</a>
+        </div>
+    </div>
+    <div class="card">
         <div class="card-body">
-            
             <div class="table-responsive" style="overflow: auto">    
                 <table class="table table-striped" id="empresas" style="width:100%">
                     <thead>

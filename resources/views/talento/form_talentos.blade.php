@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
@@ -328,27 +328,22 @@
                             <i class="bx bx-mail-send contact__card-icon"></i>
                             <h3 class="contact__card-title">Email</h3>
                             <span class="contact__card-data">aiesec@gmail.com</span>
-
                             <a href="mailto:fernandocayolacar@gmail.com" target="_blank" class="contact__button">
                                 Escribenos <i class="bx bx-right-arrow-alt contact__button-icon"></i>
                             </a>
                         </div>
-
                         <div class="contact__card">
                             <i class="bx bxl-whatsapp contact__card-icon"></i>
                             <h3 class="contact__card-title">WhatsApp</h3>
                             <span class="contact__card-data">+591 73665052</span>
-
                             <a href="" target="_blank" class="contact__button">
                                 Escribenos <i class="bx bx-right-arrow-alt contact__button-icon"></i>
                             </a>
                         </div>
-
                         <div class="contact__card">
                             <i class="bx bxl-messenger contact__card-icon"></i>
                             <h3 class="contact__card-title">Messenger</h3>
                             <span class="contact__card-data">AIESEC Bolivia</span>
-
                             <a href="" target="_blank" class="contact__button">
                                 Escribenos <i class="bx bx-right-arrow-alt contact__button-icon"></i>
                             </a>
@@ -395,21 +390,16 @@
                                 <option class="text-dark" value="Más de 30 años">Más de 30 años</option>
                             </select>
                         </div>
-
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">Correo *</label>
                             <input type="email" name="correo" maxlength="50" placeholder="Inserta tu Correo"
                                 class="contact__form-input" required>
                         </div>
-
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">Celular *</label>
                             <input type="text" name="celular" maxlength="10" placeholder="Inserta tu Celular"
                                 class="contact__form-input" required>
                         </div>
-
-
-
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">¿En que ciudad resides? *</label>
                             <select class="contact__form-input" name="ciudad_reside">
@@ -428,7 +418,6 @@
                                 <option class="text-dark" value="Otra">Otra</option>
                             </select>
                         </div>
-
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">¿En que universidad / Instituto estudias o
                                 estudiaste? *</label>
@@ -439,7 +428,6 @@
                                 @endforeach
                             </select>
                         </div>
-
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">Grado de Estudio *</label>
                             <select class="contact__form-input" name="grado_estudio">
@@ -458,8 +446,6 @@
                                     Maestría/Doctorado</option>
                             </select>
                         </div>
-
-
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">¿Qué carrera estudias o estudiaste? *</label>
                             <select class="contact__form-input" name="carrera">
@@ -495,15 +481,12 @@
                                 <option class="text-dark" value="Otra">Otra</option>
                             </select>
                         </div>
-
-
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">Si seleccionaste "Otra" escribe tú carrera
                                 *</label>
                             <input type="text" name="otra_carrera" placeholder="Inserta Nombre de la carrera"
                                 class="contact__form-input" maxlength="50" required>
                         </div>
-
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">Nivel de Ingles *</label>
                             <select class="contact__form-input" name="nivel_ingles">
@@ -516,8 +499,6 @@
                                     en Inglés</option>
                             </select>
                         </div>
-
-
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">Experiencia Laboral *</label>
                             <select class="contact__form-input" name="experiencia">
@@ -535,7 +516,6 @@
                                     profesional de más de 1 año</option>
                             </select>
                         </div>
-
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">¿En qué área te gustaría desarrollarte? * </label>
                             <select class="contact__form-input" name="area_desarrollo">
@@ -557,8 +537,6 @@
                                 <option class="text-dark" value="Otro">Otro</option>
                             </select>
                         </div>
-
-
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">¿Porque desea tomar una pasantía internacional? *
                             </label>
@@ -575,7 +553,6 @@
                                     conocer otros países</option>
                             </select>
                         </div>
-
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">¿Cual de los programas te interesa? *
                             </label>
@@ -589,7 +566,6 @@
                                     | 6 a 18 meses</option>
                             </select>
                         </div>
-
                         <p>¿Cómo te enteraste de nuestro programa </p>
                         <br>
                         <div class="contact__form-div">
@@ -614,7 +590,6 @@
                                 <option class="text-dark" value="Otros">Otros</option>
                             </select>
                         </div>
-
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">¿Por cual medio deseas ser contactado? *
                             </label>
@@ -627,7 +602,6 @@
                                 <option class="text-dark" value="Otro">Otro</option>
                             </select>
                         </div>
-
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">Describa los documentos a adjuntar *</label>
                             <input type="text" name="describir_documento" placeholder="Describa.."
@@ -641,24 +615,17 @@
                             <label for="" class="contact__form-tag">adjuntar Archivo</label>
                             <input name="documentos" class="contact__form-input" type="file" accept=".zip,.rar,.7zip">
                         </div>
-
                         <button type="submit" class="button">Registrarme</button>
                     </form>
                 </div>
             </div>
         </section>
-
     </main>
     @extends('contactos.index')
     @extends('plantilla.flechaarriba')
     @extends('plantilla.parners')
-
-
-
-
     <script src="{{ asset('assets/js/mixitup.min.js') }}"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <!--<script src="{{ asset('assets/js/main.js') }}"></script>-->
 </body>
-
 </html>

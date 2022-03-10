@@ -257,13 +257,12 @@ return [
         [
             'text'       => 'Talento Global',
             'icon' =>        'fas fa-users fa-fw',
-            'route'        => 'talento.index'
-
+            'route'        => 'talentos.index'
         ],
         [
             'text'       => 'Empresas / ONGs',
             'icon' =>        'fas fa-users fa-fw',
-            'route'        => 'empresa.index'
+            'route'        => 'empresas.index'
 
         ],
         [

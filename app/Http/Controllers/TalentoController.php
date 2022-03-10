@@ -6,6 +6,8 @@ use App\Models\talento_global;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\TalentoExport;
 
 class TalentoController extends Controller
 {
@@ -39,5 +41,9 @@ class TalentoController extends Controller
             DB::rollBack();
             return redirect('/')->with('error', $e->getMessage());
         }
+    }
+
+    public function exportExcel() {
+        return Excel::download(new TalentoExport, 'talento.xlsx');
     }
 }
