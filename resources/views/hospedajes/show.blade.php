@@ -30,7 +30,7 @@
                         <div class="form-group row">
                             <div class="col-md-4 col-sm-4" style="padding-bottom: 1rem;">
                                 <label class="text-info">Nombre Completo *:</label>
-                                <input class="form-control" maxlength="50" type="text" style="padding-bottom: 1rem;" value="{{ $hospedaje->nombre }}"
+                                <input class="form-control" maxlength="50" type="text" value="{{ $hospedaje->nombre }}"
                                 disabled>
                             </div>
 
@@ -48,7 +48,8 @@
                                 <input class="form-control" type="email" value="{{ $hospedaje->correo }}" disabled>
                             </div>
 
-                      
+                        </div>
+                        <div class="form-group row">
                             <div class="col-md-4 col-sm-4" style="padding-bottom: 1rem;">
                                 <label class="text-info">Dirección donde vives *: </label>
                                 <input class="form-control" maxlength="50" type="text"
@@ -70,99 +71,111 @@
                                 <input class="form-control" type="text" value="{{ $hospedaje->hospedar_fecha }}"
                                     disabled>
                             </div>
-                          
+                        </div>
+                        <div class="row">
                             <div class="col-md-4 col-sm-4" style="padding-bottom: 1rem;">
-                                <label class="text-info">Hora: </label>
-                                <input class="form-control" type="text" value="{{ $hospedaje->hospedar_hora }}"
-                                    disabled>
+                                <div class="form-group">
+                                    <label class="text-info">Hora: </label>
+                                    <input class="form-control" type="text" value="{{ $hospedaje->hospedar_hora }}"
+                                        disabled>
+                                </div>
                             </div>
 
 
                             <div class="col-md-4 col-sm-4" style="padding-bottom: 1rem;">
-                                <label class="text-info">¿Qué puedes ofrecerle al voluntario? *: </label>
-                                @if ($ofrecer->habitacion_unica > 0)
-                                <div class="form-check">
-                                    <label class="form-check-label" for="check1">
+                                <div class="form-group">
+                                    <label class="text-info">¿Qué puedes ofrecerle al voluntario? *: </label>
+                                    @if ($ofrecer->habitacion_unica > 0)
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="check1">
+                                            
+                                                <input type="checkbox" checked disabled> Habitación única
                                         
-                                            <input type="checkbox" checked disabled> Habitación única
-                                       
-                                    </label>
+                                        </label>
+                                    </div>
+                                    @endif
+                                    @if ($ofrecer->habitacion_compa > 0)
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="check1">
+                                            
+                                                <input type="checkbox" checked disabled> Habitación compartida
+                                            
+                                        </label>
+                                    </div>
+                                    @endif
+                                    @if ($ofrecer->servicios > 0)
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="check1">
+                                            
+                                                <input type="checkbox" checked disabled> Servicios (Agua, luz, internet, etc.)
+                                            
+                                        </label>
+                                    </div>
+                                    @endif 
+                                    @if ($ofrecer->desayuno > 0)
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="check1">
+                                            
+                                                <input type="checkbox" checked disabled> Desayuno
+                                            
+                                        </label>
+                                    </div>
+                                    @endif
+                                    @if ($ofrecer->almuerzo > 0)
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="check1">
+                                            
+                                                <input type="checkbox" checked disabled> Almuerzo
+                                            
+                                        </label>
+                                    </div>
+                                    @endif
+                                    @if ($ofrecer->cena > 0)
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="check1">
+                                            
+                                                <input type="checkbox" checked disabled> Cena
+                                            
+                                        </label>
+                                    </div>
+                                    @endif
+                                    @if ($ofrecer->otros > 0)
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="check1">
+                                            
+                                                <input type="checkbox" checked disabled> Otros
+                                            
+                                        </label>
+                                    </div>
+                                    @endif
                                 </div>
-                                @endif
-                                @if ($ofrecer->habitacion_compa > 0)
-                                <div class="form-check">
-                                    <label class="form-check-label" for="check1">
-                                        
-                                            <input type="checkbox" checked disabled> Habitación compartida
-                                        
-                                    </label>
-                                </div>
-                                @endif
-                                @if ($ofrecer->servicios > 0)
-                                <div class="form-check">
-                                    <label class="form-check-label" for="check1">
-                                        
-                                            <input type="checkbox" checked disabled> Servicios (Agua, luz, internet, etc.)
-                                          
-                                    </label>
-                                </div>
-                                @endif 
-                                @if ($ofrecer->desayuno > 0)
-                                <div class="form-check">
-                                    <label class="form-check-label" for="check1">
-                                        
-                                            <input type="checkbox" checked disabled> Desayuno
-                                        
-                                    </label>
-                                </div>
-                                @endif
-                                @if ($ofrecer->almuerzo > 0)
-                                <div class="form-check">
-                                    <label class="form-check-label" for="check1">
-                                        
-                                            <input type="checkbox" checked disabled> Almuerzo
-                                        
-                                    </label>
-                                </div>
-                                @endif
-                                @if ($ofrecer->cena > 0)
-                                <div class="form-check">
-                                    <label class="form-check-label" for="check1">
-                                        
-                                            <input type="checkbox" checked disabled> Cena
-                                        
-                                    </label>
-                                </div>
-                                @endif
-                                @if ($ofrecer->otros > 0)
-                                <div class="form-check">
-                                    <label class="form-check-label" for="check1">
-                                        
-                                            <input type="checkbox" checked disabled> Otros
-                                        
-                                    </label>
-                                </div>
-                                @endif
                             </div>
                             <div class="col-md-4 col-sm-4" style="padding-bottom: 1rem;">
-                                <label class="text-info">¿Cómo te enteraste del programa Familia Global? *: </label>
-                                <input class="form-control" type="text" value="{{ $hospedaje->saber_programa }}"
-                                    disabled>
+                                <div class="form-group">
+                                    <label class="text-info">¿Cómo te enteraste del programa Familia Global? *: </label>
+                                    <input class="form-control" type="text" value="{{ $hospedaje->saber_programa }}"
+                                        disabled>
+                                </div>
                             </div>
-
-                            <div class="col-md-4 col-sm-4" style="padding-bottom: 1rem;">
-                                <label class="text-info">¿Por qué quieres formar parte del programa Familia Global? *:
-                                </label>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6" style="padding-bottom: 1rem;">
+                                <div class="form-group">
+                                    <label class="text-info">¿Por qué quieres formar parte del programa Familia Global? *:
+                                    </label>
+                                    
+                                    <textarea rows="5" class="form-control"
+                                        disabled>{{ $hospedaje->formar_parte }}</textarea>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <label class="text-info">¿Tienes algo para decirnos? </label>
                                 
-                                <textarea style="width: 285px" cols="50" rows="5"
-                                    disabled>{{ $hospedaje->formar_parte }}</textarea>
-                            </div>
-                           
-                            <div class="col-md-4 col-sm-4">
-                                <label class="text-info" style="padding-bottom: 1.5rem;">¿Tienes algo para decirnos? </label>
-                               
-                                <textarea style="width: 285px" cols="50" rows="5"
-                                    disabled>{{ $hospedaje->decir_algo }}</textarea>
+                                    <textarea rows="5" class="form-control"
+                                        disabled>{{ $hospedaje->decir_algo }}</textarea>
+                                </div>
                             </div>
                         </div>
                         <br>

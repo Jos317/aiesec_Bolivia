@@ -16,19 +16,13 @@
 <div class="card">
     <div class="card-body">
         <div class="row">
-            <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                 <div class="form-group">
                     <label for="name">Nombre de la empresa / ONGs: </label>
                     <input type="text" name="name" class="form-control" value="{{$empresa->nombre_empresa}}" disabled>
                 </div>
             </div>
-            <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                <div class="form-group">
-                    <label for="name">Nombre del representante: </label>
-                    <input type="text" name="name" class="form-control" value="{{$empresa->nombre_representante}}" disabled>
-                </div>
-            </div>
-            <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                 <div class="form-group">
                     <label for="name">Nombre del representante: </label>
                     <input type="text" name="name" class="form-control" value="{{$empresa->nombre_representante}}" disabled>
@@ -37,13 +31,13 @@
         </div>
         <br>
         <div class="row">
-            <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                 <div class="form-group">
                     <label for="name">Cargo del representante: </label>
                     <input type="text" name="name" class="form-control" value="{{$empresa->cargo_representante}}" readonly>
                 </div>
             </div>
-            <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                 <div class="form-group">
                     <label for="name">Página Web de la Institución / Facebook:  </label>
                     @if (strlen($empresa->pagina_web)==0)
@@ -56,49 +50,52 @@
         </div>
         <br>
         <div class="row">
-            <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                 <div class="form-group">
                     <label for="name">Celular de la Institución: </label>
                     <input type="text" name="name" class="form-control" value="{{$empresa->celular}}" disabled>
                 </div>
             </div>
-            <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                 <div class="form-group">
                     <label for="name">Teléfono de la Institución: </label>
                     <input type="text" name="name" class="form-control" value="{{$empresa->telefono}}" disabled>
                 </div>
             </div>
+        </div>
+        <br>
+        <div class="row">
             <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                 <div class="form-group">
                     <label for="name">Email del representante de la Institución: </label>
                     <input type="text" name="name" class="form-control" value="{{$empresa->correo_representante}}" disabled>
                 </div>
             </div>
-        </div>
-        <br>
-        <div class="row">
             <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                 <div class="form-group">
                     <label for="name">Email de la Institución:  </label>
                     <input type="text" name="name" class="form-control" value="{{$empresa->correo_empresa}}" disabled>
                 </div>
             </div>
+        </div>
+        <br>
+        <div class="row">
             <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                 <div class="form-group">
                     <label for="name">¿En qué departamento se encuentra la empresa/ONG?: </label>
                     <input type="text" name="name" class="form-control" value="{{$empresa->departamento}}" disabled>
                 </div>
             </div>
-        </div>
-        <br>
-        <div class="row">
             <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                 <div class="form-group">
                     <label for="name">Dirección de la empresa/ONG: </label>
                     <input type="text" name="name" class="form-control" value="{{$empresa->direccion}}" disabled>
                 </div>
             </div>
-            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <div class="form-group">
                     <label for="name">¿A qué se dedica la empresa/ONG?: </label>
                     <textarea class="form-control" name="name" rows="3" disabled>{{$empresa->dedicacion}}</textarea>

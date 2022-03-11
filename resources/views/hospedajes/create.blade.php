@@ -158,6 +158,7 @@
                         </div>
 
                         <div class="contact__form-div">
+                            <label for="" class="contact__form-tag">¿En qué ciudad te encuentras? *:</label>
                             <select class="contact__form-input" name="ciudad_reside">
                                 <option value="vacio" disabled selected>Seleccione una opción...</option>
                                 <option class="text-dark" value="La Paz">La Paz</option>

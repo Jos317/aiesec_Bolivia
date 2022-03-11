@@ -1,7 +1,8 @@
 <table>
     <thead>
-    <tr><th colspan="17"><strong>Empresas / ONGs</strong></th></tr>
+    <tr><th colspan="14"><strong>Empresas / ONGs</strong></th></tr>
     <tr>
+        <th><strong>Id</strong></th>
         <th><strong>Nombre de la empresa</strong></th>
         <th><strong>Representante de la empresa</strong></th>
         <th><strong>Cargo del representante</strong></th>
@@ -20,6 +21,7 @@
     <tbody>
     @foreach($empresas as $empresa)
         <tr>
+            <td>{{ $empresa->id }}</td>
             <td>{{ $empresa->nombre_empresa }}</td>
             <td>{{ $empresa->nombre_representante }}</td>
             <td>{{ $empresa->cargo_representante }}</td>
@@ -32,7 +34,11 @@
             <td>{{ $empresa->direccion }}</td>
             <td>{{ $empresa->dedicacion}}</td>
             <td>{{ $empresa->saber_de_AIESEC }}</td>
-            <td>{{ $empresa->nombre_amigo }}</td>
+            @if (strlen($empresa->nombre_amigo)==0)
+                <td>No seleccionó Nombre/amigo</td>
+            @else
+                <td>{{ $empresa->nombre_amigo }}</td>
+            @endif
         </tr>
     @endforeach
     </tbody>

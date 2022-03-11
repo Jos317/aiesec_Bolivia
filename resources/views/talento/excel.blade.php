@@ -1,7 +1,8 @@
 <table>
     <thead>
-    <tr><th colspan="17"><strong>Talento Global</strong></th></tr>
+    <tr><th colspan="18"><strong>Talento Global</strong></th></tr>
     <tr>
+        <th><strong>Id</strong></th>
         <th><strong>Nombres</strong></th>
         <th><strong>Apellidos</strong></th>
         <th><strong>Edad</strong></th>
@@ -24,6 +25,7 @@
     <tbody>
     @foreach($talentos as $talento)
         <tr>
+            <td>{{ $talento->id }}</td>
             <td>{{ $talento->nombres }}</td>
             <td>{{ $talento->apellidos }}</td>
             <td>{{ $talento->edad }}</td>
@@ -33,7 +35,11 @@
             <td>{{ $universidades[$talento->universidad - 1]->name}}</td>
             <td>{{ $talento->grado_estudio }}</td>
             <td>{{ $talento->carrera }}</td>
-            <td>{{ $talento->otra_carrera}}</td>
+            @if (strlen($talento->otra_carrera)==0)
+                <td>No seleccionó Otra carrera</td>
+            @else
+                <td>{{ $talento->otra_carrera}}</td>
+            @endif
             <td>{{ $talento->nivel_ingles}}</td>
             <td>{{ $talento->experiencia}}</td>
             <td>{{ $talento->area_desarrollo}}</td>
