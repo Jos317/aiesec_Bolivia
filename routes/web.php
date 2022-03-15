@@ -27,28 +27,43 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::resource('roles', role_controller::class)->names('roles');
-Route::resource('users', user_controller::class)->names('users');
-
 //Empresa
 Route::get('form_empresas', [EmpresaController::class, 'form']);
 Route::post('empresa/store', [EmpresaController::class, 'store']);
 Route::resource('empresas', Empresacontroller::class)->names('empresas');
-Route::get('empresa/ver/{id}', [EmpresaController::class, 'ver']);
-Route::get('empresa/excel', [EmpresaController::class, 'exportExcel']);
 
 //Talento
 Route::get('form_talentos', [TalentoController::class, 'form']);
 Route::post('talento/store', [TalentoController::class, 'store']);
 Route::resource('talentos',TalentoController::class)->names('talentos');
-Route::get('talento/ver/{id}', [TalentoController::class, 'ver']);
-Route::get('talento/excel', [TalentoController::class, 'exportExcel']);
+
+//hospedaje
+Route::resource('hospedajes', HospedaIController::class)->names('hospedajes');
 
 //welcome enviar correo
 Route::resource('contactos', ContactoController::class)->names('contactos');
 Route::resource('mensajes', MensajeController::class)->names('mensajes');
 
+Route::middleware(['auth'])->group(function () {
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::resource('roles', role_controller::class)->names('roles');
+    Route::resource('users', user_controller::class)->names('users');
 
-//hospedaje
-Route::resource('hospedajes', HospedaIController::class)->names('hospedajes');
+    //Empresa
+    Route::resource('empresas', Empresacontroller::class)->names('empresas');
+    Route::get('empresa/ver/{id}', [EmpresaController::class, 'ver']);
+    Route::get('empresa/excel', [EmpresaController::class, 'exportExcel']);
+
+    //Talento
+    Route::resource('talentos',TalentoController::class)->names('talentos');
+    Route::get('talento/ver/{id}', [TalentoController::class, 'ver']);
+    Route::get('talento/excel', [TalentoController::class, 'exportExcel']);
+
+    //welcome enviar correo
+    Route::resource('contactos', ContactoController::class)->names('contactos');
+    Route::resource('mensajes', MensajeController::class)->names('mensajes');
+
+    //hospedaje
+    Route::resource('hospedajes', HospedaIController::class)->names('hospedajes');
+    Route::get('hospedaje/excel', [HospedaIController::class, 'exportExcel']);
+});

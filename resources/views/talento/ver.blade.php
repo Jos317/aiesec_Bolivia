@@ -16,22 +16,16 @@
 <div class="card">
     <div class="card-body">
         <div class="row">
-            <div class="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                 <div class="form-group">
                     <label for="name">Nombres: </label>
                     <input type="text" name="name" class="form-control" value="{{$talento->nombres}}" disabled>
                 </div>
             </div>
-            <div class="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                 <div class="form-group">
                     <label for="name">Apellidos: </label>
                     <input type="text" name="name" class="form-control" value="{{$talento->apellidos}}" disabled>
-                </div>
-            </div>
-            <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
-                <div class="form-group">
-                    <label for="name">Edad: </label>
-                    <input type="text" name="name" class="form-control" value="{{$talento->edad}}" disabled>
                 </div>
             </div>
         </div>
@@ -43,13 +37,22 @@
                     <input type="email" name="name" class="form-control" value="{{$talento->correo}}" disabled>
                 </div>
             </div>
-            <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <div class="form-group">
+                    <label for="name">Edad: </label>
+                    <input type="text" name="name" class="form-control" value="{{$talento->edad}}" disabled>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                 <div class="form-group">
                     <label for="name">Celular: </label>
                     <input type="text" name="name" class="form-control" value="{{$talento->celular}}" disabled>
                 </div>
             </div>
-            <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                 <div class="form-group">
                     <label for="name">¿En que ciudad resides?: </label>
                     <input type="text" name="name" class="form-control" value="{{$talento->ciudad_reside}}" disabled>
@@ -58,28 +61,31 @@
         </div>
         <br>
         <div class="row">
-            <div class="col-7 col-sm-7 col-md-7 col-lg-7 col-xl-7">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <div class="form-group">
                     <label for="name">¿En que universidad / Instituto estudias o estudiaste?: </label>
                     <input type="text" name="name" class="form-control" value="{{$universidades[$talento->universidad - 1]->name}}" disabled>
                 </div>
             </div>
-            <div class="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5">
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                 <div class="form-group">
                     <label for="name">Grado de Estudio:  </label>
                     <input type="text" name="name" class="form-control" value="{{$talento->grado_estudio}}" disabled>
                 </div>
             </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                 <div class="form-group">
                     <label for="name">¿Qué carrera estudias o estudiaste?: </label>
                     <input type="text" name="name" class="form-control" value="{{$talento->carrera}}" disabled>
                 </div>
             </div>
-            <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                 <div class="form-group">
                     <label for="name">Nombre de la carrera si seleccionó Otro: </label>
                     @if (strlen($talento->otra_carrera)==0)
@@ -89,7 +95,7 @@
                     @endif
                 </div>
             </div>
-            <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                 <div class="form-group">
                     <label for="name">Nivel de Ingles: </label>
                     <input type="text" name="name" class="form-control" value="{{$talento->nivel_ingles}}" disabled>
@@ -145,7 +151,7 @@
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
             <div class="form-group">
                 <label for="name">Describa los documentos a adjuntar: </label>
-                <input type="text" name="name" class="form-control" value="{{$talento->describir_documento}}" disabled>
+                <textarea class="form-control" name="name" rows="2" disabled>{{$talento->describir_documento}}</textarea>
             </div>
         </div>
         <br>

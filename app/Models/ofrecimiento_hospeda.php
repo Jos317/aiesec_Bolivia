@@ -12,8 +12,8 @@ class ofrecimiento_hospeda extends Model
     protected $fillable = ['habitacion_unica', 'habitacion_compa','servicios','desayuno','almuerzo','cena','otros'];
     public $timestamps = false;
     
-    public function ofrecimiento_hospeda()
+    public function hospeda_internacional()
     {
-        return $this->hasOne('App\Models\ofrecimiento_hospeda','idofrecimiento','id');
+        return $this->hasOne('App\Models\hospeda_internacional','idofrecimiento','id');
     }
 }

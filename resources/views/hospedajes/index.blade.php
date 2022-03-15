@@ -8,6 +8,11 @@
 
 @section('content')
     <div class="card">
+        <div class="card-header">
+            <a href="{{url('hospedaje/excel')}}" class="btn btn-sm btn-success">Exportar a Excel</a>
+        </div>
+    </div>
+    <div class="card">
         <div class="card-body">
             {{-- <a href="{{ route('hospedajes.create') }}" class="btn btn-primary btn-sm">CREAR (TEMPORAL)<a>
                 <br>
