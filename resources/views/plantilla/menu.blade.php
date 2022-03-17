@@ -7,19 +7,35 @@
         <div class="nav__menu" id="nav-menu">
             <ul class="nav__list">
                 <li class="nav__item">
-                    <a href="{{ url('/') }}" class="nav__link active-link">Nosotros</a>
+                    <a href="{{ url('/') }}" class="nav__link ">Nosotros</a>
                 </li>
 
                 <li class="nav__item">
-                    <a href="{{ asset('form_talentos') }}" class="nav__link">Jóvenes</a>
+                    <a href="#" class="nav__link">Jóvenes</a>
+                    <ul class="children">
+                        <li class="sub__child">
+                            <a href="{{ asset('form_talentos') }}" class="nav2__link">Talento Global</a>
+                        </li>
+                        <li class="sub__child">
+                            <a href="./subpages/index.html" class="nav2__link">Voluntariado Global</a>
+                        </li>
+                    </ul>
                 </li>
 
                 <li class="nav__item">
                     <a href="{{ asset('form_empresas') }}" class="nav__link">Organizaciones</a>
+                    <ul class="children">
+                        <li class="sub__child">
+                            <a href="./subpages/ONGs.html" class="nav2__link">Proyectos para ONGs</a>
+                        </li>
+                        <li class="sub__child">
+                            <a href="./subpages/Organi.html" class="nav2__link">Talento Global - Empresas</a>
+                        </li>
+                    </ul>
                 </li>
 
                 <li class="nav__item">
-                    <a href="{{ route('hospedajes.create') }}" class="nav__link">Hospeda</a>
+                    <a href="{{ asset('form_hospedajes') }}" class="nav__link">Hospeda</a>
                 </li>
 
                 <li class="nav__item">

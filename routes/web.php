@@ -35,9 +35,11 @@ Route::resource('empresas', Empresacontroller::class)->names('empresas');
 //Talento
 Route::get('form_talentos', [TalentoController::class, 'form']);
 Route::post('talento/store', [TalentoController::class, 'store']);
-Route::resource('talentos',TalentoController::class)->names('talentos');
+Route::resource('talentos', TalentoController::class)->names('talentos');
 
 //hospedaje
+Route::get('form_hospedajes', [HospedaIController::class, 'form']);
+Route::post('hospedaje/store', [HospedaIController::class, 'store']);
 Route::resource('hospedajes', HospedaIController::class)->names('hospedajes');
 
 //welcome enviar correo
@@ -55,7 +57,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('empresa/excel', [EmpresaController::class, 'exportExcel']);
 
     //Talento
-    Route::resource('talentos',TalentoController::class)->names('talentos');
+    Route::resource('talentos', TalentoController::class)->names('talentos');
     Route::get('talento/ver/{id}', [TalentoController::class, 'ver']);
     Route::get('talento/excel', [TalentoController::class, 'exportExcel']);
 

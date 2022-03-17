@@ -28,7 +28,7 @@ class HospedaIController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function form()
     {
         return view('hospedajes.create');
     }
@@ -118,8 +118,6 @@ class HospedaIController extends Controller
             DB::rollBack();
             return redirect('/')->with('error', $e->getMessage());
         }
-        
-        
     }
 
     /**
@@ -168,7 +166,8 @@ class HospedaIController extends Controller
         //
     }
 
-    public function exportExcel() {
+    public function exportExcel()
+    {
         return Excel::download(new HospedaExport, 'hospeda_internacional.xlsx');
     }
 }

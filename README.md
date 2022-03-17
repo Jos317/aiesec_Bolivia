@@ -10,6 +10,7 @@
 -   php artisan migrate:fresh --seed
 -   php artisan ui bootstrap --auth
 -   composer require maatwebsite/excel
+-   php artisan storage:link
 -   npm install
 -   npm run dev
 -   php artisan serve

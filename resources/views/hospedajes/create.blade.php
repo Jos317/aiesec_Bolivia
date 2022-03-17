@@ -22,7 +22,7 @@
 
 
                     <a href="#">
-                        <img src="../assets/img/FG-Logo-37.png" alt="" class="home__scroll">
+                        <img src="{{ asset('assets/img/FG-Logo-37.png') }}" alt="" class="home__scroll">
                     </a>
 
                 </div>
@@ -74,7 +74,8 @@
 
                 <div class="quality__content grid">
                     <div class="quality__images">
-                        <img src="../assets/img/Requisitos_01.png" alt="" class="quality__img-big">
+
+                        <img src="{{ asset('assets/img/Requisitos_01.png') }}" alt="" class="quality__img-big">
                     </div>
 
                     <div class="quality__data">
@@ -134,7 +135,7 @@
             <div class="contact__container container grid">
                 <div class="contact__content">
                     <h3 class="contact__title">Escribe tus datos!</h3>
-                    <form action="{{ route('hospedajes.store') }}" class="contact__form" method="POST"
+                    <form action="{{ url('hospedaje/store') }}" class="contact__form" method="POST"
                         enctype="multipart/form-data">
                         @csrf
 
@@ -260,8 +261,7 @@
                                 *:</label>
                             <br>
                             <br>
-                            <textarea class="contact__form-input" name="formar_parte" cols="50" rows="7"
-                                placeholder="Escribir"></textarea>
+                            <textarea class="contact__form-input" name="formar_parte" cols="50" rows="7" placeholder="Escribir"></textarea>
                         </div>
 
 
@@ -288,8 +288,7 @@
                             <label for="" class="contact__form-tag">¿Tienes algo para decirnos?</label>
                             <br>
                             <br>
-                            <textarea class="contact__form-input" name="decir_algo" cols="50" rows="7"
-                                placeholder="Escribir"></textarea>
+                            <textarea class="contact__form-input" name="decir_algo" cols="50" rows="7" placeholder="Escribir"></textarea>
                         </div>
 
                         <button class="button">Registrarme</button>

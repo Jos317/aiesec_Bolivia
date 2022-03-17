@@ -317,14 +317,51 @@
         <!--=============== CONTACT ===============-->
         <section class="contact section" id="contact">
             <div class="container">
-                <h2 class="section__title">Pasantías Glogales</h2>
+                <h2 class="section__title">Pasantías
+                    Glogales</h2>
             </div>
-            <h3 class="contact__title">Escribe tus datos!</h3>
-            <form action="{{ url('talento/store') }}" class="contact__form" method="POST"
-                enctype="multipart/form-data">
-                @csrf
-                <div class="contact__container container grid">
-                    <div class="contact__content">
+            <div class="contact__container container grid">
+                <!--<div class="contact__content">
+                    <h3 class="contact__title">Tienes dudas?</h3>
+                    <div class="contact__info">
+                        <div class="contact__card">
+                            <i class="bx bx-mail-send contact__card-icon"></i>
+                            <h3 class="contact__card-title">Email</h3>
+                            <span class="contact__card-data">aiesec@gmail.com</span>
+
+                            <a href="mailto:fernandocayolacar@gmail.com" target="_blank" class="contact__button">
+                                Escribenos <i class="bx bx-right-arrow-alt contact__button-icon"></i>
+                            </a>
+                        </div>
+
+                        <div class="contact__card">
+                            <i class="bx bxl-whatsapp contact__card-icon"></i>
+                            <h3 class="contact__card-title">WhatsApp</h3>
+                            <span class="contact__card-data">+591 73665052</span>
+
+                            <a href="" target="_blank" class="contact__button">
+                                Escribenos <i class="bx bx-right-arrow-alt contact__button-icon"></i>
+                            </a>
+                        </div>
+
+                        <div class="contact__card">
+                            <i class="bx bxl-messenger contact__card-icon"></i>
+                            <h3 class="contact__card-title">Messenger</h3>
+                            <span class="contact__card-data">AIESEC Bolivia</span>
+
+                            <a href="" target="_blank" class="contact__button">
+                                Escribenos <i class="bx bx-right-arrow-alt contact__button-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>-->
+
+                <div class="contact__content">
+                    <h3 class="contact__title">Escribe tus datos!</h3>
+                    <form action="{{ url('talento/store') }}" class="contact__form" method="POST"
+                        enctype="multipart/form-data">
+                        @csrf
+
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">Nombres *</label>
                             <input type="text" name="nombres" placeholder="Inserta tus Nombres"
@@ -341,8 +378,7 @@
                             <label for="" class="contact__form-tag">Edad *</label>
                             <select class="contact__form-input" name="edad">
                                 <option value="vacio" disabled selected>Seleccione una opción...</option>
-                                <option class="text-dark" value="Menos de 18 años">Menos de 18 años
-                                </option>
+                                <option class="text-dark" value="Menos de 18 años">Menos de 18 años</option>
                                 <option class="text-dark" value="18">18</option>
                                 <option class="text-dark" value="19">19</option>
                                 <option class="text-dark" value="20">20</option>
@@ -409,11 +445,9 @@
                             <select class="contact__form-input" name="grado_estudio">
                                 <option value="vacio" disabled selected>Seleccione una opción...</option>
                                 <option class="text-dark" value="Bachiller">Bachiller</option>
-                                <option class="text-dark" value="Universidad 1er. a 3er. semestre">
-                                    Universidad
+                                <option class="text-dark" value="Universidad 1er. a 3er. semestre">Universidad
                                     1er. a 3er. semestre</option>
-                                <option class="text-dark" value="Universidad 4to. a 6to. semestre">
-                                    Universidad
+                                <option class="text-dark" value="Universidad 4to. a 6to. semestre">Universidad
                                     4to. a 6to. semestre</option>
                                 <option class="text-dark" value="Universidad 7mo. a 10mo. semestre">
                                     Universidad
@@ -427,12 +461,10 @@
 
 
                         <div class="contact__form-div">
-                            <label for="" class="contact__form-tag">¿Qué carrera estudias o estudiaste?
-                                *</label>
+                            <label for="" class="contact__form-tag">¿Qué carrera estudias o estudiaste? *</label>
                             <select class="contact__form-input" name="carrera">
                                 <option value="vacio" disabled selected>Seleccione una opción...</option>
-                                <option class="text-dark" value="Administración de Empresas">
-                                    Administración de
+                                <option class="text-dark" value="Administración de Empresas">Administración de
                                     Empresas</option>
                                 <option class="text-dark" value="Ciencias de la Educación">Ciencias de la
                                     Educación</option>
@@ -445,14 +477,11 @@
                                 <option class="text-dark" value="Turismo y Hotelería">Turismo y Hotelería
                                 </option>
                                 <option class="text-dark" value="Idiomas">Idiomas</option>
-                                <option class="text-dark" value="Ingeniería Comercial">Ingeniería
-                                    Comercial
+                                <option class="text-dark" value="Ingeniería Comercial">Ingeniería Comercial
                                 </option>
-                                <option class="text-dark" value="Ingeniería Financiera">Ingeniería
-                                    Financiera
+                                <option class="text-dark" value="Ingeniería Financiera">Ingeniería Financiera
                                 </option>
-                                <option class="text-dark" value="Ingeniería Industrial">Ingeniería
-                                    Industrial
+                                <option class="text-dark" value="Ingeniería Industrial">Ingeniería Industrial
                                 </option>
                                 <option class="text-dark" value="Ingeniería de Sistemas y Computación">
                                     Ingeniería de Sistemas y Computación</option>
@@ -469,15 +498,12 @@
 
 
                         <div class="contact__form-div">
-                            <label for="" class="contact__form-tag">Si seleccionaste "Otra escribe tú carrera
+                            <label for="" class="contact__form-tag">Si seleccionaste "Otra" escribe tú carrera
                             </label>
                             <input type="text" name="otra_carrera" placeholder="Inserta Nombre de la carrera"
                                 class="contact__form-input" maxlength="50">
                         </div>
-                    </div>
 
-
-                    <div class="contact__content">
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">Nivel de Ingles *</label>
                             <select class="contact__form-input" name="nivel_ingles">
@@ -486,8 +512,7 @@
                                 <option class="text-dark" value="Intermedio (B1-B2)">Intermedio (B1-B2)
                                 </option>
                                 <option class="text-dark" value="Avanzado (C1-C2)">Avanzado (C1-C2)</option>
-                                <option class="text-dark" value="No tengo estudios en Inglés">No tengo
-                                    estudios
+                                <option class="text-dark" value="No tengo estudios en Inglés">No tengo estudios
                                     en Inglés</option>
                             </select>
                         </div>
@@ -503,8 +528,7 @@
                                     Tengo experiencia
                                     profesional menor a 6 meses</option>
                                 <option class="text-dark"
-                                    value="Tengo experiencia profesional de 6 meses a 1 año">
-                                    Tengo experiencia
+                                    value="Tengo experiencia profesional de 6 meses a 1 año">Tengo experiencia
                                     profesional de 6 meses a 1 año</option>
                                 <option class="text-dark" value="Tengo experiencia profesional de más de 1 año">
                                     Tengo experiencia
@@ -513,8 +537,7 @@
                         </div>
 
                         <div class="contact__form-div">
-                            <label for="" class="contact__form-tag">¿En qué área te gustaría desarrollarte? *
-                            </label>
+                            <label for="" class="contact__form-tag">¿En qué área te gustaría desarrollarte? * </label>
                             <select class="contact__form-input" name="area_desarrollo">
                                 <option value="vacio" disabled selected>Seleccione una opción...</option>
                                 <option class="text-dark" value="Administración de Empresas">Administración de
@@ -537,8 +560,7 @@
 
 
                         <div class="contact__form-div">
-                            <label for="" class="contact__form-tag">¿Porque desea tomar una pasantía internacional?
-                                *
+                            <label for="" class="contact__form-tag">¿Porque desea tomar una pasantía internacional? *
                             </label>
                             <select class="contact__form-input" name="pasantia_internacional">
                                 <option value="vacio" disabled selected>Seleccione una opción...</option>
@@ -612,42 +634,18 @@
                                 class="contact__form-input" maxlength="200" required>
                         </div>
                         <p>En caso de adicionar tu CV y/o otro documento
-                            <br>
-                            (Certificados, Recomendaciones, Etc.), <br>
-                            por favor un
-                            <br>archivo general y en extensión
-                            zip *
-                        </p>
+                            (Certificados, Recomendaciones, Etc.), por favor un archivo general y en extensión
+                            zip *</p>
                         <br>
-                        <style>
-                            .image-upload>input {
-                                display: none;
-                            }
-
-                            .image-upload i {
-                                width: 100%;
-                                height: 100%;
-                                cursor: pointer;
-                                text-align: center;
-                            }
-                            }
-
-                        </style>
-
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">adjuntar Archivo</label>
-                            <div class="contact__form-input">
-                                <input name="documentos" class="image-upload" type="file" accept=".zip,.rar,.7zip"
-                                    alt="Click aquí para subir" title="Click aquí para subir">
-                                <i class='bx bxs-cloud-upload'></i>
-                            </div>
+                            <input name="documentos" class="contact__form-input" type="file" accept=".zip,.rar,.7zip">
                         </div>
 
                         <button type="submit" class="button">Registrarme</button>
-                    </div>
+                    </form>
                 </div>
-
-            </form>
+            </div>
         </section>
 
     </main>
