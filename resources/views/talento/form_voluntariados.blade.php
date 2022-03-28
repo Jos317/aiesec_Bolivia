@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{{ asset('assets/img/IconAIESEC.png') }}" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="{{ asset('assets/css/styletglo.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/stylevolglo.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/form.css') }}">
     <title>AIESEC Bolivia</title>
 </head>
@@ -14,25 +14,23 @@
 <body>
     @extends('plantilla.menu')
     <main>
+
         <section class="home grid" id="home">
             <div class="home__container">
                 <div class="home__content container">
 
                     <h1 class="home__title">
-                        <img src="{{ asset('assets/img/GTa_horizontal_white.png') }}" alt="" class="home__img">
+                        <img src="{{ asset('assets/img/GV_horizontal_white.png') }}">
                     </h1>
                     <p class="home__description">
-                        Con aiesec puedes realizar tus prácticas, pasantías u obtener
-                        una oportunidad de trabajo en el exterior que potencia tu hoja de vida y
-                        ayuda al crecimiento de tu carrera, además obtienes nuevas competencias y
-                        desarrollas tu liderazgo.<br>
+                        Descubre tu mejor versión y conoce el mundo mientras vives un intercambio social
+                        e impactas positivamente una comunidad, con proyectos alineados con los Objetivos
+                        de Desarrollo Sostenible.<br>
                         <br>
-                        ¿Quieres un trayecto profesional internacional?
+                        ¿Estás listo para vivir la experiencia de tu vida este 2022?
                     </p>
-
                     <a href="#contact" class="button">¡Unirme!</a>
                 </div>
-
             </div>
 
             <div class="home__container2">
@@ -43,7 +41,6 @@
                                 <h3 class="home__data-title">Miembros</h3>
                                 <p class="home__data-description">De jóvenes, para jóvenes.</p>
                             </div>
-        
                             <div class="home__data-group">
                                 <h2 class="home__data-number">200</h2>
                                 <h3 class="home__data-title">Aliados</h3>
@@ -51,7 +48,6 @@
                             </div>
                         </div>
                     </div> -->
-
             </div>
 
 
@@ -72,251 +68,126 @@
 
                 <div class="specialty__category">
                     <div class="specialty__group specialty__line">
-                        <img src="{{ asset('assets/img/Icon_GT01.png') }}" alt="" class="specialty__img">
+                        <img src="{{ asset('assets/img/Icon_GV01-01.png') }}" alt="" class="specialty__img">
 
-                        <h3 class="specialty__title">EXPERIENCIA PROFESIONAL</h3>
+                        <h3 class="specialty__title active2-link">VIVIR ENTRE CULTURAS</h3>
                         <p class="specialty__Description">
-                            Inscríbete, un asesor local te contactará y además tendrás acceso a la
-                            plataforma de proyectos en todo el mundo.
+                            Conocerás la cultura local conviviendo con una familia o anfitrión,
+                            sumado también la cultura de otros voluntarios.
                         </p>
                     </div>
 
                     <div class="specialty__group specialty__line">
-                        <img src="{{ asset('assets/img/Icon_GT02.png') }}" alt="" class="specialty__img">
+                        <img src="{{ asset('assets/img/Icon_GV02-01.png') }}" alt="" class="specialty__img">
 
-                        <h3 class="specialty__title">REMUNERACIÓN</h3>
+                        <h3 class="specialty__title active2-link">GENERAR IMPACTO</h3>
                         <p class="specialty__Description">
-                            Oportunidades profesionales con remuneración o no remuneración;
-                            según duración de oportunidad y costo de vida del país destino.
-                        </p>
+                            Eres tú quien elige a que problemática mundial contribuirás y el impacto social que quieres
+                            generar. </p>
                     </div>
 
                     <div class="specialty__group specialty__line">
-                        <img src="{{ asset('assets/img/Icon_GT03.png') }}" alt="" class="specialty__img">
-
-                        <h3 class="specialty__title">DESARROLLO DE LIDERAZGO</h3>
+                        <img src="{{ asset('assets/img/Icon_GV03-01.png') }}" class="specialty__img">
+                        <h3 class="specialty__title active2-link">DESAFIAR TU ZONA DE CONFORT</h3>
                         <p class="specialty__Description">
-                            Desarrollo de liderazgo en ambientes interculturales,
-                            retantes y prácticos, que sacarán la mejor versión como profesional.
-                        </p>
+                            Vivirás un tiempo muy retador donde aprenderás a conocerte y desarrollar liderazgo. </p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <section class="blog section" id="blog">
-            <div class="blog__container container">
-                <h2 class="section__title">
-                    Conoce las historias de liderazgo de jóvenes como tu.
-                </h2>
 
-                <div class="blog__content grid">
-                    <article class="blog__card">
-                        <div class="blog__image">
-                            <img src="{{ asset('assets/img/bl1.jpg') }}" alt="" class="blog__img">
-                            <a href="#" class="blog__button">
-                                <i class="bx bx-right-arrow-alt"></i>
-                            </a>
-                        </div>
+        <section class="work section" id="work">
 
-                        <div class="blog__data">
-                            <h2 class="blog__title">
-                                Valentina | Voluntaria Global
-                            </h2>
-                            <p class="blog__description">
-                                “Creyeron tanto en mí, que logré crear un estudio de fotografía y
-                                video en la empresa, nunca se había hecho ese proyecto, y con mi esfuerzo
-                                y dedicación lo logré”.
-                            </p>
-
-                            <div class="blog__footer">
-                                <div class="blog__reaction">
-                                    <i class="bx bx-comment"></i>
-                                    <span>13</span>
-                                </div>
-                                <div class="blog__reaction">
-                                    <i class="bx bx-show"></i>
-                                    <span>76</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="blog__card">
-                        <div class="blog__image">
-                            <img src="{{ asset('assets/img/bl1.jpg') }}" alt="" class="blog__img">
-                            <a href="#" class="blog__button">
-                                <i class="bx bx-right-arrow-alt"></i>
-                            </a>
-                        </div>
-
-                        <div class="blog__data">
-                            <h2 class="blog__title">
-                                Cristhian | Talento Global
-                            </h2>
-                            <p class="blog__description">
-                                “Ser parte del programa de talento global no es solo ir a otro
-                                país y adquirir nueva experiencia laboral o nuevas habilidades,
-                                también trae consigo la oportunidad de conocer personas nuevas, entornos
-                                y culturas totalmente diferentes”.
-                            </p>
-
-                            <div class="blog__footer">
-                                <div class="blog__reaction">
-                                    <i class="bx bx-comment"></i>
-                                    <span>3</span>
-                                </div>
-                                <div class="blog__reaction">
-                                    <i class="bx bx-show"></i>
-                                    <span>37</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="quality section" id="premium">
-            <div class="quality__container container">
-                <h2 class="section__title">
-                    A pocos pasos de tener una experiencia profesional
-                </h2>
-
-                <div class="quality__content grid">
-                    <div class="quality__images">
-                        <img src="{{ asset('assets/img/Requisitos_01.png') }}" alt="" class="quality__img-big">
-                    </div>
-
-                    <div class="quality__data">
-                        <h1 class="quality__title">Requisitos Generales</h1>
-                        <table style="width: 100%; border: none;">
-                            <tbody>
-                                <tr>
-                                    <td class="table__img">
-                                        <img src="{{ asset('assets/img/Icon_GT040.png') }}" alt=""
-                                            class="quality__img-req">
-                                    </td>
-                                    <td class="table__desciption">
-                                        <p>Los programas de intercambios están dirigidos a jóvenes entre los 18 y
-                                            30 años de edad.</p>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td class="table__img">
-                                        <img src="{{ asset('assets/img/Icon_GT05.png') }}" alt=""
-                                            class="quality__img-req">
-                                    </td>
-                                    <td class="table__desciption">
-                                        Para esta experiencia debes tener cursado un 70% de tu carrera.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="table__img">
-                                        <img src="{{ asset('assets/img/Icon_GT060.png') }}" alt=""
-                                            class="quality__img-req">
-                                    </td>
-                                    <td class="table__desciption">
-                                        El inglés es un factor importante si tu intercambio lo realiza en un país que no
-                                        habla tu idioma.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="table__img">
-                                        <img src="{{ asset('assets/img/Icon_GT07.png') }}" alt=""
-                                            class="quality__img-req">
-                                    </td>
-                                    <td class="table__desciption">
-                                        Tener algún tipo de experiencia en el área de estudio, así logra ser un
-                                        candidato ideal para cualquier organización.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="table__img">
-                                        <img src="{{ asset('assets/img/Icon_GT08.png') }}" alt=""
-                                            class="quality__img-req">
-                                    </td>
-                                    <td class="table__desciption">
-                                        Pagar la cuota adminsitratica a AIESEC (aplican términos y condiciones), comprar
-                                        tiquetes, tramites/pagos de Visa y seguro internacional.
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="quality__buttons">
-                            <button class="button">
-                                Postularte
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="specialty section container" id="specialty">
-            <div class="specialty__container">
+            <div class="specialty__container container">
                 <div class="specialty__box">
-                    <h2 class="section__title">
-                        Es necesario que conozca todo el proceso
+                    <h2 class="section__title">¿Tienes dudas sobre los beneficios y proceso? <br> Acá te contamos todo
                     </h2>
                 </div>
+            </div>
 
-                <div class="specialty2__category">
-                    <div class="specialty2__group specialty2__line">
-                        <img src="{{ asset('assets/img/Icon_GT08.png') }}" alt="" class="specialty2__img">
+            <div class="work__filters">
+                <span class="work__item active-work" data-filter='.bene'>Beneficios</span>
+                <span class="work__item" data-filter='.pro'>Procesos</span>
+            </div>
 
-                        <p class="specialty2__Description">
-                            <strong class="active-link">Inscríbete</strong>, un asesor local te contactará y además
-                            tendrás
-                            acceso a la plataforma de proyectos en todo el mundo.
-                        </p>
-                    </div>
+            <div class="work__container container grid">
+                <div class="work__card mix bene">
+                    <img src="{{ asset('assets/img/Icon_GV05.png') }}" class="specialty2__img">
+                    <p class="work__description">
+                        Conoce la verdadera cultura local al convivir con <strong class="active2-link"> familia o un
+                            anfitrión</strong>,
+                        que te mostrarán lo mejor del lugar que visitas. Además incluye una o dos
+                        <strong class="active2-link">comidas</strong> dependiendo del país y ciudad de destino.
+                    </p>
+                </div>
+                <div class="work__card mix bene">
+                    <img src="{{ asset('assets/img/Icon_GV06.png') }}" class="specialty2__img">
 
-                    <div class="specialty2__group specialty2__line">
-                        <img src="{{ asset('assets/img/Icon_GT11.png') }}" alt="" class="specialty2__img">
+                    <p class="work__description">
+                        Vive una <strong class="active2-link">experiencia práctica</strong> en comunidades u
+                        organizaciones que desafían
+                        tu carácter y desarrollen tu liderazgo.
+                    </p>
+                </div>
+                <div class="work__card mix bene">
 
-                        <p class="specialty2__Description">
-                            <strong class="active-link">Aplica</strong> a las oportunidades que se adaptan a su
-                            perfil y
-                            a los requisitos solicitados por la empresa.
-                        </p>
-                    </div>
+                    <img src="{{ asset('assets/img/Icon_GV07.png') }}" class="specialty2__img">
 
-                    <div class="specialty2__group specialty2__line">
-                        <img src="{{ asset('assets/img/Icon_GT12.png') }}" alt="" class="specialty2__img">
+                    <p class="work__description">
+                        Construye una <strong class="active2-link">red de amigos en todo el mundo</strong>, no serás
+                        el único voluntario;
+                        aprenderás un poco de la cultura, idioma o costumbre de voluntarios de otras partes
+                        del mundo.
+                    </p>
+                </div>
+                <div class="work__card mix pro">
+                    <img src="{{ asset('assets/img/Icon_GV08.png') }}" class="specialty2__img">
 
-                        <p class="specialty2__Description">
-                            Realiza tu <strong class="active-link">entrevista</strong> con el comité local
-                            del país destino y con la empresa a la que aplicaste.
-                        </p>
-                    </div>
+                    <p class="work__description">
+                        <strong class="active2-link">Inscríbete más abajo</strong>, uno de nuestros voluntarios
+                        locales te contactará.
+                        Tendrás acceso a la plataforma de proyectos en todo el mundo. Ten en cuenta que debes
+                        tener entre 18 a 30 años.
+                    </p>
+                </div>
+                <div class="work__card mix pro">
 
-                    <div class="specialty2__group specialty2__line">
-                        <img src="{{ asset('assets/img/Icon_GT08.png') }}" alt="" class="specialty2__img">
+                    <img src="{{ asset('assets/img/Icon_GV09.png') }}" class="specialty2__img">
+                    <p class="work__description">
+                        <strong class="active2-link">Aplica al proyecto social</strong> que más te interese, y realiza
+                        tu entrevista
+                        con el asesor del país destino, el proyecto puede tener una duración entre 6 a 8
+                        semanas; una vez aceptado empieza a alistar maletas. Ah, <strong class="active2-link">¡puedes
+                            hacer más de un proyecto y multiplicar tu impacto!</strong>
+                    </p>
+                </div>
 
-                        <p class="specialty2__Description">
-                            Una vez aprobado en la oportunidad debes realizar el aporte de <strong
-                                class="active-link">cuota administrativa</strong>
-                            a AEISEC y alistar los demás documentos necesarios para el viaje.
-                        </p>
-                    </div>
+                <div class="work__card mix pro">
 
-                    <div class="specialty2__group specialty2__line">
-                        <img src="{{ asset('assets/img/Icon_GT14.png') }}" alt="" class="specialty2__img">
+                    <img src="{{ asset('assets/img/Icon_GV010.png') }}" class="specialty2__img">
+                    <p class="work__description">
+                        <strong class="active2-link">Haz el donativo correspondiente</strong>.
+                        Tu donativo no incluye tiquetes de avión, seguro internacional, costo de vida en el país
+                        destino y costo de visa (si aplica).
+                    </p>
+                </div>
 
-                        <p class="specialty2__Description">
-                            <strong class="active-link">¡Listo!</strong> tu experiencia de intercambio profesional
-                            comienza ahora.
-                        </p>
-                    </div>
+                <div class="work__card mix pro">
+                    <img src="{{ asset('assets/img/Icon_GV011.png') }}" class="specialty2__img">
+                    <p class="work__description">
+                        <strong class="active2-link">¡Ya es 2022!</strong> Es hora de impactar el mundo, conocer
+                        culturas y
+                        desarrollar liderazgo con aiesec.
+                    </p>
                 </div>
             </div>
-        </div>
+        </section>
+
         <!--=============== CONTACT ===============-->
         <section class="contact section" id="contact">
             <div class="container">
-                <h2 class="section__title">Pasantías Glogales</h2>
+                <h2 class="section__title">Voluntariado Glogales</h2>
                 <h3 class="contact__title">Escribe tus datos!</h3>
             </div>
 
@@ -665,6 +536,7 @@
     <script src="{{ asset('assets/js/mixitup.min.js') }}"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <!--<script src="{{ asset('assets/js/main.js') }}"></script>-->
+    <script src="{{ asset('assets/js/mainvol.js') }}"></script>
 </body>
 
 </html>

@@ -17,7 +17,7 @@
                             <a href="{{ asset('form_talentos') }}" class="nav2__link">Talento Global</a>
                         </li>
                         <li class="sub__child">
-                            <a href="./subpages/index.html" class="nav2__link">Voluntariado Global</a>
+                            <a href="{{ asset('form_voluntariados') }}" class="nav2__link">Voluntariado Global</a>
                         </li>
                     </ul>
                 </li>
@@ -26,10 +26,11 @@
                     <a href="{{ asset('form_empresas') }}" class="nav__link">Organizaciones</a>
                     <ul class="children">
                         <li class="sub__child">
-                            <a href="./subpages/ONGs.html" class="nav2__link">Proyectos para ONGs</a>
+                            <a href="{{ asset('form_ong') }}" class="nav2__link">Proyectos para ONGs</a>
                         </li>
                         <li class="sub__child">
-                            <a href="./subpages/Organi.html" class="nav2__link">Talento Global - Empresas</a>
+                            <a href="{{ asset('form_empresas') }}" class="nav2__link">Talento Global -
+                                Empresas</a>
                         </li>
                     </ul>
                 </li>

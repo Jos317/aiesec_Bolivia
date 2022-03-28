@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="{{ asset('assets/img/IconAIESEC.png') }}" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="{{ asset('assets/css/stylehosp.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/form.css') }}">
     <title>AIESEC Bolivia</title>
 </head>
 
@@ -131,170 +132,183 @@
         <section class="contact section" id="contact">
             <div class="container">
                 <h2 class="section__title">Contactanos</h2>
+                <h3 class="contact__title">Escribe tus datos!</h3>
             </div>
-            <div class="contact__container container grid">
-                <div class="contact__content">
-                    <h3 class="contact__title">Escribe tus datos!</h3>
-                    <form action="{{ url('hospedaje/store') }}" class="contact__form" method="POST"
-                        enctype="multipart/form-data">
-                        @csrf
 
-                        <div class="contact__form-div">
-                            <label for="" class="contact__form-tag">Nombre Completo *:</label>
-                            <input name="nombre" class="contact__form-input" maxlength="50" type="text"
-                                placeholder="Inserta tus Nombres" required>
-                        </div>
+            <form action="{{ url('hospedaje/store') }}" class="contact__form" method="POST"
+                enctype="multipart/form-data">
+                @csrf
+                <div class="contact__container container grid">
+                    <div class="contact__content">
+                        <div class="contacts2">
 
-                        <div class="contact__form-div">
-                            <label for="" class="contact__form-tag">Celular *:</label>
-                            <input name="celular" class="contact__form-input" maxlength="10" type="text"
-                                placeholder="Inserta número de celular..." required>
-                        </div>
+                            <div class="contact__form-div">
+                                <label for="" class="contact__form-tag">Nombre Completo *:</label>
+                                <input name="nombre" class="contact__form-input" maxlength="50" type="text"
+                                    placeholder="Inserta tus Nombres" required>
+                            </div>
 
-
-                        <div class="contact__form-div">
-                            <label for="" class="contact__form-tag">Correo *:</label>
-                            <input name="correo" class="contact__form-input" type="email"
-                                placeholder="Inserta tu Email.." required>
-                        </div>
-
-                        <div class="contact__form-div">
-                            <label for="" class="contact__form-tag">¿En qué ciudad te encuentras? *:</label>
-                            <select class="contact__form-input" name="ciudad_reside">
-                                <option value="vacio" disabled selected>Seleccione una opción...</option>
-                                <option class="text-dark" value="La Paz">La Paz</option>
-                                <option class="text-dark" value="Cochabamba">Cochabamba</option>
-                                <option class="text-dark" value="Santa Cruz">Santa Cruz</option>
-                                <option class="text-dark" value="Chuquisaca">Chuquisaca</option>
-                                <option class="text-dark" value="Tarija">Tarija</option>
-                                <option class="text-dark" value="Potosí">Potosí</option>
-                                <option class="text-dark" value="Oruro">Oruro</option>
-                                <option class="text-dark" value="Pando">Pando</option>
-                                <option class="text-dark" value="Beni">Beni</option>
-                                <option class="text-dark" value="Se encuentra en 2 o más departamentos">Se
-                                    encuentra en 2 o más departamentos</option>
-                            </select>
-                        </div>
+                            <div class="contact__form-div">
+                                <label for="" class="contact__form-tag">Celular *:</label>
+                                <input name="celular" class="contact__form-input" maxlength="10" type="text"
+                                    placeholder="Inserta número de celular..." required>
+                            </div>
 
 
+                            <div class="contact__form-div">
+                                <label for="" class="contact__form-tag">Correo *:</label>
+                                <input name="correo" class="contact__form-input" type="email"
+                                    placeholder="Inserta tu Email.." required>
+                            </div>
 
-                        <div class="contact__form-div">
-                            <label for="" class="contact__form-tag">Dirección donde vives *: </label>
-                            <input name="direccion" class="contact__form-input" maxlength="50" type="text"
-                                placeholder="Inserta número de celular..." required>
-                        </div>
+                            <div class="contact__form-div">
+                                <label for="" class="contact__form-tag">¿En qué ciudad te encuentras? *:</label>
+                                <select class="contact__form-input" name="ciudad_reside">
+                                    <option value="vacio" disabled selected>Seleccione una opción...</option>
+                                    <option class="text-dark" value="La Paz">La Paz</option>
+                                    <option class="text-dark" value="Cochabamba">Cochabamba</option>
+                                    <option class="text-dark" value="Santa Cruz">Santa Cruz</option>
+                                    <option class="text-dark" value="Chuquisaca">Chuquisaca</option>
+                                    <option class="text-dark" value="Tarija">Tarija</option>
+                                    <option class="text-dark" value="Potosí">Potosí</option>
+                                    <option class="text-dark" value="Oruro">Oruro</option>
+                                    <option class="text-dark" value="Pando">Pando</option>
+                                    <option class="text-dark" value="Beni">Beni</option>
+                                    <option class="text-dark" value="Se encuentra en 2 o más departamentos">Se
+                                        encuentra en 2 o más departamentos</option>
+                                </select>
+                            </div>
 
 
 
-                        <div class="contact__form-div">
-                            <label for="" class="contact__form-tag">¿Cuántos voluntarios puedes hospedar? *:</label>
-                            <select class="contact__form-input" name="cantidad_voluntarios">
-                                <option value="vacio" disabled selected>Seleccione una opción...</option>
-                                <option class="text-dark" value="1">1</option>
-                                <option class="text-dark" value="2">2</option>
-                                <option class="text-dark" value="3 o más">3 o más</option>
+                            <div class="contact__form-div">
+                                <label for="" class="contact__form-tag">Dirección donde vives *: </label>
+                                <input name="direccion" class="contact__form-input" maxlength="50" type="text"
+                                    placeholder="Inserta número de celular..." required>
+                            </div>
 
-                            </select>
-                        </div>
 
-                        <div class="contact__form-div">
-                            <label for="" class="contact__form-tag">En que fecha puedes empezar a hospedar al (los)
-                                Voluntario(s) * </label>
-                            <input type="date" name="hospedar_fecha" placeholder="fecha" class="contact__form-input">
-                        </div>
 
-                        <div class=" contact__form-div">
-                            <label for="" class="contact__form-tag">En que hora puedes empezar a hospedar al (los)
-                                Voluntario(s) *</label>
-                            <input type="time" name="hospedar_hora" placeholder="hora" class="contact__form-input">
-                        </div>
+                            <div class="contact__form-div">
+                                <label for="" class="contact__form-tag">¿Cuántos voluntarios puedes hospedar? *:</label>
+                                <select class="contact__form-input" name="cantidad_voluntarios">
+                                    <option value="vacio" disabled selected>Seleccione una opción...</option>
+                                    <option class="text-dark" value="1">1</option>
+                                    <option class="text-dark" value="2">2</option>
+                                    <option class="text-dark" value="3 o más">3 o más</option>
 
-                        <div class=" contact__form-div">
-                            <label for="" class="contact__form-tag">¿Qué puedes ofrecerle al voluntario? *: </label>
+                                </select>
+                            </div>
+
+                            <p>En que fecha puedes empezar a hospedar</p>
                             <br>
-                            <div>
-                                <label for="check1">
-                                    <input type="checkbox" name="habitacion_unica" value="1"> Habitación única
-                                </label>
-                            </div>
-                            <div>
-                                <label for="check1">
-                                    <input type="checkbox" name="habitacion_compa" value="1"> Habitación compartida
-                                </label>
-                            </div>
-                            <div>
-                                <label for="check1">
-                                    <input type="checkbox" name="servicios" value="1"> Servicios (Agua, luz,
-                                    internet, etc.)
-                                </label>
+                            <div class="contact__form-div">
+                                <label for="" class="contact__form-tag"> al (los)
+                                    Voluntario(s) * </label>
+                                <input type="date" name="hospedar_fecha" placeholder="fecha"
+                                    class="contact__form-input">
                             </div>
 
-                            <div>
-                                <label class="form-check-label" for="check1">
-                                    <input type="checkbox" name="desayuno" value="1"> Desayuno
-                                </label>
-                            </div>
-                            <div>
-                                <label for="check1">
-                                    <input type="checkbox" name="almuerzo" value="1"> Almuerzo
-                                </label>
-                            </div>
-                            <div>
-                                <label for="check1">
-                                    <input type="checkbox" name="cena" value="1"> Cena
-                                </label>
-                            </div>
-                            <div>
-                                <label for="check1">
-                                    <input type="checkbox" name="otros" value="1"> Otros
-                                </label>
-                            </div>
+
                         </div>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
+                    </div>
 
-                        <div class=" contact__form-div contact_form-area">
-                            <label for="" class="contact__form-tag">¿Por qué quieres formar parte del programa Familia
-                                Global?
-                                *:</label>
+                    <div class="contact__content">
+                        <div class="contacts2">
+
+                            <p>En que hora puedes empezar a hospedar</p>
                             <br>
-                            <br>
-                            <textarea class="contact__form-input" name="formar_parte" cols="50" rows="7" placeholder="Escribir"></textarea>
-                        </div>
+                            <div class=" contact__form-div">
+                                <label for="" class="contact__form-tag"> al (los)
+                                    Voluntario(s) *</label>
+                                <input type="time" name="hospedar_hora" placeholder="hora" class="contact__form-input">
+                            </div>
+                            <div class=" contact__form-div">
+                                <label for="" class="contact__form-tag">¿Qué puedes ofrecerle al voluntario? *: </label>
+                                <br>
+                                <p>
+                                    <label for="check1">
+                                        <input type="checkbox" name="habitacion_unica" value="1"> Habitación única
+                                    </label>
+                                </p>
+                                <p>
+                                    <label for="check1">
+                                        <input type="checkbox" name="habitacion_compa" value="1"> Habitación compartida
+                                    </label>
+                                </p>
+                                <p>
+                                    <label for="check1">
+                                        <input type="checkbox" name="servicios" value="1"> Servicios (Agua, luz,
+                                        internet, etc.)
+                                    </label>
+                                </p>
 
-
-                        <div class="contact__form-div">
-                            <label for="" class="contact__form-tag">¿Cómo te enteraste del programa Familia Global?
-                                *:</label>
-                            <select class="contact__form-input" name="saber_programa">
-                                <option value="vacio" disabled selected>Seleccione una opción...</option>
-                                <option class="text-dark" value="Soy o Fui miembro de AIESEC">Soy o Fui miembro
-                                    de AIESEC</option>
-                                <option class="text-dark" value="Amigos/Familiares">Amigos/Familiares</option>
-                                <option class="text-dark" value="Facebook">Facebook</option>
-                                <option class="text-dark" value="Instagram">Instagram</option>
-                                <option class="text-dark" value="LinkedIn">LinkedIn</option>
-                                <option class="text-dark" value="WhatsApp">WhatsApp</option>
-                                <option class="text-dark" value="Sitio Web">Sitio Web</option>
-                                <option class="text-dark" value="Otras redes sociales">Otras redes sociales
-                                </option>
-
-                            </select>
-                        </div>
-
-                        <div class=" contact__form-div contact_form-area">
-                            <label for="" class="contact__form-tag">¿Tienes algo para decirnos?</label>
+                                <p>
+                                    <label class="form-check-label" for="check1">
+                                        <input type="checkbox" name="desayuno" value="1"> Desayuno
+                                    </label>
+                                </p>
+                                <p>
+                                    <label for="check1">
+                                        <input type="checkbox" name="almuerzo" value="1"> Almuerzo
+                                    </label>
+                                </p>
+                                <p>
+                                    <label for="check1">
+                                        <input type="checkbox" name="cena" value="1"> Cena
+                                    </label>
+                                </p>
+                                <p>
+                                    <label for="check1">
+                                        <input type="checkbox" name="otros" value="1"> Otros
+                                    </label>
+                                </p>
+                            </div>
                             <br>
                             <br>
-                            <textarea class="contact__form-input" name="decir_algo" cols="50" rows="7" placeholder="Escribir"></textarea>
-                        </div>
+                            <br>
+                            <br>
+                            <p>¿Por qué quieres formar parte </p>
+                            <br>
+                            <div class=" contact__form-div">
+                                <label for="" class="contact__form-tag">del programa
+                                    Familia
+                                    Global?
+                                    *:</label>
+                                <textarea class="contact__form-input" name="formar_parte" cols="50" rows="7" placeholder="Escribir"></textarea>
+                            </div>
 
-                        <button class="button">Registrarme</button>
-                    </form>
+                            <p>¿Cómo te enteraste del programa </p>
+                            <br>
+                            <div class="contact__form-div">
+                                <label for="" class="contact__form-tag">Familia Global?
+                                    *:</label>
+                                <select class="contact__form-input" name="saber_programa">
+                                    <option value="vacio" disabled selected>Seleccione una opción...</option>
+                                    <option class="text-dark" value="Soy o Fui miembro de AIESEC">Soy o Fui miembro
+                                        de AIESEC</option>
+                                    <option class="text-dark" value="Amigos/Familiares">Amigos/Familiares</option>
+                                    <option class="text-dark" value="Facebook">Facebook</option>
+                                    <option class="text-dark" value="Instagram">Instagram</option>
+                                    <option class="text-dark" value="LinkedIn">LinkedIn</option>
+                                    <option class="text-dark" value="WhatsApp">WhatsApp</option>
+                                    <option class="text-dark" value="Sitio Web">Sitio Web</option>
+                                    <option class="text-dark" value="Otras redes sociales">Otras redes sociales
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class=" contact__form-div ">
+                                <label for="" class="contact__form-tag">¿Tienes algo para decirnos?</label>
+                                <textarea class="contact__form-input" name="decir_algo" cols="50" rows="7"
+                                    placeholder="Escribir"></textarea>
+                            </div>
+                            <br>
+                            <button class="button">Registrarme</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </form>
         </section>
 
     </main>

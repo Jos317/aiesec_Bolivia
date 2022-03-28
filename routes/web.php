@@ -29,13 +29,16 @@ Auth::routes();
 
 //Empresa
 Route::get('form_empresas', [EmpresaController::class, 'form']);
+Route::get('form_ong', [EmpresaController::class, 'formong']);
 Route::post('empresa/store', [EmpresaController::class, 'store']);
 Route::resource('empresas', Empresacontroller::class)->names('empresas');
 
 //Talento
 Route::get('form_talentos', [TalentoController::class, 'form']);
+Route::get('form_voluntariados', [TalentoController::class, 'formv']);
 Route::post('talento/store', [TalentoController::class, 'store']);
 Route::resource('talentos', TalentoController::class)->names('talentos');
+
 
 //hospedaje
 Route::get('form_hospedajes', [HospedaIController::class, 'form']);

@@ -10,8 +10,13 @@ use App\Exports\EmpresaExport;
 
 class EmpresaController extends Controller
 {
-    public function form(){
+    public function form()
+    {
         return view('empresa.form_empresas');
+    }
+    public function formong()
+    {
+        return view('empresa.form_ong');
     }
 
     public function index()
@@ -20,15 +25,17 @@ class EmpresaController extends Controller
         return view('empresa.index', compact('empresas'));
     }
 
-    public function ver($id){
+    public function ver($id)
+    {
         $empresa = empresa_ong::find($id);
 
         return view('empresa.ver', ['empresa' => $empresa]);
     }
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
         try {
-            
+
             DB::beginTransaction();
             empresa_ong::store($request);
             DB::commit();
@@ -39,7 +46,8 @@ class EmpresaController extends Controller
         }
     }
 
-    public function exportExcel() {
+    public function exportExcel()
+    {
         return Excel::download(new EmpresaExport, 'empresa.xlsx');
     }
 }

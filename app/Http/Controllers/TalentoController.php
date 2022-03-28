@@ -11,28 +11,36 @@ use App\Exports\TalentoExport;
 
 class TalentoController extends Controller
 {
-    public function form(){
-        $universidades = File::get(base_path().'/public/lista_universidades.json');
+    public function form()
+    {
+        $universidades = File::get(base_path() . '/public/lista_universidades.json');
         $universidades = json_decode($universidades)->universidad;
         return view('talento.form_talentos', compact('universidades'));
     }
-
+    public function formv()
+    {
+        $universidades = File::get(base_path() . '/public/lista_universidades.json');
+        $universidades = json_decode($universidades)->universidad;
+        return view('talento.form_voluntariados', compact('universidades'));
+    }
     public function index()
     {
         $talentos = talento_global::all();
         return view('talento.index', compact('talentos'));
     }
 
-    public function ver($id){
+    public function ver($id)
+    {
         $talento = talento_global::find($id);
-        $universidades = File::get(base_path().'/public/lista_universidades.json');
+        $universidades = File::get(base_path() . '/public/lista_universidades.json');
         $universidades = json_decode($universidades)->universidad;
         return view('talento.ver', compact('universidades'), ['talento' => $talento]);
     }
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
         try {
-            
+
             DB::beginTransaction();
             talento_global::store($request);
             DB::commit();
@@ -43,7 +51,8 @@ class TalentoController extends Controller
         }
     }
 
-    public function exportExcel() {
+    public function exportExcel()
+    {
         return Excel::download(new TalentoExport, 'talento.xlsx');
     }
 }
