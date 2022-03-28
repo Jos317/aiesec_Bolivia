@@ -245,9 +245,7 @@
                             </tbody>
                         </table>
                         <div class="quality__buttons">
-                            <button class="button">
-                                Postularte
-                            </button>
+                            <a href="#contact" class="button">Postularte</a>
                         </div>
                     </div>
                 </div>
@@ -328,6 +326,9 @@
                         <div class="contacts2">
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">Nombres *</label>
+                                @error('nombres')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
                                 <input type="text" name="nombres" placeholder="Inserta tus Nombres"
                                     class="contact__form-input" maxlength="50" required>
                             </div>
