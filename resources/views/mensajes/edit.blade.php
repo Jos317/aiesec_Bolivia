@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Quality-Store')
+@section('title', 'AIESEC-BOL')
 
 @section('content_header')
     <h1>Editar Estado Bandeja de Correos</h1>

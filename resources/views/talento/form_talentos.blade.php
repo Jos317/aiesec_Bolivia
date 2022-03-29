@@ -649,7 +649,7 @@
 
                                 </div>
                             </div>
-
+                            <input type="hidden" name="estado" value="Sin Ver">
                             <button type="submit" class="button">Registrarme</button>
                         </div>
                     </div>

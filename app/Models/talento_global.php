@@ -13,7 +13,7 @@ class talento_global extends Model
     protected $table='talento_global'; 
     protected $fillable = ['nombres','apellidos','edad','correo', 'celular','ciudad_reside','universidad','grado_estudio',
     'carrera','otra_carrera','nivel_ingles','experiencia','area_desarrollo','pasantia_internacional',
-    'programa','descubrimiento_programa','medio_contacto','describir_documento', 'documentos'
+    'programa','descubrimiento_programa','medio_contacto','describir_documento', 'documentos', 'estado'
     ];
     public $timestamps = false;
 
@@ -38,6 +38,7 @@ class talento_global extends Model
         $talento->descubrimiento_programa = $request->descubrimiento_programa;
         $talento->medio_contacto = $request->medio_contacto;
         $talento->describir_documento = $request->describir_documento;
+        $talento->estado = $request->estado;
         if($request->hasFile('documentos')){
             $extension = $request->documentos->extension();
             if($extension == "zip" || $extension == "rar" || $extension == "7zip"){

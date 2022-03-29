@@ -28,6 +28,8 @@ class CreateEmpresaOngTable extends Migration
             $table->text('dedicacion');
             $table->string('saber_de_AIESEC',25);
             $table->string('nombre_amigo',50)->nullable();
+
+            $table->string('estado')->nullable();
         });
     }
 

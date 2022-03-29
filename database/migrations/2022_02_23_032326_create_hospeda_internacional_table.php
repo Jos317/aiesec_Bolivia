@@ -26,6 +26,7 @@ class CreateHospedaInternacionalTable extends Migration
             $table->string('formar_parte');
             $table->string('saber_programa',30);
             $table->string('decir_algo')->nullable();
+            $table->string('estado')->nullable();
             
             $table->unsignedBigInteger('idofrecimiento');
             $table->foreign('idofrecimiento')->on ('ofrecimiento_hospeda')->references('id'); //foranea celular

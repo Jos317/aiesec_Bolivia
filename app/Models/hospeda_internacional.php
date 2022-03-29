@@ -12,7 +12,7 @@ class hospeda_internacional extends Model
     protected $table='hospeda_internacional'; 
     protected $fillable = ['nombre', 'celular','correo','ciudad_reside','direccion',
     'cantidad_voluntarios','hospedar_fecha','hospedar_hora','formar_parte','saber_programa','decir_algo',
-    'idofrecimiento'
+    'idofrecimiento','estado'
     ];
     public $timestamps = false;
 
