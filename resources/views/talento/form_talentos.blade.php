@@ -317,7 +317,12 @@
                 <h2 class="section__title">Pasantías Glogales</h2>
                 <h3 class="contact__title">Escribe tus datos!</h3>
             </div>
-
+            @error('correo')
+                <div class="alert alert-danger">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>¡Error!</strong> Este producto ya está registrado.
+                </div>
+            @enderror
             <form action="{{ url('talento/store') }}" class="contact__form" method="POST"
                 enctype="multipart/form-data">
                 @csrf
@@ -636,6 +641,7 @@
                             </p>
                             <br>
 
+
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">adjuntar Archivo </label>
                                 <br>
@@ -645,6 +651,11 @@
                                             accept=".zip,.rar,.7zip" alt="Click aquí para subir"
                                             title="Click aquí para subir">
                                         <i class='bx bxs-cloud-upload'></i>Subir fichero...
+                                        @error('documentos')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+
+
                                     </div>
 
 

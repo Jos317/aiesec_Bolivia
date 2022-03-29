@@ -101,7 +101,12 @@
                 <h2 class="section__title">Contactanos</h2>
                 <h3 class="contact__title">Escribe tus datos!</h3>
             </div>
-
+            @error('correo_representante')
+                <div class="alert alert-danger">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>¡Error!</strong> Este producto ya está registrado.
+                </div>
+            @enderror
             <form action="{{ url('empresa/store') }}" class="contact__form" method="POST"
                 enctype="multipart/form-data">
                 @csrf
