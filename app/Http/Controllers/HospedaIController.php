@@ -111,6 +111,7 @@ class HospedaIController extends Controller
             $talento->saber_programa = $request->saber_programa;
             $talento->decir_algo = $request->decir_algo;
             $talento->idofrecimiento = $ofrecer->id;
+            $talento->estado = 'Pendiente';
             $talento->save();
             DB::commit();
             return redirect()->to('/')->with('message', 'Formulario almacenado exitosamente');
@@ -169,5 +170,22 @@ class HospedaIController extends Controller
     public function exportExcel()
     {
         return Excel::download(new HospedaExport, 'hospeda_internacional.xlsx');
+    }
+
+    public function vista_estado($id){
+        
+        $hospedaje = hospeda_internacional::find($id);
+       
+        return view('hospedajes.estado', compact('hospedaje'));
+
+    }
+
+    public function estadoXd(Request $request){
+        
+        $hospedaje = hospeda_internacional::find($request->id);
+        $hospedaje->estado = $request->estado;
+        $hospedaje->save();
+        return redirect()->route('hospedajes.index');
+
     }
 }

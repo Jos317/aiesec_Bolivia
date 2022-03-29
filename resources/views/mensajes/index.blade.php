@@ -2,76 +2,83 @@
 
 @section('title', 'AIESEC-BOL')
 @section('content_header')
-
 @stop
 
 
 @section('content')
-
-    <br>
+<br>
     <div class="card text-dark">
         <div class="card-header  text-center">
             <h3><b>Bandeja de Correos</b></h3>
         </div>
     </div>
 
-    <div class="card-body table-responsive">
-        <table class="table table-striped table-bordered shadow-lg mt-4" id="mensajes">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Correo</th>
-                    <th>Observación</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive" style="overflow: auto">
+                <table class="table table-striped" id="mensajes" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Correo</th>
+                            <th scope="col">Observación</th>
+                            <th scope="col">Opciones</th>
+                        </tr>
+                    </thead>
 
-                @foreach ($contacto as $contactos)
-                    {{-- hereeeeee --}}
-                    <tr>
-                        <td>
-                            <center>{{ $contactos->id }}</center>
-                        </td>
-                        <td>
-                            <center>{{ $contactos->correo }}</center>
-                        </td>
+                    <tbody>
 
-                        <td>
-                            @if ($contactos->estado == null)
-                                <center>Sin ver</center>
-                            @else
-                                <center>{{ $contactos->estado }}</center>
-                            @endif
+                        @foreach ($contacto as $contactos)
+                            <tr>
+                                <td>
+                                    {{ $contactos->id }}
+                                </td>
+                                <td>
+                                    {{ $contactos->correo }}
+                                </td>
 
-                        </td>
+                                <td>
+                                    @if ($contactos->estado == null)
+                                        Sin ver
+                                    @else
+                                        {{ $contactos->estado }}
+                                    @endif
 
+                                </td>
+                                <td>
+                                    <form action="{{ route('contactos.destroy', $contactos) }}" method="POST">
 
+                                        <a href="{{ route('contactos.edit', $contactos) }}"
+                                            class="btn btn-primary btn-sm" style="margin-right: 5px" ><i class="fas fa-edit"></i> Editar</a>
+                                        @csrf
 
-                        {{-- @can('Modo Admin') --}}
-                        <td class="text-center">
-                            <form action="{{ route('contactos.destroy', $contactos) }}" method="POST">
+                                        @method('delete')
+                                        <button onclick="return confirm('¿ESTA SEGURO DE  BORRAR?')" type="submit"
+                                            value="Borrar" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i>
+                                             Eliminar</button>
 
-                                <a href="{{ route('contactos.edit', $contactos) }}" class="btn btn-primary btn-sm"><i
-                                        class="fas fa-edit"></i>
-                                    Editar</a>
-                                @csrf
+                                    </form>
+                                </td>
 
-                                @method('delete')
-                                <button onclick="return confirm('¿ESTA SEGURO DE  BORRAR?')" type="submit" value="Borrar"
-                                    class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i>
-                                    Eliminar</button>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
 
-                            </form>
-                        </td>
-                        {{-- @endcan --}}
-                    </tr>
-                @endforeach
-            </tbody>
-        </table>
-
+        </div>
     </div>
-    </div>
+
+
+
+
+
+
+
+
+
+
+
 @stop
 
 @section('css')
@@ -80,11 +87,12 @@
 @stop
 
 @section('js')
-    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap5.min.js"></script>
     <script>
-        $('#marcas').DataTable({
-            autoWidth: false
+        $(document).ready(function() {
+            $('#mensajes').DataTable();
         });
     </script>
-@endsection
+@stop

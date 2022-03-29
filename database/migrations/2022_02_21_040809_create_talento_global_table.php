@@ -35,6 +35,8 @@ class CreateTalentoGlobalTable extends Migration
             $table->string('medio_contacto',40);
             $table->string('describir_documento');
             $table->string('documentos');
+
+            $table->string('estado')->nullable();
         });
     }
 

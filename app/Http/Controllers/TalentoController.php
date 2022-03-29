@@ -43,6 +43,7 @@ class TalentoController extends Controller
 
             DB::beginTransaction();
             talento_global::store($request);
+
             DB::commit();
             return redirect()->to('/')->with('message', 'Formulario almacenado exitosamente');
         } catch (\Exception $e) {
@@ -54,5 +55,21 @@ class TalentoController extends Controller
     public function exportExcel()
     {
         return Excel::download(new TalentoExport, 'talento.xlsx');
+    }
+
+    public function vista_estado_t($id){
+        
+        $talento = talento_global::find($id);
+        return view('talento.estado', compact('talento'));
+
+    }
+
+    public function estado_t(Request $request){
+        
+        $talento = talento_global::find($request->id);
+        $talento->estado = $request->estado;
+        $talento->save();
+        return redirect()->route('talentos.index');
+
     }
 }

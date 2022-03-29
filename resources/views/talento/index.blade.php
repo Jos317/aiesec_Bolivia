@@ -3,13 +3,13 @@
 @section('title', 'AIESEC-BOL')
 
 @section('content_header')
-    <h1>Pasantías Globales</h1>
+    <h1>Pasantías Globales - Talento Global</h1>
 @stop
 
 @section('content')
     <div class="card">
         <div class="card-header">
-            <a href="{{url('talento/excel')}}" class="btn btn-sm btn-success">Exportar a Excel</a>
+            <a href="{{url('talento/excel')}}" class="btn btn-sm btn-success"><i class="fas fa-file-excel" style="margin-right: 3px"></i> Exportar a Excel</a>
         </div>
     </div>
     <div class="card">
@@ -23,6 +23,7 @@
                                 <th scope="col">Apellidos</th>
                                 <th scope="col">Correo</th>
                                 <th scope="col">Celular</th>
+                                <th scope="col">Estado</th>
                                 <th scope="col">Opciones</th>
                         </tr>
                     </thead>
@@ -35,8 +36,11 @@
                                     <td>{{ $talento->apellidos }}</td>
                                     <td>{{ $talento->correo }}</td>
                                     <td>{{ $talento->celular }}</td>
-                                    <td>
-                                        <a href="{{url('talento/ver/'.$talento->id)}}" class="btn btn-primary btn-sm">Ver información completa<a>
+                                    <td>{{ $talento->estado }}</td>
+                                    <td >
+                                        <a href="{{url('talento/ver/'.$talento->id)}}" style="margin-right: 5px" class="btn btn-primary btn-sm"><i class="fas fa-eye" style="margin-right: 3px"></i> Ver <a> 
+                                            
+                                        <a href="{{ url('talento/vista_estado_t', $talento->id) }}" class="btn btn-sm btn-warning"><i class="fas fa-check-circle" style="margin-right: 2px"></i> Estado</a>
                                     </td>
                                 </tr>
                             @endforeach

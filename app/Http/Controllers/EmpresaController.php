@@ -50,4 +50,20 @@ class EmpresaController extends Controller
     {
         return Excel::download(new EmpresaExport, 'empresa.xlsx');
     }
+
+    public function vista_estado_e($id){
+        
+        $empresa = empresa_ong::find($id);
+        return view('empresa.estado', compact('empresa'));
+
+    }
+
+    public function estado_e(Request $request){
+        
+        $empresa = empresa_ong::find($request->id);
+        $empresa->estado = $request->estado;
+        $empresa->save();
+        return redirect()->route('empresas.index');
+
+    }
 }

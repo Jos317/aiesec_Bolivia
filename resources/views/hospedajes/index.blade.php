@@ -9,7 +9,7 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <a href="{{url('hospedaje/excel')}}" class="btn btn-sm btn-success">Exportar a Excel</a>
+            <a href="{{url('hospedaje/excel')}}" class="btn btn-sm btn-success"><i class="fas fa-file-excel" style="margin-right: 3px"></i> Exportar a Excel</a>
         </div>
     </div>
     <div class="card">
@@ -25,6 +25,7 @@
                             <th scope="col">Nombre Completo</th>
                             <th scope="col">Correo</th>
                             <th scope="col">Celular</th>
+                            <th scope="col">Estado</th>
                             <th scope="col">Opciones</th>
                         </tr>
                     </thead>
@@ -36,9 +37,11 @@
                                 <td>{{ $hospedaje->nombre }}</td>
                                 <td>{{ $hospedaje->correo }}</td>
                                 <td>{{ $hospedaje->celular }}</td>
+                                <td>{{ $hospedaje->estado }}</td>
                                 <td>
-                                    <a class="btn btn-primary btn-sm" href="{{ route('hospedajes.show', $hospedaje) }}">Ver
-                                        Informacion</a>
+                                    <a class="btn btn-primary btn-sm" style="margin-right: 5px" href="{{ route('hospedajes.show', $hospedaje) }}"><i class="fas fa-eye" style="margin-right: 5px"></i>Ver</a>
+
+                                    <a href="{{ url('hospedajes/vista_estado', $hospedaje->id) }}" class="btn btn-sm btn-warning"><i class="fas fa-check-circle" style="margin-right: 2px"></i> Estado</a>
                                 </td>
                             </tr>
                         @endforeach
