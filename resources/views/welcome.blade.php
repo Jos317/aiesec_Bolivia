@@ -67,7 +67,7 @@
                         </p>
                     </div>
                     <div>
-                        <a href="#" class="button2 button--flex button--white ">
+                        <a href="{{ asset('form_voluntariados') }}" class="button2 button--flex button--white ">
                             Ver más
                             <i class="uil uil-arrow-from-right button_icon"></i>
                         </a>
