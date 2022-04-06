@@ -32,25 +32,8 @@
                     <a href="#contact" class="button">¡Unirme!</a>
                 </div>
             </div>
-
             <div class="home__container2">
-                <!-- <div class="home__content container">
-                        <div class="home__data">
-                            <div class="home__data-group">
-                                <h2 class="home__data-number">+1200</h2>
-                                <h3 class="home__data-title">Miembros</h3>
-                                <p class="home__data-description">De jóvenes, para jóvenes.</p>
-                            </div>
-                            <div class="home__data-group">
-                                <h2 class="home__data-number">200</h2>
-                                <h3 class="home__data-title">Aliados</h3>
-                                <p class="home__data-description">Ambiente multicultural en tu organización.</p>
-                            </div>
-                        </div>
-                    </div> -->
             </div>
-
-
         </section>
 
         <div class="specialty section container" id="specialty">
@@ -199,6 +182,9 @@
                         <div class="contacts2">
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">Nombres *</label>
+                                @error('nombres')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
                                 <input type="text" name="nombres" placeholder="Inserta tus Nombres"
                                     class="contact__form-input" maxlength="50" required>
                             </div>
@@ -211,8 +197,8 @@
 
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">Edad *</label>
-                                <select class="contact__form-input" name="edad">
-                                    <option value="vacio" disabled selected>Seleccione una opción...</option>
+                                <select class="contact__form-input" name="edad" required>
+                                    <option value="" disabled selected>Seleccione una opción...</option>
                                     <option class="text-dark" value="Menos de 18 años">Menos de 18 años
                                     </option>
                                     <option class="text-dark" value="18">18</option>
@@ -240,7 +226,9 @@
 
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">Celular *</label>
-                                <input type="text" name="celular" maxlength="10" placeholder="Inserta tu Celular"
+                                <input
+                                    onkeydown="return ((event.keyCode>=47 && event.keyCode<=58) || (event.keyCode==8))"
+                                    type="text" name="celular" maxlength="10" placeholder="Inserta tu Celular"
                                     class="contact__form-input" required>
                             </div>
 
@@ -248,8 +236,8 @@
 
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">¿En que ciudad resides? *</label>
-                                <select class="contact__form-input" name="ciudad_reside">
-                                    <option value="vacio" disabled selected>Seleccione una opción...</option>
+                                <select class="contact__form-input" name="ciudad_reside" required>
+                                    <option value="" disabled selected>Seleccione una opción...</option>
                                     <option class="text-dark" value="La Paz">La Paz</option>
                                     <option class="text-dark" value="Cochabamba">Cochabamba</option>
                                     <option class="text-dark" value="Santa Cruz">Santa Cruz</option>
@@ -268,8 +256,8 @@
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">¿En que universidad estudias o
                                     estudiaste? *</label>
-                                <select class="contact__form-input" id="buscador" name="universidad">
-                                    <option value="vacio" disabled selected>Seleccione una opción...</option>
+                                <select class="contact__form-input" id="buscador" name="universidad" required>
+                                    <option value="" disabled selected>Seleccione una opción...</option>
                                     @foreach ($universidades as $item)
                                         <option value="{{ $item->code }}">{{ $item->name }}</option>
                                     @endforeach
@@ -278,8 +266,8 @@
 
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">Grado de Estudio *</label>
-                                <select class="contact__form-input" name="grado_estudio">
-                                    <option value="vacio" disabled selected>Seleccione una opción...</option>
+                                <select class="contact__form-input" name="grado_estudio" required>
+                                    <option value="" disabled selected>Seleccione una opción...</option>
                                     <option class="text-dark" value="Bachiller">Bachiller</option>
                                     <option class="text-dark" value="Universidad 1er. a 3er. semestre">
                                         Universidad
@@ -301,8 +289,8 @@
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">¿Qué carrera estudias o estudiaste?
                                     *</label>
-                                <select class="contact__form-input" name="carrera">
-                                    <option value="vacio" disabled selected>Seleccione una opción...</option>
+                                <select class="contact__form-input" name="carrera" required>
+                                    <option value="" disabled selected>Seleccione una opción...</option>
                                     <option class="text-dark" value="Administración de Empresas">
                                         Administración de
                                         Empresas</option>
@@ -354,8 +342,8 @@
                         <div class="contacts2">
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">Nivel de Ingles *</label>
-                                <select class="contact__form-input" name="nivel_ingles">
-                                    <option value="vacio" disabled selected>Seleccione una opción...</option>
+                                <select class="contact__form-input" name="nivel_ingles" required>
+                                    <option value="" disabled selected>Seleccione una opción...</option>
                                     <option class="text-dark" value="Básico (A1-A2)">Básico (A1-A2)</option>
                                     <option class="text-dark" value="Intermedio (B1-B2)">Intermedio (B1-B2)
                                     </option>
@@ -370,8 +358,8 @@
 
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">Experiencia Laboral *</label>
-                                <select class="contact__form-input" name="experiencia">
-                                    <option value="vacio" disabled selected>Seleccione una opción...</option>
+                                <select class="contact__form-input" name="experiencia" required>
+                                    <option value="" disabled selected>Seleccione una opción...</option>
                                     <option class="text-dark" value="Aún no tengo experiencia profesional">Aún
                                         no
                                         tengo experiencia profesional</option>
@@ -393,8 +381,8 @@
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">¿En qué área te gustaría desarrollarte? *
                                 </label>
-                                <select class="contact__form-input" name="area_desarrollo">
-                                    <option value="vacio" disabled selected>Seleccione una opción...</option>
+                                <select class="contact__form-input" name="area_desarrollo" required>
+                                    <option value="" disabled selected>Seleccione una opción...</option>
                                     <option class="text-dark" value="Administración de Empresas">
                                         Administración de
                                         Empresas</option>
@@ -421,8 +409,8 @@
                                     internacional?
                                     *
                                 </label>
-                                <select class="contact__form-input" name="pasantia_internacional">
-                                    <option value="vacio" disabled selected>Seleccione una opción...</option>
+                                <select class="contact__form-input" name="pasantia_internacional" required>
+                                    <option value="" disabled selected>Seleccione una opción...</option>
                                     <option class="text-dark" value="Internacionalizar mi profesión">
                                         Internacionalizar mi profesión</option>
                                     <option class="text-dark" value="Potenciar mi CV">Potenciar mi CV</option>
@@ -438,8 +426,8 @@
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">¿Cual de los programas te interesa? *
                                 </label>
-                                <select class="contact__form-input" name="programa">
-                                    <option value="vacio" disabled selected>Seleccione una opción...</option>
+                                <select class="contact__form-input" name="programa" required>
+                                    <option value="" disabled selected>Seleccione una opción...</option>
                                     <option class="text-dark" value="Talento Global | 6 a 12 semanas">Talento
                                         Global | 6 a 12 semanas</option>
                                     <option class="text-dark" value="Talento Global | 3 a 6 meses">Talento
@@ -451,14 +439,14 @@
                                 </select>
                             </div>
 
-                            <p>¿Cómo te enteraste de nuestro programa </p>
-                            <br>
+
                             <div class="contact__form-div">
-                                <label for="" class="contact__form-tag">de Pasantías
+                                <label for="" class="contact__form-tag">¿Cómo te enteraste de nuestro programa de
+                                    Pasantías
                                     Globales?*
                                 </label>
-                                <select class="contact__form-input" name="descubrimiento_programa">
-                                    <option value="vacio" disabled selected>Seleccione una opción...</option>
+                                <select class="contact__form-input" name="descubrimiento_programa" required>
+                                    <option value="" disabled selected>Seleccione una opción...</option>
                                     <option class="text-dark" value="Amigos/Familiares">Amigos/Familiares
                                     </option>
                                     <option class="text-dark" value="Eventos/Webinars">Eventos/Webinars
@@ -495,7 +483,7 @@
 
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">Describa los documentos a adjuntar
-                                    *</label>
+                                    de manera corta*</label>
                                 <input type="text" name="describir_documento" placeholder="Describa.."
                                     class="contact__form-input" maxlength="200" required>
                             </div>
@@ -504,23 +492,23 @@
                                 por favor un archivo general y en extensión
                                 zip *
                             </p>
-                            <br>
 
                             <div class="contact__form-div">
-                                <label for="" class="contact__form-tag">adjuntar Archivo </label>
+                                <label for="" class="contact__form-tag"><i class='bx bxs-cloud-upload'></i>Adjuntar
+                                    Archivo </label>
                                 <br>
                                 <div class="custom-input-file2">
-                                    <div class="custom-input-file">
-                                        <input name="documentos" class="upload" type="file"
-                                            accept=".zip,.rar,.7zip" alt="Click aquí para subir"
-                                            title="Click aquí para subir">
-                                        <i class='bx bxs-cloud-upload'></i>Subir fichero...
-                                    </div>
+                                    {{-- <div class="custom-input-file"> --}}
+                                    <input name="documentos" class="upload" type="file"
+                                        accept=".zip,.rar,.7zip" alt="Click aquí para subir"
+                                        title="Click aquí para subir" required>
+                                    {{-- <i class='bx bxs-cloud-upload'></i>Subir fichero... --}}
+                                    {{-- </div> --}}
 
 
                                 </div>
                             </div>
-
+                            <input type="hidden" name="estado" value="Sin Ver">
                             <button type="submit" class="button">Registrarme</button>
                         </div>
                     </div>
@@ -531,7 +519,7 @@
     </main>
     @extends('contactos.index')
     @extends('plantilla.flechaarriba')
-    @extends('plantilla.parners')
+    {{-- @extends('plantilla.parners') --}}
 
     <script src="{{ asset('assets/js/mixitup.min.js') }}"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>

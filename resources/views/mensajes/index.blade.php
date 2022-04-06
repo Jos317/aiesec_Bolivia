@@ -6,7 +6,7 @@
 
 
 @section('content')
-<br>
+    <br>
     <div class="card text-dark">
         <div class="card-header  text-center">
             <h3><b>Bandeja de Correos</b></h3>
@@ -48,14 +48,14 @@
                                 <td>
                                     <form action="{{ route('contactos.destroy', $contactos) }}" method="POST">
 
-                                        <a href="{{ route('contactos.edit', $contactos) }}"
-                                            class="btn btn-primary btn-sm" style="margin-right: 5px" ><i class="fas fa-edit"></i> Editar</a>
+                                        <a href="{{ route('contactos.edit', $contactos) }}" class="btn btn-primary btn-sm"
+                                            style="margin-right: 5px"><i class="fas fa-edit"></i> Editar</a>
                                         @csrf
 
                                         @method('delete')
                                         <button onclick="return confirm('¿ESTA SEGURO DE  BORRAR?')" type="submit"
                                             value="Borrar" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i>
-                                             Eliminar</button>
+                                            Eliminar</button>
 
                                     </form>
                                 </td>
@@ -68,15 +68,6 @@
 
         </div>
     </div>
-
-
-
-
-
-
-
-
-
 
 
 @stop

@@ -1,14 +1,12 @@
 .contacts2 {
     max-width: 400px;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1em;
 }
-
+/*    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;*/
 form p {
     margin: 0;
-    font-size: 12px;
+    font-size: 0.813rem;
 }
 
 .custom-input-file2 {
@@ -30,9 +28,9 @@ form p {
 }
 
 .custom-input-file .upload {
-    border: 10000px solid transparent;
+    border: 100px solid transparent;
     cursor: pointer;
-    font-size: 10000px;
+    font-size: 100px;
     margin: 0;
     opacity: 0;
     outline: 0 none;

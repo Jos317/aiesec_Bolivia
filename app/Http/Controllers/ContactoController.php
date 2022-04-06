@@ -14,7 +14,7 @@ class ContactoController extends Controller
      */
     public function index()
     {
-        return view('welcome');
+        return view('contactos.index');
     }
 
     /**
@@ -44,8 +44,7 @@ class ContactoController extends Controller
         $contacto = new Contacto();
         $contacto->correo = $request->input('correo');
         $contacto->save();
-
-        return redirect()->route('contactos.index');
+        return redirect()->to('/')->with('message', 'Correo enviado exitosamente');
     }
 
     /**

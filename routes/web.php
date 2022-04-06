@@ -46,20 +46,21 @@ Route::post('hospedaje/store', [HospedaIController::class, 'store']);
 Route::resource('hospedajes', HospedaIController::class)->names('hospedajes');
 
 //welcome enviar correo
+Route::post('contactos/store', [ContactoController::class, 'store']);
 Route::resource('contactos', ContactoController::class)->names('contactos');
 Route::resource('mensajes', MensajeController::class)->names('mensajes');
 
 //estado-hospeda
- Route::get('hospedajes/vista_estado/{id}', [HospedaIController::class, 'vista_estado']);
- Route::post('hospedajes/vista_estado/estadoXd', [HospedaIController::class, 'estadoXd']);
+Route::get('hospedajes/vista_estado/{id}', [HospedaIController::class, 'vista_estado']);
+Route::post('hospedajes/vista_estado/estadoXd', [HospedaIController::class, 'estadoXd']);
 
- //estado-talento
- Route::get('talento/vista_estado_t/{id}', [TalentoController::class, 'vista_estado_t']);
- Route::post('talento/vista_estado/estado_t', [TalentoController::class, 'estado_t']);
+//estado-talento
+Route::get('talento/vista_estado_t/{id}', [TalentoController::class, 'vista_estado_t']);
+Route::post('talento/vista_estado/estado_t', [TalentoController::class, 'estado_t']);
 
-  //estado-empresa
-  Route::get('empresa/vista_estado_e/{id}', [EmpresaController::class, 'vista_estado_e']);
-  Route::post('empresa/vista_estado/estado_e', [EmpresaController::class, 'estado_e']);
+//estado-empresa
+Route::get('empresa/vista_estado_e/{id}', [EmpresaController::class, 'vista_estado_e']);
+Route::post('empresa/vista_estado/estado_e', [EmpresaController::class, 'estado_e']);
 
 
 Route::middleware(['auth'])->group(function () {
@@ -84,5 +85,4 @@ Route::middleware(['auth'])->group(function () {
     //hospedaje
     Route::resource('hospedajes', HospedaIController::class)->names('hospedajes');
     Route::get('hospedaje/excel', [HospedaIController::class, 'exportExcel']);
-
 });

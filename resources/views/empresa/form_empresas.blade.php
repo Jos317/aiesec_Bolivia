@@ -112,23 +112,26 @@
             <div class="quality__container container">
                 <div class="quality__content grid">
                     <div class="quality__images">
-                        <img src="{{ asset('assets/img/globalreport.png') }}" alt="" class="quality__img-big">
+                        <img src="{{ asset('assets/img/desc.png') }}" alt="" class="quality__img-big">
                     </div>
 
                     <div class="quality__data">
                         <span class="quality__special">PARA DESCARGAR</span>
-                        <h1 class="quality__title">Informe de Empleabilidad Global de los jóvenes</h1>
+                        <h1 class="quality__title">Youth Entrepreneurship Forum</h1>
                         <p class="quality__description">
-                            Los Millenials & Centennials ya están dominando el mercado laboral.
-                            Comprenda cómo funciona el mercado laboral global para estudiantes y graduados,
-                            especialmente en lo que respecta a la movilidad global de los jóvenes talentos.
-                            Participaron en esta encuesta realizada por AIESEC más de 400 empresas de 65 países.
-                            El informe contiene los resultados en términos de las habilidades esperadas que esperan
-                            los empleadores al contratar a jóvenes talentos.
+                            El Youth Entrepreneurship Forum es un foro organizado por AIESEC que tiene como objetivo
+                            agrupar a empresas
+                            y organizaciones que buscan reforzarse y construirse como Marca Empleadora <br>
+                            A través de este evento se busca desde el sector empresarial desarrollar las capacidades
+                            profesionales y de
+                            liderazgo con la finalidad de generar en ellos una visión de emprendimiento para
+                            que en el largo plazo puedan adecuarse e intentar generar sus propios negocios e ideas,
+                            que aporten al desarrollo del país
                         </p>
 
                         <div class="quality__buttons">
-                            <a download href="../assets/download/#" class="button">
+                            <a download href="{{ asset('assets/download/Booklet B2B - YEF 2022.pptx.pdf') }}"
+                                class="button">
                                 Descargar
                             </a>
                         </div>
@@ -245,8 +248,7 @@
                 <h3 class="contact__title">Escribe tus datos!</h3>
             </div>
 
-            <form action="{{ url('empresa/store') }}" class="contact__form" method="POST"
-                enctype="multipart/form-data">
+            <form action="{{ url('empresa/store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="contact__container container grid">
                     <div class="contact__content">
@@ -268,32 +270,36 @@
                                 <input type="text" name="cargo_representante" maxlength="50"
                                     placeholder="Cargo Representante" class="contact__form-input" required>
                             </div>
-                            <p>Página Web / Facebook de la Institución </p>
-                            <br>
+
                             <div class="contact__form-div">
-                                <label for="" class="contact__form-tag">En caso de tener </label>
+                                <label for="" class="contact__form-tag">Página Web / Facebook de la Institución En caso
+                                    de tener </label>
                                 <input name="pagina_web" class="contact__form-input" maxlength="100" type="text"
                                     placeholder="Página Web...">
                             </div>
 
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">Celular de la Institución *</label>
-                                <input name="celular" class="contact__form-input" maxlength="10" type="text"
+                                <input
+                                    onkeydown="return ((event.keyCode>=47 && event.keyCode<=58) || (event.keyCode==8))"
+                                    name="celular" class="contact__form-input" maxlength="10" type="text"
                                     placeholder="Celular..." required>
                             </div>
 
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">Teléfono de la Institución </label>
-                                <input name="telefono" class="contact__form-input" maxlength="10" type="text"
-                                    placeholder="Teléfono...">
+                                <input
+                                    onkeydown="return ((event.keyCode>=47 && event.keyCode<=58) || (event.keyCode==8))"
+                                    name="telefono" class="contact__form-input" maxlength="10" type="text"
+                                    placeholder="Teléfono..." required>
                             </div>
 
 
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">Correo del representante de la empresa
                                     *</label>
-                                <input name="correo_representante" class="contact__form-input" type="email"
-                                    placeholder="Correo..." required>
+                                <input name="correo_representante" class="contact__form-input" maxlength="50"
+                                    type="email" placeholder="Correo..." required>
                             </div>
                         </div>
                     </div>
@@ -302,27 +308,26 @@
                         <div class="contacts2">
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">Correo de la empresa *</label>
-                                <input name="correo_empresa" class="contact__form-input" type="email"
+                                <input name="correo_empresa" class="contact__form-input" maxlength="50" type="email"
                                     placeholder="Correo empresa..." required>
                             </div>
 
 
-                            <p>¿En qué departamento se encuentra la </p>
-                            <br>
                             <div class="contact__form-div">
-                                <label for="" class="contact__form-tag">empresa / ONG? *</label>
-                                <select class="contact__form-input" name="departamento">
-                                    <option value="vacio" disabled selected>Seleccione una opción...</option>
-                                    <option class="text-dark" value="La Paz">La Paz</option>
-                                    <option class="text-dark" value="Cochabamba">Cochabamba</option>
-                                    <option class="text-dark" value="Santa Cruz">Santa Cruz</option>
-                                    <option class="text-dark" value="Chuquisaca">Chuquisaca</option>
-                                    <option class="text-dark" value="Tarija">Tarija</option>
-                                    <option class="text-dark" value="Potosí">Potosí</option>
-                                    <option class="text-dark" value="Oruro">Oruro</option>
-                                    <option class="text-dark" value="Pando">Pando</option>
-                                    <option class="text-dark" value="Beni">Beni</option>
-                                    <option class="text-dark" value="Se encuentra en 2 o más departamentos">Se
+                                <label for="" class="contact__form-tag">¿En qué departamento se encuentra la empresa /
+                                    ONG? *</label>
+                                <select class="contact__form-input" name="departamento" required>
+                                    <option value="" disabled selected>Seleccione una opción...</option>
+                                    <option value="La Paz">La Paz</option>
+                                    <option value="Cochabamba">Cochabamba</option>
+                                    <option value="Santa Cruz">Santa Cruz</option>
+                                    <option value="Chuquisaca">Chuquisaca</option>
+                                    <option value="Tarija">Tarija</option>
+                                    <option value="Potosí">Potosí</option>
+                                    <option value="Oruro">Oruro</option>
+                                    <option value="Pando">Pando</option>
+                                    <option value="Beni">Beni</option>
+                                    <option value="Se encuentra en 2 o más departamentos">Se
                                         encuentra en 2 o más departamentos</option>
                                 </select>
                             </div>
@@ -342,8 +347,8 @@
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">¿A través de qué medio se entero de AIESEC?
                                     *</label>
-                                <select class="contact__form-input" name="saber_de_AIESEC">
-                                    <option value="vacio" disabled selected>Seleccione una opción...</option>
+                                <select class="contact__form-input" name="saber_de_AIESEC" required>
+                                    <option value="" disabled selected>Seleccione una opción...</option>
                                     <option class="text-dark" value="Facebook">Facebook</option>
                                     <option class="text-dark" value="Instragam">Instragam</option>
                                     <option class="text-dark" value="Linkedln">Linkedln</option>
@@ -357,15 +362,17 @@
                                     <option class="text-dark" value="Otro">Otro</option>
                                 </select>
                             </div>
-
-                            <p>Si marcaste Amigos/Familiares, mencione el <br>nombre de dicha persona:</p>
                             <br>
+                            <p>Si marcaste Amigos/Familiares, mencione el
+                                <br>nombre de dicha persona:
+                            </p>
+
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">Nombre (Opcional)</label>
                                 <input name="nombre_amigo" class="contact__form-input" maxlength="50" type="text"
                                     placeholder="Nombre...">
                             </div>
-
+                            <br>
                             <button type="submit" class="button">Registrarme</button>
                         </div>
                     </div>

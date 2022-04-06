@@ -23,7 +23,7 @@
 
 
                     <a href="#">
-                        <img src="{{ asset('assets/img/FG-Logo-37.png') }}" alt="" class="home__scroll">
+                        <img src="{{ asset('assets/img/logohosp.png') }}" alt="" class="home__scroll">
                     </a>
 
                 </div>
@@ -33,7 +33,6 @@
 
 
         </section>
-
         <div class="specialty section container" id="specialty">
             <div class="specialty__container">
                 <div class="specialty__box">
@@ -65,6 +64,7 @@
                 </div>
             </div>
         </div>
+
 
 
         <section class="quality section" id="premium">
@@ -163,8 +163,8 @@
 
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">¿En qué ciudad te encuentras? *:</label>
-                                <select class="contact__form-input" name="ciudad_reside">
-                                    <option value="vacio" disabled selected>Seleccione una opción...</option>
+                                <select class="contact__form-input" name="ciudad_reside" required>
+                                    <option value="" disabled selected>Seleccione una opción...</option>
                                     <option class="text-dark" value="La Paz">La Paz</option>
                                     <option class="text-dark" value="Cochabamba">Cochabamba</option>
                                     <option class="text-dark" value="Santa Cruz">Santa Cruz</option>
@@ -191,8 +191,8 @@
 
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">¿Cuántos voluntarios puedes hospedar? *:</label>
-                                <select class="contact__form-input" name="cantidad_voluntarios">
-                                    <option value="vacio" disabled selected>Seleccione una opción...</option>
+                                <select class="contact__form-input" name="cantidad_voluntarios" required>
+                                    <option value="" disabled selected>Seleccione una opción...</option>
                                     <option class="text-dark" value="1">1</option>
                                     <option class="text-dark" value="2">2</option>
                                     <option class="text-dark" value="3 o más">3 o más</option>
@@ -200,13 +200,12 @@
                                 </select>
                             </div>
 
-                            <p>En que fecha puedes empezar a hospedar</p>
-                            <br>
+
                             <div class="contact__form-div">
-                                <label for="" class="contact__form-tag"> al (los)
+                                <label for="" class="contact__form-tag">En que fecha puedes empezar a hospedar al (los)
                                     Voluntario(s) * </label>
-                                <input type="date" name="hospedar_fecha" placeholder="fecha"
-                                    class="contact__form-input">
+                                <input type="date" name="hospedar_fecha" placeholder="fecha" class="contact__form-input"
+                                    required>
                             </div>
 
 
@@ -216,16 +215,19 @@
                     <div class="contact__content">
                         <div class="contacts2">
 
-                            <p>En que hora puedes empezar a hospedar</p>
+
+                            <div class=" contact__form-div">
+                                <label for="" class="contact__form-tag">En que hora puedes empezar a hospedar al (los)
+                                    Voluntario(s) *</label>
+                                <input type="time" name="hospedar_hora" placeholder="hora" class="contact__form-input"
+                                    required>
+                            </div>
+
                             <br>
                             <div class=" contact__form-div">
-                                <label for="" class="contact__form-tag"> al (los)
-                                    Voluntario(s) *</label>
-                                <input type="time" name="hospedar_hora" placeholder="hora" class="contact__form-input">
-                            </div>
-                            <div class=" contact__form-div">
-                                <label for="" class="contact__form-tag">¿Qué puedes ofrecerle al voluntario? *: </label>
-                                <br>
+
+                                <p>¿Qué puedes ofrecerle al voluntario? *: </p>
+
                                 <p>
                                     <label for="check1">
                                         <input type="checkbox" name="habitacion_unica" value="1"> Habitación única
@@ -267,24 +269,19 @@
                             <br>
                             <br>
                             <br>
-                            <br>
-                            <p>¿Por qué quieres formar parte </p>
-                            <br>
                             <div class=" contact__form-div">
-                                <label for="" class="contact__form-tag">del programa
+                                <label for="" class="contact__form-tag">¿Por qué quieres formar parte del programa
                                     Familia
                                     Global?
                                     *:</label>
-                                <textarea class="contact__form-input" name="formar_parte" cols="50" rows="7" placeholder="Escribir"></textarea>
+                                <textarea class="contact__form-input" name="formar_parte" cols="50" rows="7" placeholder="Escribir" required></textarea>
                             </div>
 
-                            <p>¿Cómo te enteraste del programa </p>
-                            <br>
                             <div class="contact__form-div">
-                                <label for="" class="contact__form-tag">Familia Global?
+                                <label for="" class="contact__form-tag">¿Cómo te enteraste del programa Familia Global?
                                     *:</label>
-                                <select class="contact__form-input" name="saber_programa">
-                                    <option value="vacio" disabled selected>Seleccione una opción...</option>
+                                <select class="contact__form-input" name="saber_programa" required>
+                                    <option value="" disabled selected>Seleccione una opción...</option>
                                     <option class="text-dark" value="Soy o Fui miembro de AIESEC">Soy o Fui miembro
                                         de AIESEC</option>
                                     <option class="text-dark" value="Amigos/Familiares">Amigos/Familiares</option>
@@ -300,8 +297,7 @@
 
                             <div class=" contact__form-div ">
                                 <label for="" class="contact__form-tag">¿Tienes algo para decirnos?</label>
-                                <textarea class="contact__form-input" name="decir_algo" cols="50" rows="7"
-                                    placeholder="Escribir"></textarea>
+                                <textarea class="contact__form-input" name="decir_algo" cols="50" rows="7" placeholder="Escribir"></textarea>
                             </div>
                             <br>
                             <button class="button">Registrarme</button>
@@ -322,7 +318,7 @@
 
     @extends('contactos.index')
     @extends('plantilla.flechaarriba')
-    @extends('plantilla.parners')
+    {{-- @extends('plantilla.parners') --}}
 
 
 

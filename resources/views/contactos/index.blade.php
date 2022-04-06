@@ -8,7 +8,8 @@
                     Subscribete para obtener mayor información
                 </p>
 
-                <form method="post" action="{{ route('contactos.store') }}" id="contactform">
+
+                <form method="post" action="{{ url('contactos/store') }}" id="contactform">
                     <div class="footer__newsletter">
                         @csrf
 
@@ -24,22 +25,14 @@
                 </form>
             </div>
 
-
             <div class="footer__data">
                 <h2 class="footer__subtitle">Dirección</h2>
                 <p class="footer__information">
-                    1234 Av. Eduardo Avaroa. <br>
+                    25 Av. Achumani - Calle 4A. <br>
                     La Paz, Bolivia
                 </p>
             </div>
 
-            <div class="footer__data">
-                <h2 class="footer__subtitle">Contactanos</h2>
-                <p class="footer__information">
-                    +591 73665124 <br>
-                    aiesec@gmail.com
-                </p>
-            </div>
 
             <div class="footer__data">
                 <h2 class="footer__subtitle">Horario</h2>
@@ -52,14 +45,15 @@
 
         <div class="footer__group">
             <ul class="footer__social">
-                <a href="#" target="_blank" class="footer__social-link">
+                <a href="https://www.facebook.com/AIESECenBolivia" target="_blank" class="footer__social-link">
                     <i class="bx bxl-facebook"></i>
                 </a>
-                <a href="#" target="_blank" class="footer__social-link">
+                <a href="https://www.instagram.com/aiesecenbolivia/" target="_blank" class="footer__social-link">
                     <i class="bx bxl-instagram"></i>
                 </a>
-                <a href="#" target="_blank" class="footer__social-link">
-                    <i class="bx bxl-twitter"></i>
+                <a href="https://www.linkedin.com/company/aiesec-en-bolivia/" target="_blank"
+                    class="footer__social-link">
+                    <i class="bx bxl-linkedin"></i>
                 </a>
             </ul>
 

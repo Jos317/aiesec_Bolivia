@@ -15,10 +15,9 @@ class role_seeder extends Seeder
      */
     public function run()
     {
-        $role1 = Role::create(['name'=> 'Superuser']);
-        $role2 = Role::create(['name'=> 'Admin']);
+        $role1 = Role::create(['name' => 'Superuser']);
+        $role2 = Role::create(['name' => 'Admin']);
 
         Permission::create(['name' => 'Gestionar Roles'])->syncRoles([$role1]);
-
     }
 }

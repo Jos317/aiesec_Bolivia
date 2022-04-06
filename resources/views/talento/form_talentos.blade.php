@@ -104,73 +104,59 @@
             </div>
         </div>
 
+
+
         <section class="blog section" id="blog">
             <div class="blog__container container">
                 <h2 class="section__title">
-                    Conoce las historias de liderazgo de jóvenes como tu.
+                    Conoce las intercambios de jóvenes como tú.
                 </h2>
 
                 <div class="blog__content grid">
                     <article class="blog__card">
                         <div class="blog__image">
-                            <img src="{{ asset('assets/img/bl1.jpg') }}" alt="" class="blog__img">
-                            <a href="#" class="blog__button">
-                                <i class="bx bx-right-arrow-alt"></i>
+                            <img src="{{ asset('assets/img/blg1.jpg') }}" alt="" class="blog__img">
+                            <a href="https://www.thehersheycompany.com/es_mx/inicio.html" class="blog__button">
+                                <img src="{{ asset('assets/img/blg2em.png') }}" alt="" class="blog__img2">
                             </a>
                         </div>
 
                         <div class="blog__data">
                             <h2 class="blog__title">
-                                Valentina | Voluntaria Global
+                                Natalia Carranza | Talento Global
                             </h2>
                             <p class="blog__description">
-                                “Creyeron tanto en mí, que logré crear un estudio de fotografía y
-                                video en la empresa, nunca se había hecho ese proyecto, y con mi esfuerzo
-                                y dedicación lo logré”.
+                                Soy estudiante de la UPSA estudio Administracíon de empresas, hice mi intercambio en
+                                México, Guadalajara en la empresa Hershey’s aqui cumpli mi cargo como
+                                Coordinadora de Marketing Digital, ser parte del programa de Talento Global fue una
+                                experiencia
+                                inolvidable en mi vida.
+
                             </p>
 
-                            <div class="blog__footer">
-                                <div class="blog__reaction">
-                                    <i class="bx bx-comment"></i>
-                                    <span>13</span>
-                                </div>
-                                <div class="blog__reaction">
-                                    <i class="bx bx-show"></i>
-                                    <span>76</span>
-                                </div>
-                            </div>
                         </div>
                     </article>
 
                     <article class="blog__card">
                         <div class="blog__image">
-                            <img src="{{ asset('assets/img/bl1.jpg') }}" alt="" class="blog__img">
-                            <a href="#" class="blog__button">
-                                <i class="bx bx-right-arrow-alt"></i>
+                            <img src="{{ asset('assets/img/blg2.jpeg') }}" alt="" class="blog__img">
+                            <a href="https://inoquos.com/" class="blog__button2">
+                                <img src="{{ asset('assets/img/blg3em.png') }}" alt="" class="blog__img2">
                             </a>
                         </div>
 
                         <div class="blog__data">
                             <h2 class="blog__title">
-                                Cristhian | Talento Global
+                                Dylan Irala | Talento Global
                             </h2>
                             <p class="blog__description">
-                                “Ser parte del programa de talento global no es solo ir a otro
-                                país y adquirir nueva experiencia laboral o nuevas habilidades,
-                                también trae consigo la oportunidad de conocer personas nuevas, entornos
-                                y culturas totalmente diferentes”.
+                                Soy estudiante de la UCB estudio Administración de Empresas, hice mi intercambio en
+                                México en la empresa INOQUOS aqui cumpli mi cargo como
+                                Consultor de Marketing, perteneciendo a talento global tuve la oportunidad de conocer
+                                personas nuevas, entornos
+                                y culturas totalmente diferentes
                             </p>
 
-                            <div class="blog__footer">
-                                <div class="blog__reaction">
-                                    <i class="bx bx-comment"></i>
-                                    <span>3</span>
-                                </div>
-                                <div class="blog__reaction">
-                                    <i class="bx bx-show"></i>
-                                    <span>37</span>
-                                </div>
-                            </div>
                         </div>
                     </article>
                 </div>
@@ -346,8 +332,8 @@
 
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">Edad *</label>
-                                <select class="contact__form-input" name="edad">
-                                    <option value="vacio" disabled selected>Seleccione una opción...</option>
+                                <select class="contact__form-input" name="edad" required>
+                                    <option value="" disabled selected>Seleccione una opción...</option>
                                     <option class="text-dark" value="Menos de 18 años">Menos de 18 años
                                     </option>
                                     <option class="text-dark" value="18">18</option>
@@ -375,7 +361,9 @@
 
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">Celular *</label>
-                                <input type="text" name="celular" maxlength="10" placeholder="Inserta tu Celular"
+                                <input
+                                    onkeydown="return ((event.keyCode>=47 && event.keyCode<=58) || (event.keyCode==8))"
+                                    type="text" name="celular" maxlength="10" placeholder="Inserta tu Celular"
                                     class="contact__form-input" required>
                             </div>
 
@@ -383,8 +371,8 @@
 
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">¿En que ciudad resides? *</label>
-                                <select class="contact__form-input" name="ciudad_reside">
-                                    <option value="vacio" disabled selected>Seleccione una opción...</option>
+                                <select class="contact__form-input" name="ciudad_reside" required>
+                                    <option value="" disabled selected>Seleccione una opción...</option>
                                     <option class="text-dark" value="La Paz">La Paz</option>
                                     <option class="text-dark" value="Cochabamba">Cochabamba</option>
                                     <option class="text-dark" value="Santa Cruz">Santa Cruz</option>
@@ -403,8 +391,8 @@
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">¿En que universidad estudias o
                                     estudiaste? *</label>
-                                <select class="contact__form-input" id="buscador" name="universidad">
-                                    <option value="vacio" disabled selected>Seleccione una opción...</option>
+                                <select class="contact__form-input" id="buscador" name="universidad" required>
+                                    <option value="" disabled selected>Seleccione una opción...</option>
                                     @foreach ($universidades as $item)
                                         <option value="{{ $item->code }}">{{ $item->name }}</option>
                                     @endforeach
@@ -413,8 +401,8 @@
 
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">Grado de Estudio *</label>
-                                <select class="contact__form-input" name="grado_estudio">
-                                    <option value="vacio" disabled selected>Seleccione una opción...</option>
+                                <select class="contact__form-input" name="grado_estudio" required>
+                                    <option value="" disabled selected>Seleccione una opción...</option>
                                     <option class="text-dark" value="Bachiller">Bachiller</option>
                                     <option class="text-dark" value="Universidad 1er. a 3er. semestre">
                                         Universidad
@@ -436,8 +424,8 @@
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">¿Qué carrera estudias o estudiaste?
                                     *</label>
-                                <select class="contact__form-input" name="carrera">
-                                    <option value="vacio" disabled selected>Seleccione una opción...</option>
+                                <select class="contact__form-input" name="carrera" required>
+                                    <option value="" disabled selected>Seleccione una opción...</option>
                                     <option class="text-dark" value="Administración de Empresas">
                                         Administración de
                                         Empresas</option>
@@ -489,8 +477,8 @@
                         <div class="contacts2">
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">Nivel de Ingles *</label>
-                                <select class="contact__form-input" name="nivel_ingles">
-                                    <option value="vacio" disabled selected>Seleccione una opción...</option>
+                                <select class="contact__form-input" name="nivel_ingles" required>
+                                    <option value="" disabled selected>Seleccione una opción...</option>
                                     <option class="text-dark" value="Básico (A1-A2)">Básico (A1-A2)</option>
                                     <option class="text-dark" value="Intermedio (B1-B2)">Intermedio (B1-B2)
                                     </option>
@@ -505,8 +493,8 @@
 
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">Experiencia Laboral *</label>
-                                <select class="contact__form-input" name="experiencia">
-                                    <option value="vacio" disabled selected>Seleccione una opción...</option>
+                                <select class="contact__form-input" name="experiencia" required>
+                                    <option value="" disabled selected>Seleccione una opción...</option>
                                     <option class="text-dark" value="Aún no tengo experiencia profesional">Aún
                                         no
                                         tengo experiencia profesional</option>
@@ -528,8 +516,8 @@
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">¿En qué área te gustaría desarrollarte? *
                                 </label>
-                                <select class="contact__form-input" name="area_desarrollo">
-                                    <option value="vacio" disabled selected>Seleccione una opción...</option>
+                                <select class="contact__form-input" name="area_desarrollo" required>
+                                    <option value="" disabled selected>Seleccione una opción...</option>
                                     <option class="text-dark" value="Administración de Empresas">
                                         Administración de
                                         Empresas</option>
@@ -556,8 +544,8 @@
                                     internacional?
                                     *
                                 </label>
-                                <select class="contact__form-input" name="pasantia_internacional">
-                                    <option value="vacio" disabled selected>Seleccione una opción...</option>
+                                <select class="contact__form-input" name="pasantia_internacional" required>
+                                    <option value="" disabled selected>Seleccione una opción...</option>
                                     <option class="text-dark" value="Internacionalizar mi profesión">
                                         Internacionalizar mi profesión</option>
                                     <option class="text-dark" value="Potenciar mi CV">Potenciar mi CV</option>
@@ -573,8 +561,8 @@
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">¿Cual de los programas te interesa? *
                                 </label>
-                                <select class="contact__form-input" name="programa">
-                                    <option value="vacio" disabled selected>Seleccione una opción...</option>
+                                <select class="contact__form-input" name="programa" required>
+                                    <option value="" disabled selected>Seleccione una opción...</option>
                                     <option class="text-dark" value="Talento Global | 6 a 12 semanas">Talento
                                         Global | 6 a 12 semanas</option>
                                     <option class="text-dark" value="Talento Global | 3 a 6 meses">Talento
@@ -586,14 +574,15 @@
                                 </select>
                             </div>
 
-                            <p>¿Cómo te enteraste de nuestro programa </p>
+                            <p>¿Cómo te enteraste de nuestro</p>
                             <br>
                             <div class="contact__form-div">
-                                <label for="" class="contact__form-tag">de Pasantías
+                                <label for="" class="contact__form-tag"> programa de
+                                    Pasantías
                                     Globales?*
                                 </label>
-                                <select class="contact__form-input" name="descubrimiento_programa">
-                                    <option value="vacio" disabled selected>Seleccione una opción...</option>
+                                <select class="contact__form-input" name="descubrimiento_programa" required>
+                                    <option value="" disabled selected>Seleccione una opción...</option>
                                     <option class="text-dark" value="Amigos/Familiares">Amigos/Familiares
                                     </option>
                                     <option class="text-dark" value="Eventos/Webinars">Eventos/Webinars
@@ -630,7 +619,7 @@
 
                             <div class="contact__form-div">
                                 <label for="" class="contact__form-tag">Describa los documentos a adjuntar
-                                    *</label>
+                                    de manera corta*</label>
                                 <input type="text" name="describir_documento" placeholder="Describa.."
                                     class="contact__form-input" maxlength="200" required>
                             </div>
@@ -639,24 +628,18 @@
                                 por favor un archivo general y en extensión
                                 zip *
                             </p>
-                            <br>
-
 
                             <div class="contact__form-div">
-                                <label for="" class="contact__form-tag">adjuntar Archivo </label>
+                                <label for="" class="contact__form-tag"><i class='bx bxs-cloud-upload'></i>Adjuntar
+                                    Archivo </label>
                                 <br>
                                 <div class="custom-input-file2">
-                                    <div class="custom-input-file">
-                                        <input name="documentos" class="upload" type="file"
-                                            accept=".zip,.rar,.7zip" alt="Click aquí para subir"
-                                            title="Click aquí para subir">
-                                        <i class='bx bxs-cloud-upload'></i>Subir fichero...
-                                        @error('documentos')
-                                            <span class="text-danger">{{ $message }}</span>
-                                        @enderror
-
-
-                                    </div>
+                                    {{-- <div class="custom-input-file"> --}}
+                                    <input name="documentos" class="upload" type="file"
+                                        accept=".zip,.rar,.7zip" alt="Click aquí para subir"
+                                        title="Click aquí para subir" required>
+                                    {{-- <i class='bx bxs-cloud-upload'></i>Subir fichero... --}}
+                                    {{-- </div> --}}
 
 
                                 </div>
@@ -672,8 +655,7 @@
     </main>
     @extends('contactos.index')
     @extends('plantilla.flechaarriba')
-    @extends('plantilla.parners')
-
+    {{-- @extends('plantilla.parners') --}}
     <script src="{{ asset('assets/js/mixitup.min.js') }}"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <!--<script src="{{ asset('assets/js/main.js') }}"></script>-->

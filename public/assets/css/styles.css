@@ -663,7 +663,6 @@ button {
     justify-items: center;
     gap: 2.5rem 2rem;
     border-top: 1px solid var(--text-color-light);
-    padding-top: 2.5rem;
 }
 
 .logo__img {
@@ -700,23 +699,33 @@ button {
 .blog__button {
     display: inline-flex;
     background-color: #fff;
-    padding: 1.15rem;
+    padding: 0 1.15rem;
     border-radius: 0.5rem 0 0.5rem 0;
     font-size: 2rem;
     color: var(--title-color);
     position: absolute;
     right: 0;
     bottom: 0;
+    width: 30%;
 }
 
-.blog__button i {
-    transform: rotate(-30deg);
-    transition: 0.4s;
+.blog__button2 {
+    display: inline-flex;
+    background-color: #fff;
+    padding: 0.7rem 1.15rem;
+    border-radius: 0.5rem 0 0.5rem 0;
+    font-size: 2rem;
+    color: var(--title-color);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 30%;
 }
-
-.blog__button:hover i {
-    transform: rotate(-30deg) translateX(0.25rem);
-}
+/* .blog__img2{
+  width: 100%;
+  position: absolute;
+  float: right;
+} */
 
 .blog__title {
     font-size: var(--h2-font-size);
@@ -1130,7 +1139,7 @@ button {
     }
 
     .blog__container {
-        padding-bottom: 3rem;
+        padding-bottom: 1rem;
     }
 
     .blog__content {

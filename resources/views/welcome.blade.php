@@ -7,6 +7,8 @@
     <link rel="shortcut icon" href="{{ asset('assets/img/IconAIESEC.png') }}" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
 
 
@@ -96,100 +98,58 @@
         <section class="blog section" id="blog">
             <div class="blog__container container">
                 <h2 class="section__title">
-                    Conoce las historias de liderazgo de jóvenes como tu.
+                    Conoce las intercambios de jóvenes como tú.
                 </h2>
 
                 <div class="blog__content grid">
                     <article class="blog__card">
                         <div class="blog__image">
-                            <img src="{{ asset('assets/img/bl2.jpg') }}" alt="" class="blog__img">
-                            <a href="#" class="blog__button">
-                                <i class="bx bx-right-arrow-alt"></i>
+                            <img src="{{ asset('assets/img/blg1.jpg') }}" alt="" class="blog__img">
+                            <a href="https://www.thehersheycompany.com/es_mx/inicio.html" class="blog__button">
+                                <img src="{{ asset('assets/img/blg2em.png') }}" alt="" class="blog__img2">
                             </a>
                         </div>
 
                         <div class="blog__data">
                             <h2 class="blog__title">
-                                Valentina | Voluntaria Global
+                                Natalia Carranza | Talento Global
                             </h2>
                             <p class="blog__description">
-                                “Creyeron tanto en mí, que logré crear un estudio de fotografía y
-                                video en la empresa, nunca se había hecho ese proyecto, y con mi esfuerzo
-                                y dedicación lo logré”.
+                                Soy estudiante de la UPSA estudio Administracíon de empresas, hice mi intercambio en
+                                México, Guadalajara en la empresa Hershey’s aqui cumpli mi cargo como
+                                Coordinadora de Marketing Digital, ser parte del programa de Talento Global fue una
+                                experiencia
+                                inolvidable en mi vida.
+
                             </p>
 
-                            <div class="blog__footer">
-                                <div class="blog__reaction">
-                                    <i class="bx bx-comment"></i>
-                                    <span>13</span>
-                                </div>
-                                <div class="blog__reaction">
-                                    <i class="bx bx-show"></i>
-                                    <span>76</span>
-                                </div>
-                            </div>
                         </div>
                     </article>
 
-                    {{-- <article class="blog__card">
-                        <div class="blog__image">
-                            <iframe
-                                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FAIESECenBolivia%2Fposts%2F4995195870493663&show_text=true&width=500"
-                                width="450" height="300" style="border:none;overflow:hidden" scrolling="no"
-                                frameborder="0" allowfullscreen="true"
-                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                            <a href="#" class="blog__button">
-                                <i class="bx bx-right-arrow-alt"></i>
-                            </a>
-                        </div>
-
-                        <div class="blog__data">
-                            <h2 class="blog__title">
-                                Valentina | Voluntaria Global
-                            </h2>
-                            <p class="blog__description">
-                                “Creyeron tanto en mí, que logré crear un estudio de fotografía y
-                                video en la empresa, nunca se había hecho ese proyecto, y con mi esfuerzo
-                                y dedicación lo logré”.
-                            </p>
-
-                        </div>
-                    </article> --}}
-
                     <article class="blog__card">
                         <div class="blog__image">
-                            <img src="{{ asset('assets/img/bl1.jpg') }}" alt="" class="blog__img">
-                            <a href="#" class="blog__button">
-                                <i class="bx bx-right-arrow-alt"></i>
+                            <img src="{{ asset('assets/img/blg2.jpeg') }}" alt="" class="blog__img">
+                            <a href="https://inoquos.com/" class="blog__button2">
+                                <img src="{{ asset('assets/img/blg3em.png') }}" alt="" class="blog__img2">
                             </a>
                         </div>
 
                         <div class="blog__data">
                             <h2 class="blog__title">
-                                Cristhian | Talento Global
+                                Dylan Irala | Talento Global
                             </h2>
                             <p class="blog__description">
-                                “Ser parte del programa de talento global no es solo ir a otro
-                                país y adquirir nueva experiencia laboral o nuevas habilidades,
-                                también trae consigo la oportunidad de conocer personas nuevas, entornos
-                                y culturas totalmente diferentes”.
+                                Soy estudiante de la UCB estudio Administración de Empresas, hice mi intercambio en
+                                México en la empresa INOQUOS aqui cumpli mi cargo como
+                                Consultor de Marketing, perteneciendo a talento global tuve la oportunidad de conocer
+                                personas nuevas, entornos
+                                y culturas totalmente diferentes
                             </p>
 
-                            <div class="blog__footer">
-                                <div class="blog__reaction">
-                                    <i class="bx bx-comment"></i>
-                                    <span>3</span>
-                                </div>
-                                <div class="blog__reaction">
-                                    <i class="bx bx-show"></i>
-                                    <span>37</span>
-                                </div>
-                            </div>
                         </div>
                     </article>
                 </div>
             </div>
-
         </section>
 
     </main>
@@ -200,10 +160,49 @@
 
 
 
-
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
     <script src="{{ asset('assets/js/mixitup.min.js') }}"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <!--<script src="{{ asset('assets/js/main.js') }}"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script>
+        @if (Session::has('message'))
+            toastr.options =
+            {
+            "closeButton" : true,
+            "progressBar" : true
+            }
+            toastr.success("{{ session('message') }}");
+        @endif
+
+        @if (Session::has('error'))
+            toastr.options =
+            {
+            "closeButton" : true,
+            "progressBar" : true
+            }
+            toastr.error("{{ session('error') }}");
+        @endif
+
+        @if (Session::has('info'))
+            toastr.options =
+            {
+            "closeButton" : true,
+            "progressBar" : true
+            }
+            toastr.info("{{ session('info') }}");
+        @endif
+
+        @if (Session::has('warning'))
+            toastr.options =
+            {
+            "closeButton" : true,
+            "progressBar" : true
+            }
+            toastr.warning("{{ session('warning') }}");
+        @endif
+    </script>
 </body>
 
 </html>
